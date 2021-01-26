@@ -1,9 +1,18 @@
 .container {
    min-height: 100vh;
-   width: 70%;
+   width: 100%;
    margin: 10rem auto;
-   background-color: beige;
-
+   text-align: center;
+   /* background-color: beige; */
+}
+.container h2 a {
+   text-decoration: none;
+   color: rgba(58, 56, 56, 0.452);
+   transition: .6s;
+}
+.container h2 a:hover {
+   font-size: 1.2em;
+   color: rgba(0, 0, 255, 0.514);
 }
 .header {
    position: fixed;
@@ -18,6 +27,7 @@
  }
  .main {
     min-height: 100vh;
+
  }
 .footer {
 

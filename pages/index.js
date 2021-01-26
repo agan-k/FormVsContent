@@ -1,11 +1,14 @@
 import Layout from '../components/layout'
-import styles from '../styles/Home.module.css'
+import Project from '../components/project'
 
 export default function Home() {
   return (
-    <Layout>
-       <h1>Home</h1>
+     <Layout>
+        <Project
+           url='https://larabello.com'
+           
+        />
      
-    </Layout>
+     </Layout>
   )
 }

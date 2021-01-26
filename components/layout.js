@@ -23,6 +23,7 @@ export default function Layout({ children, title = 'FormVsContent' }) {
          <Head>
             <title>{title}</title>
             <link rel="icon" href="/favicon.ico" />
+            <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200;600&family=Roboto+Condensed:wght@300&family=Unica+One&display=swap" rel="stylesheet"></link>
          </Head>
          <header className={style.header}>
             <ul>{linksList}</ul>
