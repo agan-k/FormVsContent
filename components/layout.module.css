@@ -1,12 +1,24 @@
 .container {
+   min-height: 100vh;
    width: 70%;
-   margin: 0 auto;
+   margin: 10rem auto;
    background-color: beige;
 
 }
 .header {
+   position: fixed;
+   display: flex;
 
-}
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: min-content;
+   background-color:red;
+   z-index: 1;
+ }
+ .main {
+    min-height: 100vh;
+ }
 .footer {
 
 }

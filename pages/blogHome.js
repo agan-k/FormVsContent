@@ -21,7 +21,7 @@ export default function blogHome() {
       {link: 'posts/second-blogpost', name: 'second-blogpost'}
    ]
    const linksList = linkData.map(item =>
-      <li className={router.pathname == `${item.link}` ? 'active' : ''}>
+      <li className={router.pathname == `${item.link}` ? 'current-post' : ''}>
          <Link href={item.link}>
             <a>{item.name}</a>
          </Link>
