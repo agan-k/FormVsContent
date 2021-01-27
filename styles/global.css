@@ -1,17 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
+  /* font-family: Courier; */
+  font-size: 18px;
   color: rgba(58, 56, 56, 0.452);
+
 }
-/* 
+h1 {
+   font-size: 3.8rem;
+   font-weight: 400;
+   /* margin: 1rem;  */
+}
+h2 {
+   font-size: 3rem;
+   /* margin: 1rem; */
+}
+h3 {
+   font-size: 1.2rem;
+   /* margin: 1rem; */
+}
+
 a {
-  color: inherit;
+  color: rgba(144, 189, 209, 0.8);
+  text-decoration: none;
+  transition: .7s;
+}
+a:hover {
+  color: rgb(144, 159, 209);
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
-} */
+}

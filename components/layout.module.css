@@ -4,24 +4,23 @@
    margin: 10rem auto;
    text-align: center;
 }
-.container h2 a {
+/* .container h2 a {
    text-decoration: none;
    color: rgba(58, 56, 56, 0.452);
    transition: .6s;
-}
-.container h2 a:hover {
+} */
+/* .container h2 a:hover {
    font-size: 1.2em;
    color: rgba(0, 0, 255, 0.514);
-}
+} */
 .header {
    position: fixed;
    display: flex;
-
    top: 0;
    left: 0;
    width: 100%;
-   height: min-content;
-   background-color:red;
+   /* height: min-content; */
+   background-color:rgb(24, 24, 24);
    z-index: 1;
  }
  .main {

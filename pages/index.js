@@ -3,16 +3,18 @@ import Project from '../components/project'
 
 export default function Home() {
 
-   const Stack = [
-      { id: 1, name: 'html5', src: '/assets/html5.png' },
-      { id: 2, name: 'css3', src: '/assets/css3.png' },
-      { id: 3, name: 'javascript', src: '/assets/javascript.png' },
-      { id: 4, name: 'react', src: '/assets/reactJS.png' },
-      { id: 5, name: 'next', src: '/assets/nextJS.png' },
-      { id: 6, name: 'prismic', src: '/assets/prismic-io.jpg' },
-      { id: 7, name: 'postgresql', src: '/assets/postgresql.png' },
-      { id: 8, name: 'nodeExpress', src: '/assets/nodeAndExpress.png' },
-      { id: 9, name: 'jquery', src: '/assets/jQuery.png' },
+   const stackData = [
+      { id: 1, name: 'HTML5', src: '/assets/html5.png' },
+      { id: 2, name: 'CSS3', src: '/assets/css3.png' },
+      { id: 3, name: 'JavaScript', src: '/assets/javascript.png' },
+      { id: 4, name: 'ReactJS', src: '/assets/reactJS.png' },
+      { id: 5, name: 'NextJS', src: '/assets/nextJS.png' },
+      { id: 6, name: 'API', src: '' },
+      { id: 7, name: 'CMS', src: '' },
+      { id: 8, name: 'Prismic', src: '/assets/prismic-io.jpg' },
+      { id: 9, name: 'PostgreSQL', src: '/assets/postgresql.png' },
+      { id: 10, name: 'NodeExpress', src: '/assets/nodeAndExpress.png' },
+      { id: 11, name: 'jQuery', src: '/assets/jQuery.png' },
    ]
    const StackFilter = (arr, ...params) => {
       let match = [...params]
@@ -26,15 +28,15 @@ export default function Home() {
       }
       return filteredArr
    }
-   const laraStack = StackFilter(Stack, 'css3', 'html5', 'javascript', 'react', 'next', 'prismic')
+   const laraStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript', 'ReactJS', 'NextS', 'CMS', 'Prismic')
       .map(item => item)
-   const rajStack = StackFilter(Stack, 'react', 'javascript')
+   const rajStack = StackFilter(stackData, 'ReactJS', 'JavaScript', 'CSS3', 'HTML5')
       .map(item => item)
-   const aicStack = StackFilter(Stack, 'react', 'three')
+   const aicStack = StackFilter(stackData, 'ReactJS', 'JavaScript', 'CSS3', 'HTML', 'API')
       .map(item => item)
-   const katStack = StackFilter(Stack, 'react', 'three')
+   const katStack = StackFilter(stackData, 'ReactJS', 'JavaScript', 'HTML', 'CSS3')
       .map(item => item)
-   const domStack = StackFilter(Stack, 'jquery', 'three',)
+   const domStack = StackFilter(stackData, 'jQuery', 'HTML5', 'CSS3')
       .map(item => item)
    
    

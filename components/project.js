@@ -11,7 +11,7 @@ export default function Project(props) {
          <a href={props.url}>{props.name}</a>
       </h2>
       {/* Stack Used */}
-      <h3>
+      <h3>Stack:&nbsp;
          {props.stack.map(item => 
             `${item.name} `
          )}
@@ -19,14 +19,14 @@ export default function Project(props) {
       {/* Stack Logos */} 
       <div className={style.logos}>
          {props.stack.map(item => 
-            <img key={item.id} src={item.src} height='50'/>
+            <img key={item.id} src={item.src} />
          )}
       </div>
          {/* Source Repo */} 
       <div className={style.github_logo}>
          <h3>Source:</h3>
          <a href={props.repo_link}>
-            <img src='/assets/github.png' height='50' />
+            <img src='/assets/github.png' />
          </a>
       </div>
          {/* Screen Shots - Desktop */} 
