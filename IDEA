@@ -6,3 +6,25 @@ Layout
          - Projects
       Blog
          - list of blog posts
+
+         const laraFilter = (arr, condition) => {
+      
+      let filteredArr = ['string']
+      for (let i = 0; i < arr.length; i++) {
+         if (condition) {
+            filteredArr.push(arr[i].id)
+         }
+      }
+      return filteredArr
+   }
+
+    const laraFilter = (arr, [param]) => {
+      
+      let filteredArr = ['string']
+      for (let i = 0; i < arr.length; i++) {
+         if (arr[i].id == 'react' || arr[i].id == 'three') {
+            filteredArr.push(arr[i].id)
+         }
+      }
+      return filteredArr
+   }

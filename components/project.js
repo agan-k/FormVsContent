@@ -2,36 +2,51 @@ import React from 'react'
 import Link from 'next/link'
 import style from './project.module.css'
 
-export default function Project() {
+export default function Project(props) {
+   console.log(props)
    return (
       <div className={style.container}>
+      {/* Project Name */}
       <h2>
-          <a href={props.url}>LaraBello.com</a>
+         <a href={props.url}>{props.name}</a>
       </h2>
-      <h3>Stack: ReactJS, NextJS, API (Prismic CMS), JavaScript, CSS</h3>
-         <div className={style.logos}>
-            {/* map trough images, make a list of relevant logos in 
-            index.js and pass to the corresponding project  */}
-         {props.logos}
+      {/* Stack Used */}
+      <h3>
+         {props.stack.map(item => 
+            `${item.name} `
+         )}
+      </h3>
+      {/* Stack Logos */} 
+      <div className={style.logos}>
+         {props.stack.map(item => 
+            <img key={item.id} src={item.src} height='50'/>
+         )}
+      </div>
          
-       </div>
-       <div className={style.github_logo}>
-          <h3>Source:</h3>
+         {/* Source Repo */} 
+         
+      <div className={style.github_logo}>
+         <h3>Source:</h3>
          <a href={props.repo_link}>
-            <img src='/assets/github.png' />
+            <img src='/assets/github.png' height='50' />
          </a>
-       </div>
-
-       <div className={style.screenshots}>
-          <div className={style.desktop_screenshots}>
-            {/* map trough images, make a list of relevant logos in 
-            index.js and pass to the corresponding project  */}
-            {props.desktopScreenShots}
+      </div>
+         
+         {/* Screen Shots - Desktop */} 
+         
+      <div className={style.screenshots}>
+         <div className={style.desktop_screenshots}>
+            {props.desktop_sshot.map((item, index) => 
+               <img key={index} src={item} height='100' />
+            )}
           </div>
+            
+            {/* Screen Shots - Mobile */} 
+            
           <div className={style.mobile_screenshots}>
-            {/* map trough images, make a list of relevant logos in 
-            index.js and pass to the corresponding project  */}
-            {props.mobileScreenShots}
+            {props.mobile_sshot.map((item, index) => 
+               <img key={index} src={item} height='100' />
+            )}
           </div>
        </div>
     </div>
