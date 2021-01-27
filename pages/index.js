@@ -3,8 +3,6 @@ import Project from '../components/project'
 
 export default function Home() {
 
-   
-
    const Stack = [
       { id: 1, name: 'html5', src: '/assets/html5.png' },
       { id: 2, name: 'css3', src: '/assets/css3.png' },
@@ -16,7 +14,6 @@ export default function Home() {
       { id: 8, name: 'nodeExpress', src: '/assets/nodeAndExpress.png' },
       { id: 9, name: 'jquery', src: '/assets/jQuery.png' },
    ]
-
    const StackFilter = (arr, ...params) => {
       let match = [...params]
       let filteredArr = []
@@ -29,9 +26,6 @@ export default function Home() {
       }
       return filteredArr
    }
-   
-   console.log(StackFilter(Stack, 'react', 'jquery', 'postgresql'))
-
    const laraStack = StackFilter(Stack, 'css3', 'html5', 'javascript', 'react', 'next', 'prismic')
       .map(item => item)
    const rajStack = StackFilter(Stack, 'react', 'javascript')
@@ -42,10 +36,11 @@ export default function Home() {
       .map(item => item)
    const domStack = StackFilter(Stack, 'jquery', 'three',)
       .map(item => item)
+   
+   
   return (
      <Layout>
         <h1>Current Projects</h1>
-
         <Project
            name='LaraBello.com'
            url='https://larabello.com'
@@ -54,7 +49,6 @@ export default function Home() {
            desktop_sshot={['/assets/screen_shots/lara_desktop1.jpg', '/assets/screen_shots/lara_desktop2.jpg']}
            tablet_sshot={['', '']}
            mobile_sshot={['', '']}
-           
         />
         <Project
            name='RajivJayaveera.com'
@@ -93,7 +87,6 @@ export default function Home() {
            tablet_sshot={['/assets/screen_shots/dom_tablet.jpg']}
            mobile_sshot={['/assets/screen_shots/dom_mobile.jpg', '/assets/screen_shots/dom_mobile1.jpg',]}
         />
-     
      </Layout>
   )
 }
