@@ -37,15 +37,22 @@ export default function Project(props) {
       <div className={style.screenshots}>
          <div className={style.desktop_screenshots}>
             {props.desktop_sshot.map((item, index) => 
-               <img key={index} src={item} height='100' />
+               <img key={index} src={item} width='200' />
             )}
           </div>
             
+            {/* Screen Shots - Tablet */} 
+            
+          <div className={style.tablet_screenshots}>
+            {props.tablet_sshot.map((item, index) => 
+               <img key={index} src={item} width='70' />
+            )}
+          </div>
             {/* Screen Shots - Mobile */} 
             
           <div className={style.mobile_screenshots}>
             {props.mobile_sshot.map((item, index) => 
-               <img key={index} src={item} width='70' />
+               <img key={index} src={item} width='30' />
             )}
           </div>
        </div>

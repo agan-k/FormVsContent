@@ -81,6 +81,7 @@ export default function Home() {
            stack={katStack}
            repo_link='https://github.com/agan-k/katarinaolujic'
            desktop_sshot={['/assets/screen_shots/kat1_desktop.png', '/assets/screen_shots/kat1_desktop.png']}
+           tablet_sshot={['', '']}
            mobile_sshot={['', '']}
         />
         <Project
@@ -88,9 +89,9 @@ export default function Home() {
            url='https://dominiquecarre.fr'
            stack={domStack}
            repo_link=''
-           desktop_sshot={['/assets/screen_shots/aic_desktop.jpg', '/assets/screen_shots/aic_desktop1.jpg']}
+           desktop_sshot={['/assets/screen_shots/dom_desktop.jpg']}
            tablet_sshot={['/assets/screen_shots/dom_tablet.jpg']}
-           mobile_sshot={['/assets/screen_shots/aic_mobile.png', '/assets/screen_shots/aic_mobile1.png',]}
+           mobile_sshot={['/assets/screen_shots/dom_mobile.jpg', '/assets/screen_shots/dom_mobile1.jpg',]}
         />
      
      </Layout>
