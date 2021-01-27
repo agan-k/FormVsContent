@@ -45,7 +45,7 @@ export default function Project(props) {
             
           <div className={style.mobile_screenshots}>
             {props.mobile_sshot.map((item, index) => 
-               <img key={index} src={item} height='100' />
+               <img key={index} src={item} width='70' />
             )}
           </div>
        </div>
