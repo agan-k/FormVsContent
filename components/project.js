@@ -29,25 +29,26 @@ export default function Project(props) {
             <img src='/assets/github.png' />
          </a>
       </div>
-         {/* Screen Shots - Desktop */} 
       <div className={style.screenshots}>
+         {/* Screen Shots - Desktop */} 
          <div className={style.desktop_screenshots}>
             {props.desktop_sshot.map((item, index) => 
                <img key={index} src={item} width='200' />
             )}
-          </div>
-            {/* Screen Shots - Tablet */} 
-          <div className={style.tablet_screenshots}>
-            {props.tablet_sshot.map((item, index) => 
-               <img key={index} src={item} width='70' />
-            )}
-          </div>
-            {/* Screen Shots - Mobile */} 
-          <div className={style.mobile_screenshots}>
-            {props.mobile_sshot.map((item, index) => 
-               <img key={index} src={item} width='30' />
-            )}
-          </div>
+         </div>
+         {/* Screen Shots - Tablet && Mobile */} 
+         <div className={style.tablet_and_mobile_container}>
+            <div className={style.tablet_screenshots}>
+               {props.tablet_sshot.map((item, index) => 
+                  <img key={index} src={item} width='70' />
+               )}
+            </div>
+            <div className={style.mobile_screenshots}>
+               {props.mobile_sshot.map((item, index) => 
+                  <img key={index} src={item} width='30' />
+               )}
+            </div>
+         </div>
        </div>
     </div>
 
