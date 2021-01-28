@@ -29,6 +29,9 @@ a {
   text-decoration: none;
   transition: .7s;
 }
+.active a{
+   color:sandybrown;
+ }
 a:hover {
   color: rgb(144, 159, 209);
   text-decoration: none;
