@@ -9,7 +9,7 @@ export default function Layout({ children, title = 'FormVsContent' }) {
    const linkData = [
       {name: 'home', link: '/'},
       {name: 'blog', link: '/blogHome'},
-      {name: 'resume', link: '/resume'},
+      {name: 'about/resume', link: '/about'},
    ]
    const linksList = linkData.map(item =>
       <li key={item.name} className={router.pathname == `${item.link}` ? 'active' : ''}>

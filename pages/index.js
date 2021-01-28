@@ -1,6 +1,7 @@
 import Layout from '../components/layout'
 import Project from '../components/project'
 import style from './index.module.css'
+import Head from 'next/head'
 
 export default function Home() {
 
@@ -42,8 +43,13 @@ export default function Home() {
    
    
    return (
-     
     <Layout>
+     <Head>
+            <title>FC</title>
+            <link rel="icon" href="/favicon.ico" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"/>
+         </Head>
       <div className={style.container}>
          <div className={style.badge}>
             <img src='/assets/sailin.jpg'/>
