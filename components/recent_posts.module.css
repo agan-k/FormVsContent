@@ -1,22 +1,48 @@
 .posts_container {
    display: flex;
    justify-content: space-between;
-   width: 95%;
-   height: 15rem;
+   align-items: flex-start;
+   width: 100%;
+   
    margin: 0 auto;
    text-align: initial;
 }
 .recent_post {
+   position: relative;
    background-color: white;
    width: 32%;
-   height: 90%;
+   min-height: 15rem;
 }
 .recent_post h2 {
+   font-size: 1.3rem;
+   line-height: 1.5rem;
    margin: 1rem;
+   color: #689FF1
 }
 .recent_post p {
    margin: 1rem;
 }
 .recent_post a {
+   font-size: 2rem;
+   font-weight: 200;
+   position: absolute;
+   bottom: 0;
+   right: 0;
    margin: 1rem;
+   color: #689FF1;
+   display: block;
+   text-align: right;
+}
+.recent_post a:hover {
+   margin: 1rem;
+   color: initial;
+}
+@media only screen and (max-width: 414px){
+   .posts_container {
+      flex-wrap: wrap;
+   }
+   .recent_post {
+      width: 95%;
+      margin: .5rem auto;
+   }
 }

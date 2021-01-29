@@ -6,7 +6,7 @@ import style from './recent_posts.module.css'
 export default function RecentPosts() {
 
    const recent_postsData = [
-      {title: 'Some Title Here', description: 'Description Here...', link: 'posts/first-blogpost'},
+      {title: 'Interactive Image Gallery With React Modal', description: 'No frills image gallery with focus on simple conditional rendering of React Modal component.', link: 'posts/first-blogpost'},
       {title: 'Some Title Here', description: 'Description Here...', link: 'posts/first-blogpost'},
       {title: 'Some Title Here', description: 'Description Here...', link: 'posts/first-blogpost'},
    ]
@@ -15,7 +15,10 @@ export default function RecentPosts() {
          <h2>{post.title}</h2>
          <p>{post.description}</p>
          <Link href={post.link}>
-            <a>more..</a>
+            <a>
+               {/* &#8594; */}
+               &#8600;
+            </a>
          </Link>
       </div>
       )

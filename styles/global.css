@@ -10,8 +10,8 @@ body {
                Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI,Segoe UI Emoji,Segoe UI Symbol,
                Noto Color Emoji;
   font-size: 18px;
+  color: #495057;
   line-height: 1.3rem;
-  color: rgba(58, 56, 56, 0.452);
   background-color: rgb(250, 248, 248);
 }
 h1 {
@@ -28,9 +28,7 @@ h3 {
    font-size: 1.5rem;
    margin: 2rem 0;
 }
-h1, h2, h3, p {
-   /* margin: 1rem; */
-}
+
 p {
    line-height: 1.5rem;
    margin: 1.5rem 0;
@@ -43,21 +41,14 @@ li {
 
    /* margin: .3rem; */
 }
-
-
 a {
-  color: rgba(144, 189, 209, 0.8);
-  text-decoration: none;
-  transition: .7s;
-}
-.active a{
-   color:sandybrown;
- }
-a:hover {
-  color: rgb(144, 159, 209);
+  color: #495057;  
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+* {
+   border-radius: 5px;
 }

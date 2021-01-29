@@ -1,4 +1,5 @@
 .container {
+   width: 100%;
    background-color:white;
    margin: 2rem 0;
    padding: 2rem;
@@ -6,15 +7,21 @@
 .container h3 {
    padding: .2rem;
 }
+.container h2 a {
+   padding: 1.5rem;
+   /* font-size: 2rem; */
+   transition: .7s;
+}
 .container h2 {
    padding: 1.5rem;
+   /* font-size: 2rem; */
+   transition: .7s;
 }
 .container h2 a:hover {
    font-size: 3rem;
-   transition: .7s;
 }
 .container h3 {
-   color: black;
+   /* color: black; */
 }
 .logos img {
    height: 2rem;
@@ -38,24 +45,65 @@
    border: .1px solid grey;
 }
 .tablet_and_mobile_container {
-   width: 100%;
+   width: 80%;
+   margin: 0 auto;
    text-align: center;
    display: flex;
    justify-content: center;
    align-items: center;
 }
 .tablet_screenshots {
-   /* width: 50%; */
+   width: 50%;
+   text-align: right;
 }
 .tablet_screenshots img {
-   width: 14rem;
+   width: 60%;
    margin: 0 .1rem;
 }
 .mobile_screenshots {
    /* display: flex; */
-   /* width: 50%; */
+   width: 50%;
+   text-align: left;
+
 }
 .mobile_screenshots img {
-   width: 6rem;
+   width: 25%;
    margin: 0 .1rem;
+}
+@media only screen and (max-width: 414px){
+   .container h2 {
+      padding-bottom: 0;
+   }
+   .container h2 a {
+      padding-bottom: .5rem;
+      font-size: 1rem;
+      color: #689FF1;
+   }
+   .container h3 {
+      padding: .5rem;
+      font-weight: 200;
+      /* color: red; */
+   }
+   .container {
+      background-color:white;
+      margin: 1rem 0;
+      padding: 0;
+   }
+   .tablet_and_mobile_container {
+      display: initial;
+   }
+   .desktop_screenshots img {
+      /* display: block */
+      width: 80%;
+      margin: .3rem auto;
+      border: .1px solid grey;
+   }
+   .tablet_screenshots {
+      width: 100%;
+      text-align: center;
+   }
+   .mobile_screenshots {
+      width: 100%;
+      text-align: center;
+   }
 }

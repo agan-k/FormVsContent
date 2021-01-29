@@ -66,7 +66,7 @@ export default function Home() {
             stack={laraStack}
             repo_link='https://github.com/agan-k/lara'
             desktop_sshot={['/assets/screen_shots/lara_desktop1.jpg', '/assets/screen_shots/lara_desktop2.jpg']}
-            tablet_sshot={['', '']}
+            // tablet_sshot={['', '']}
             mobile_sshot={['', '']}
          />
          <Project
@@ -75,7 +75,7 @@ export default function Home() {
             stack={rajStack}
             repo_link='https://github.com/agan-k/raj'
             desktop_sshot={['/assets/screen_shots/raj_desktop.jpg', '/assets/screen_shots/raj_desktop1.jpg']}
-            tablet_sshot={['', '']}
+            // tablet_sshot={['', '']}
             mobile_sshot={['/assets/screen_shots/raj_mobile.jpg', '/assets/screen_shots/raj_mobile1.jpg',
             '/assets/screen_shots/raj_mobile2.jpg', '/assets/screen_shots/raj_mobile3.jpg',]}
          />
@@ -94,7 +94,7 @@ export default function Home() {
             stack={katStack}
             repo_link='https://github.com/agan-k/katarinaolujic'
             desktop_sshot={['/assets/screen_shots/kat_desktop1.png', '/assets/screen_shots/kat_desktop2.png']}
-            tablet_sshot={['', '']}
+            // tablet_sshot={['', '']}
             mobile_sshot={['', '']}
          />
          <Project

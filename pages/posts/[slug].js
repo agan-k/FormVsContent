@@ -2,7 +2,6 @@ import React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown/with-html'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import Gist from 'react-gist'
 import Layout from '../../components/layout'
 
 const CodeBlock = ({ language, value }) => {
@@ -17,7 +16,6 @@ export default function Post({ content, data }) {
   return (
      <Layout>
         <div className='container'>
-        {/* < Gist id='agan-k/ff3dd66c043385b4cb06d55cb26030a7'/> */}
 
             {/* <div className='post-list'>
             <BlogHome />
