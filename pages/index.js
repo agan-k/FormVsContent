@@ -2,6 +2,7 @@ import Layout from '../components/layout'
 import Project from '../components/project'
 import style from './index.module.css'
 import Head from 'next/head'
+import RecentPosts from '../components/recent_posts'
 
 export default function Home() {
 
@@ -56,6 +57,8 @@ export default function Home() {
             <h2>Koran Agan</h2>
             <h3>Web Developer | Software Engineer</h3>
          </div>
+            <h1>Recent Posts</h1>
+         <RecentPosts position='top homepage'/>
          <h1>Current Projects</h1>
          <Project
             name='LaraBello.com'

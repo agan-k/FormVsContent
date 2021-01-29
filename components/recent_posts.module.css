@@ -1,0 +1,22 @@
+.posts_container {
+   display: flex;
+   justify-content: space-between;
+   width: 95%;
+   height: 15rem;
+   margin: 0 auto;
+   text-align: initial;
+}
+.recent_post {
+   background-color: white;
+   width: 32%;
+   height: 90%;
+}
+.recent_post h2 {
+   margin: 1rem;
+}
+.recent_post p {
+   margin: 1rem;
+}
+.recent_post a {
+   margin: 1rem;
+}

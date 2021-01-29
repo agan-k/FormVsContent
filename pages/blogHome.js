@@ -13,7 +13,7 @@ const linksList = linkData.map(item =>
    </Link>
    )
 
-export default function blogHome() {
+export default function BlogHome() {
 
    const router = useRouter()
    const linkData = [
