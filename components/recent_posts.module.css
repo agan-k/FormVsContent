@@ -13,13 +13,18 @@
    width: 32%;
    min-height: 15rem;
 }
-.recent_post h2 {
-   font-size: 1.3rem;
-   line-height: 1.5rem;
+.recent_post img {
+   width: 60%;
+   display: block;
    margin: 1rem;
-   color: #689FF1
+}
+.posts_container h2 {
+   font-size: 1rem;
+   margin: 1rem;
+   color: #689FF1;
 }
 .recent_post p {
+   font-size: .9rem;
    margin: 1rem;
 }
 .recent_post a {
@@ -45,4 +50,16 @@
       width: 95%;
       margin: .5rem auto;
    }
+   /* .posts_container h2 {
+      font-size: .2rem;
+      line-height: initial;
+      padding: .5rem;
+      margin: .1rem;
+      color: #689FF1;
+      color: red;
+   }
+   .recent_post p {
+      font-size: .9rem;
+      margin: 1rem;
+   } */
 }

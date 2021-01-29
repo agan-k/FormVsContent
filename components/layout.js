@@ -1,8 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
+
 import style from './layout.module.css'
+import stackData from '../data/stackData'
 
 export default function Layout({ children, title = 'FormVsContent' }) {
    const router = useRouter()
@@ -30,8 +32,15 @@ export default function Layout({ children, title = 'FormVsContent' }) {
          <main className={style.main}>
             {children}
          </main>
-         <footer>
-
+         <footer className={style.footer}>
+            <div className={style.logos}>
+            {stackData.map(logo => 
+               <img src={logo.src}/>
+            )}
+            </div>
+            <p>
+               FormVsContent&copy;2020
+            </p>
          </footer>
          
       </div>

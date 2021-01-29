@@ -1,24 +1,14 @@
 import Layout from '../components/layout'
-import Project from '../components/project'
-import style from './index.module.css'
 import Head from 'next/head'
+
+import Project from '../components/project'
 import RecentPosts from '../components/recent_posts'
+import style from './index.module.css'
+import stackData from '../data/stackData'
+
 
 export default function Home() {
 
-   const stackData = [
-      { id: 1, name: 'HTML5', src: '/assets/html5.png' },
-      { id: 2, name: 'CSS3', src: '/assets/css3.png' },
-      { id: 3, name: 'JavaScript', src: '/assets/javascript.png' },
-      { id: 4, name: 'ReactJS', src: '/assets/reactJS.png' },
-      { id: 5, name: 'NextJS', src: '/assets/nextJS.png' },
-      { id: 6, name: 'API', src: '' },
-      { id: 7, name: 'CMS', src: '' },
-      { id: 8, name: 'Prismic', src: '/assets/prismic-io.jpg' },
-      { id: 9, name: 'PostgreSQL', src: '/assets/postgresql.png' },
-      { id: 10, name: 'NodeExpress', src: '/assets/nodeAndExpress.png' },
-      { id: 11, name: 'jQuery', src: '/assets/jQuery.png' },
-   ]
    const StackFilter = (arr, ...params) => {
       let match = [...params]
       let filteredArr = []
@@ -50,7 +40,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"/>
-         </Head>
+     </Head>
       <div className={style.container}>
          <div className={style.badge}>
             <img src='/assets/sailin.jpg'/>

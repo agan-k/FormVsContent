@@ -67,7 +67,7 @@
 
 }
 .mobile_screenshots img {
-   width: 25%;
+   width: 20%;
    margin: 0 .1rem;
 }
 @media only screen and (max-width: 414px){
