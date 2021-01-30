@@ -9,6 +9,7 @@
 }
 .container h2 a {
    padding: 1.5rem;
+   color: #689FF1;
    /* font-size: 2rem; */
    transition: .7s;
 }
@@ -77,7 +78,7 @@
    .container h2 a {
       padding-bottom: .5rem;
       font-size: 1rem;
-      color: #689FF1;
+      
    }
    .container h3 {
       padding: .5rem;
