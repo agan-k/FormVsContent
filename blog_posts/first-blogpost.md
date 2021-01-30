@@ -1,7 +1,8 @@
 ---
-image: '/assets/content/posts/react.png'
+image: '/assets/reactJS.png'
 title: "Interactive Image Gallery With React Modal"
-date: "2021-01-25"
+date: "January 2021 by"
+author: 'K. Agan'
 ---
 
 

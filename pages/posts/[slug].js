@@ -25,7 +25,7 @@ export default function Post({ content, data }) {
                   <img src={frontmatter.image}/>
                   <h1>{frontmatter.title}</h1>
                </div>
-               <p>{frontmatter.date}</p>
+               <span className='date'>{frontmatter.date}</span>&nbsp;<span className='author'>{frontmatter.author}</span>
                <ReactMarkdown
                   escapeHtml={false}
                   source={content}
@@ -60,13 +60,27 @@ export default function Post({ content, data }) {
             }
             .title-image img {
                height: 4rem;
+               border-radius: 15%;
+               transform: rotate(-8deg);
+               margin-left: -1rem;
+               box-shadow: 3px 2px 5px 0px grey;
+               border: 2px solid rgb(240, 226, 202);
             }
-            
             .post-container h1 {
                font-size: 2rem;
                font-weight: 700;
                line-height: initial;
-               // margin: 4rem 0; 
+               margin: 2rem 0 0 1rem;
+            }
+            .post-container span {
+               font-size: .8rem;
+            }
+            .date {
+               font-style: italic;
+               margin-left: 4rem;
+            }
+            .author {
+               font-weight: 700;
             }
             
          `}</style>
