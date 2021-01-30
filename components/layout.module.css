@@ -28,6 +28,8 @@
  }
  .header a {
     padding: 1rem;
+    color: #495057;  
+    text-decoration: none;
  }
  .header a:hover {
    /* color: rgb(144, 159, 209); */

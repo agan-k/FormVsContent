@@ -30,11 +30,12 @@
 .recent_post a {
    font-size: 2rem;
    font-weight: 200;
+   color: #689FF1;
+   text-decoration: none;
    position: absolute;
    bottom: 0;
    right: 0;
    margin: 1rem;
-   color: #689FF1;
    display: block;
    text-align: right;
 }

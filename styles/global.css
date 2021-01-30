@@ -37,8 +37,8 @@ li {
    list-style: initial;
 }
 a {
-  color: #495057;  
-  text-decoration: none;
+   color: #689FF1;  
+  text-decoration: underline;
 }
 
 * {

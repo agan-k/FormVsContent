@@ -14,6 +14,8 @@
    margin: 2rem;
 }
 .article_title a {
+   color: #495057;  
+   text-decoration: none;
 }
 .container a:hover {
    color: initial;
