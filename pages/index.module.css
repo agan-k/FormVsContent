@@ -6,6 +6,7 @@
 .container h1 {
    font-size: 3rem;
    font-weight: 500;
+   margin: 4rem 0;
    letter-spacing: .5rem;
    color: #495057;
    text-align: left;

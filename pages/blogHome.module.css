@@ -1,0 +1,21 @@
+.container {
+   min-height: 70vh;
+   width: 95%;
+   margin: 0 auto;
+}
+.container h1 {
+   font-size: 2.5rem;
+   margin: 4rem 0;
+}
+.article_title {
+   font-size: 1.6rem;
+   list-style: none;
+   color: #689FF1;
+   margin: 2rem;
+}
+.article_title a {
+}
+.container a:hover {
+   color: initial;
+   transition: .7s;
+}

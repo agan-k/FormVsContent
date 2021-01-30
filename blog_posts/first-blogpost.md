@@ -1,5 +1,6 @@
 ---
-title: "First Blogpost H1"
+image: '/assets/content/posts/react.png'
+title: "Interactive Image Gallery With React Modal"
 date: "2021-01-25"
 ---
 

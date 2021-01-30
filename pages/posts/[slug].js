@@ -11,7 +11,7 @@ const CodeBlock = ({ language, value }) => {
 export default function Post({ content, data }) {
   // This holds the data between `---` from the .md file
    const frontmatter = data
-   console.log(data)
+   console.log(frontmatter)
 
   return (
      <Layout>
@@ -21,12 +21,16 @@ export default function Post({ content, data }) {
             <BlogHome />
             </div> */}
             <div className='post-container'>
-            <h1>{frontmatter.title}</h1>
-              <ReactMarkdown
-                 escapeHtml={false}
-                 source={content}
-                 renderers={{ code: CodeBlock }}
-              />
+               <div className='title-image'>
+                  <img src={frontmatter.image}/>
+                  <h1>{frontmatter.title}</h1>
+               </div>
+               <p>{frontmatter.date}</p>
+               <ReactMarkdown
+                  escapeHtml={false}
+                  source={content}
+                  renderers={{ code: CodeBlock }}
+               />
               
             </div>
         </div>
@@ -51,13 +55,18 @@ export default function Post({ content, data }) {
                text-align: initial;
                // background-color: white;
             }
-            // .container h1 {
-            //    margin: 2rem 0 4rem 0;
-            //    text-align: center;
-            //   }
-            .container h2 {
-               margin: 4rem;
-               color: red;
+            .title-image {
+               display: flex;
+            }
+            .title-image img {
+               height: 4rem;
+            }
+            
+            .post-container h1 {
+               font-size: 2rem;
+               font-weight: 700;
+               line-height: initial;
+               // margin: 4rem 0; 
             }
             
          `}</style>
