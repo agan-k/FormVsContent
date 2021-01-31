@@ -3,10 +3,18 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown/with-html'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import Layout from '../../components/layout'
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'; //changing 'esm' distribution to 'cjs' fixed the SyntaxError: Unexpected token 'export'
 
 const CodeBlock = ({ language, value }) => {
-   return <SyntaxHighlighter language={language}>{value}</SyntaxHighlighter>;
- };
+   return (
+      <SyntaxHighlighter
+         language={language}
+         style={vscDarkPlus}
+      >
+         {value}
+      </SyntaxHighlighter>
+   )
+ }
 
 export default function Post({ content, data }) {
 
@@ -36,10 +44,7 @@ export default function Post({ content, data }) {
         </div>
         <style jsx>{`
             .container {
-               color: #495057;
-               font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Roboto,
-               Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI,Segoe UI Emoji,Segoe UI Symbol,
-               Noto Color Emoji;
+            
             }
             .post-list {
                width: 22%;
@@ -80,11 +85,15 @@ export default function Post({ content, data }) {
                border: 2px solid rgb(240, 226, 202);
             }
             .post-body {
+               font-weight: 400;
+               font-size: .9rem;
+               width: 70%;
                margin-left: 6rem;
             }
             .post-body p a {
                color: red;
             }
+            
             
          `}</style>
         

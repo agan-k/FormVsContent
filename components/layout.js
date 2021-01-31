@@ -20,6 +20,7 @@ export default function Layout({ children, title = 'FormVsContent' }) {
          </Link>
       </li>
       )
+      
    return (
       <div className={style.container}>
          <Head>
@@ -39,7 +40,7 @@ export default function Layout({ children, title = 'FormVsContent' }) {
             )}
             </div>
             <p>
-               FormVsContent&copy;2020
+               FormVsContent&copy;2021
             </p>
          </footer>
          
