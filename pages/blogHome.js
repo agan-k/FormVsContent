@@ -28,7 +28,6 @@ export default function BlogHome() {
             <ul>
                {linksList}
             </ul>
-            <Test/>
             {/* <h2>Tech</h2> */}
             
 

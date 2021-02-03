@@ -165,18 +165,165 @@ From the react-intro directory:
 ```zsh
 ~ npm run start
 ```
-Open http://localhost:3000/ in your browser.
+Go to your browser and navigate to  
+http://localhost:3000/
 <img class='markdown-img' src='/assets/content/posts/react_article/check.png' />
 
-
+Now that we are connected to our local host, we can start developing. Lets try and make some components.
 
 
 ## Creating Components 
-- parent 
-- child 
-- passing static content
+<hr/>
+
+<h3>Top Level Component</h3>
+
+At the moment we are rendering just a heading in our <span class='command'>index.js</span> file. Let's create our top level component and use it to consolidate all of the elements from our app into a single place. Then, we can pass this top level component as the first argument in our <span class='command'>render()</span> method. By convention, this top level component is named *App.js* but for our demostrative pourposes lets name it *Parent.js*.
+
+Let's touch *Parent.js* file in the */src* folder. From the react-intro directory:
+
+```zsh
+~ cd src && touch Parent.js
+```
+In our editor, inside of the *Parent.js* file, let's first import the React dependency and make the library available to this file.
+
+```jsx
+import React from 'react'
+```
+Next, let's create our component by making a function and naming it *Parent*.
+
+```jsx
+function Parent() {
+   return()
+}
+```
+At this point we can guess that, by React convention, the component names are capitalized.
+
+To return React elements in our function we simply place them inside of the <span class='command'>return()</span> statement.
+
+```jsx
+function Parent() {
+   return(
+      <div>
+         <h1>My Component</h1>
+         <h3>Check, 1, 2...</h3>
+      </div>
+   )
+}
+```
+Notice that we wrapped the two headings in to a *div* element. This is because, as we mentioned in [part one](/posts/react-introduction-pt1), there can only be one parent element in side of a return statement. This pattern of consolidation always stands as we dig deeper in to the cluster of our application.
+
+One last thisng we need to do before we pass our Parent component in <span class='command'>ReactDOM.render()</span>  is make sure we export it.
+
+```jsx
+export default Parent
+```
+
+Our */src/Parent.js* file should look like this:
+
+```jsx
+import React from 'react'
+
+function Parent() {
+   return(
+      <div>
+         <h1>Parent Component</h1>
+         <h3>Check, 1, 2...</h3>
+      </div>
+   )
+}
+export default Parent
+```
+
+We can now pass the Parent component in our <span class='command'>index.js</span> file. First, let's import it.
+```jsx
+import Parent from './Parent'
+```
+Then, we can pass it in our <span class='command'>render()</span> method.
+```jsx
+import React from "react"
+import ReactDOM from "react-dom"
+import Parent from './Parent'
+
+ReactDOM.render(<Parent />, document.getElementById('root'))
+```
+
+Your browser should now display the *Parent* component with all of its elements.
+
+<img class='markdown-img' src='/assets/content/posts/react_article/parent_check.png' />
+
+
+<h3>Child Component</h3>
+
+Now that we have successfully rendered our top level component, let's create more content by adding a child component.
+
+From the react-intro directory:
+
+```zsh
+~ cd src && touch Child.js
+```
+
+In our editor, let's follow the same process as we did with *Parent.js*.
+
+- import dependencies
+- create <span class='command'>function Child()</span> with a <span class='command'>return()</span> statement in the body
+- export the <span class='command'>function Child()</span>
+
+```jsx
+import React from 'react'
+
+function Child() {
+   return (
+      <div>
+         <h2>Child Component</h2>
+         <p>Content of Child Component is here:</p>
+      </div>
+   )
+}
+export default Child
+```
+
+After adding some content, in this case a heading and a paragraph, let's render our new Child component inside of the Parent component. First we need to import it.
+
+```jsx
+import Child from './Child'
+```
+
+And finally, right underneath *`<hr/>`* tag (just to visualy separate the content of the two components), we pass it inside of the <span class='command'>return()</span> statement.
+
+```jsx
+import React from 'react'
+import Child from './Child'
+
+function Parent() {
+   return (
+      <div>
+         <h1>Parent Component</h1>
+         <h3>Check, 1, 2...</h3>
+
+         <hr/>
+
+         <Child />
+
+      </div>
+   )
+}
+export default Parent
+```
+If your server is not running already, restart it from the react-intro directory.
+
+```zsh
+~ npm run start
+```
+
+And back at your browser at http://localhost:3000 we should see the elements (separated by the horizontal rule) of both Parent and Child components.
+
+<img class='markdown-img' src='/assets/content/posts/react_article/passing_child.png' />
+
+And so we have managed to pass some static content from one component to another. Now let's explore how we can use React Props to set the ground for moving some content around in a more programmatic fashion.
 
 ## Passing Props
+<hr/>
+In this part 
 
 ## Conditional Rendering
 
