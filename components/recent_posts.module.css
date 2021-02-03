@@ -11,12 +11,12 @@
    position: relative;
    background-color: white;
    width: 32%;
-   min-height: 15rem;
+   min-height: 20rem;
 }
 .recent_post img {
-   width: 60%;
+   width: 100%;
    display: block;
-   margin: 1rem;
+   padding: 1rem;
 }
 .posts_container h2 {
    font-size: 1rem;
@@ -28,10 +28,13 @@
    margin: 1rem;
 }
 .recent_post a {
-   font-size: 2rem;
-   font-weight: 200;
+   
    color: #689FF1;
    text-decoration: none;
+}
+.recent_post span {
+   font-size: 2rem;
+   font-weight: 200;
    position: absolute;
    bottom: 0;
    right: 0;
@@ -40,8 +43,10 @@
    text-align: right;
 }
 .recent_post a:hover {
-   margin: 1rem;
    color: initial;
+}
+.recent_post span:hover {
+   /* margin: 1rem; */
 }
 @media only screen and (max-width: 414px){
    .posts_container {

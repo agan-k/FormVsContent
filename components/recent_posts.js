@@ -11,12 +11,18 @@ export default function RecentPosts() {
    const recent_posts = recent_postsData.map(post =>
       <div className={style.recent_post}>
          <img src={post.img} />
-         <h2>{post.title}</h2>
+         <h2>
+            <Link href={post.link}>
+               {/* <a> */}
+               {post.title}
+               {/* </a> */}
+            </Link>
+         </h2>
          <p>{post.description}</p>
          <Link href={post.link}>
             <a>
-               {/* &#8594; */}
-               &#8600;
+               <span>&#8594;</span>
+               {/* <span>&#8600;</span> */}
             </a>
          </Link>
       </div>

@@ -1,23 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import Layout from '../components/layout'
 import style from './blogHome.module.css'
 import { render } from 'react-dom'
 
-const linkData = [
-   {link: 'posts/first-blogpost', name: 'first-blogpost'},
-   {link: 'posts/second-blogpost', name: 'second-blogpost'}
-]
-const linksList = linkData.map(item =>
-   <Link href={item.link}>
-      <a>{item.name}</a>
-   </Link>
-)
-
 export default function BlogHome() {
 
-   const router = useRouter()
    const linkData = [
       {link: 'posts/first-blogpost', name: 'Interactive Image Gallery With React Modal'},
       {link: 'posts/second-blogpost', name: 'second-blogpost'}
@@ -40,6 +28,7 @@ export default function BlogHome() {
             <ul>
                {linksList}
             </ul>
+            <Test/>
             {/* <h2>Tech</h2> */}
             
 
