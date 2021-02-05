@@ -1,23 +1,38 @@
 .container {
    min-height: 70vh;
-   width: 95%;
-   margin: 0 auto;
+   width: 100%;
+   margin: 0;
 }
-.container h1 {
-   font-size: 2.5rem;
-   margin: 4rem 0;
+.post_link_container {
+   position: relative;
+   display: block;
+   width: 100%;
+   min-height: 10rem;
+   padding: .8rem;
+   background-color: white;
+   margin: 2rem 0;
+}
+.img_mask {
+   width: 80%;
+   height: 20%;
+   overflow: hidden;
+}
+.img_mask img {
+   width: 100%;
 }
 .article_title {
-   font-size: 1.6rem;
+   /* position: absolute; */
+   /* bottom: 0; */
+   font-size: 1.5rem;
+   line-height: 1.5rem;
+   /* text-align: center; */
    list-style: none;
-   color: #689FF1;
-   margin: 2rem;
+   margin: .2rem;
 }
 .article_title a {
-   color: #495057;  
+   color: #689FF1;  
    text-decoration: none;
 }
 .container a:hover {
-   color: initial;
-   transition: .7s;
+   color: #495057;
 }

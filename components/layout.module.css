@@ -51,12 +51,14 @@
    height: min-content;
    width: 100%;
    padding: 0;
+   margin-top: 2rem;
    background-color: white;
  }
  .footer p {
     text-align: center;
     opacity: .4;
     padding-bottom: 1rem;
+    margin-bottom: 0;
  }
  .logos {
    display: flex;
