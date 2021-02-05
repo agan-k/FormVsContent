@@ -17,7 +17,7 @@ So before going any further, here is a short (bare minimum) list which contains 
 - DOM (HTML)
 - Basic data types (*javascript*)
 - Functions (*javascript*)
-- Conditionals (*javascript*)
+- Conditional operator (*javascript*)
 - Logical operators (*javascript*)
 - Loops (*javascript*)
 
