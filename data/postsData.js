@@ -1,9 +1,9 @@
 const recent_postsData = [
    {
-      title: 'Introduction to React - A Somewhat Personal Jurney trough a Powerhouse - Pt.1',
-      description: 'Description Here...',
-      img: '',
-      link: 'posts/first-blogpost'
+      title: 'Understanding Recursion',
+      description: ``,
+      img: '/assets/content/posts/recursion_article/javascript_rectang.webp',
+      link: 'posts/javascript-understanding-recursion'
    },
    {
       title: 'Conditional Rendering in React - A Somewhat Personal Jurney trough a Powerhouse - Pt.2',
