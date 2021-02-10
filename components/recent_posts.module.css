@@ -11,12 +11,22 @@
    position: relative;
    background-color: white;
    width: 32%;
-   min-height: 20rem;
+   min-height: 25rem;
+   opacity: .6;
+   cursor: pointer;
+   border: 1px solid rgba(128, 128, 128, 0);
+   transition: inherit;
+
+}
+.recent_post:hover {
+   opacity: 1;
+   border: 1px solid rgba(128, 128, 128, 0.308);
 }
 .recent_post img {
    width: 100%;
    display: block;
    padding: 1rem;
+   /* opacity: .6; */
 }
 .posts_container h2 {
    font-size: 1rem;
@@ -41,9 +51,6 @@
    margin: 1rem;
    display: block;
    text-align: right;
-}
-.recent_post a:hover {
-   color: initial;
 }
 .recent_post span:hover {
    /* margin: 1rem; */

@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import style from './project.module.css'
 
 export default function Project(props) {

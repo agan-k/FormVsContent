@@ -10,23 +10,26 @@ export default function RecentPosts() {
   
    const recent_posts = postsData.map((post, index) =>
       index < 3 ?
+         <Link href={post.link}>
          <div className={style.recent_post}>
             <img src={post.img} />
             <h2>
-               <Link href={post.link}>
-                  <a>
+               {/* <Link href={post.link}> */}
+                  {/* <a> */}
                   {post.title}
-                  </a>
-               </Link>
+                  {/* </a> */}
+               {/* </Link> */}
             </h2>
             <p>{post.description}</p>
-            <Link href={post.link}>
+            {/* <Link href={post.link}> */}
                <a>
                   <span>&#8594;</span>
                   {/* <span>&#8600;</span> */}
                </a>
-            </Link>
-         </div> : ''
+            {/* </Link> */}
+            </div>
+          </Link>
+          : ''
       )
    return (
       <div className={style.posts_container}>

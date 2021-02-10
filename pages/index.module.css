@@ -4,55 +4,20 @@
    text-align: center;
 }
 .container h1 {
-   font-size: 3rem;
-   font-weight: 500;
-   margin: 4rem 0;
-   letter-spacing: .5rem;
-   color: #495057;
+   font-size: 4rem;
+   font-weight: 900;
+   color: rgb(107, 107, 110);
+   padding: 4rem 0;
+   letter-spacing: .3rem;
    text-align: left;
 }
-.container h2 {
-   margin-bottom: 0;
-}
-.container h3 {
-   font-size: 1rem;
-   margin: 0;
-}
-.badge {
-   width: 100%;
-   margin: 4rem 0;
-}
-.badge img {
-   width: 10%;
-   border-radius: 15%;
-   transform: rotate(-8deg);
-   margin-left: -1rem;
-   box-shadow: 3px 2px 5px 0px grey;
-   border: 2px solid rgb(240, 226, 202);
-}
-.badge h2 {
-   text-transform: uppercase;
-   font-size: 1rem;
-   padding: .5rem;
-   margin: 1rem 0 0 0;
-}
+
+
 @media only screen and (max-width: 414px) {
    .container h1 {
-      text-align: center;
       font-size: 2rem;
-      font-weight: 400;
-      margin: 1rem 0 0 0;
-      line-height: 1.7rem;
-      letter-spacing: initial;
-   }
-   .badge {
-      padding: 0;
-   }
-   .badge img {
-      width: 50%;
-   }
-   .badge h2 {
-      font-size: .9rem;
-      padding: 0;
+      font-weight: 800;
+      margin: 0;
+      padding: 1rem;
    }
 }

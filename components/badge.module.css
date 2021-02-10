@@ -1,0 +1,78 @@
+.badge {
+   text-align: center;
+   height: min-content;
+   width: 100%;
+   margin-top: 0rem;
+   padding-top: 3rem;
+   padding-bottom: 1rem;
+   background-color: white;
+   /* background-image: url('/assets/sailin.jpg'); */
+   background-size: 100%;
+   background-position: top right;
+
+}
+
+.avatar {
+   display: block;
+   margin: 0 auto;
+   width: 7rem;
+   height: 7rem;
+   border-radius: 15%;
+   transform: rotate(-8deg);
+   box-shadow: 3px 2px 5px 0px grey;
+   border: 2px solid rgb(240, 226, 202);
+   background-image: url('/assets/avatar.jpg');
+   background-size: 120%;
+   transition: 2s;
+   transition-delay: 1s;
+}
+.avatar:hover {
+   background-image: url('/assets/sailin.jpg');
+   background-size: 100%;
+   transition: .1s;
+}
+#sailin {
+   width: 10%;
+   border-radius: 15%;
+   transform: rotate(-8deg);
+   margin-top: 4rem;
+   margin-left: -1rem;
+   box-shadow: 3px 2px 5px 0px grey;
+   border: 2px solid rgb(240, 226, 202);
+}
+#crab {
+   width: 10%;
+   border-radius: 15%;
+   transform: rotate(-8deg);
+   margin-left: -1rem;
+   box-shadow: 3px 2px 5px 0px grey;
+   border: 2px solid rgb(240, 226, 202);
+   z-index: -199;
+}
+.badge h2 {
+   text-transform: uppercase;
+   font-size: 1rem;
+   padding: .5rem;
+   margin: 1rem 0 0 0;
+}
+.badge .social {
+   width: 1.6rem;
+   opacity: .5;
+   border-bottom: .5px solid rgba(155, 155, 155, 0);
+}
+.social:hover {
+   border-bottom: .5px solid rgba(155, 155, 155, 0.445);
+   opacity: 1;
+}
+@media only screen and (max-width: 414px) {
+   
+   .avatar {
+      width: 5rem;
+      height: 5rem;
+   }
+   .avatar:hover {
+      background-image: url('/assets/sailin.jpg');
+      background-size: 100%;
+      transition: .1s;
+   }
+}

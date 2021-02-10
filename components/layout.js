@@ -23,6 +23,7 @@ export default function Layout({ children, title = 'FormVsContent' }) {
       
    return (
       <div className={style.container}>
+         <div className={style.banner_mask}></div>
          <Head>
             <title>{title}</title>
             <link rel="icon" href="/favicon.ico" />

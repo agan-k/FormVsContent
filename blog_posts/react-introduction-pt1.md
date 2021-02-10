@@ -164,11 +164,7 @@ And so, we have succesfully passed information from one component to another and
 Now, think about it. We did not touch the original DOM. We didn't have to introduce any new elements and therefore it did not need to reload.
 
 ## Conclusion
----
 We touched upon some of the topics from the above Essentials list. The DOM relates to ReactDOM, functions relate to React Components and we made use of some of the basic data types such as variables (arguments) and objects. In the next article we will take a look at conditional rendering. For this we will need to relay on what we know about *logical operators* and *conditional statements*.
 
-
-
-
-
-
+<hr/>
+<p class='signature'>K.Agan - Dec '20, Brooklyn NY</p>

@@ -1,11 +1,11 @@
 import Layout from '../components/layout'
-import Head from 'next/head'
 
+import Badge from '../components/badge'
 import Project from '../components/project'
 import RecentPosts from '../components/recent_posts'
+
 import style from './index.module.css'
 import stackData from '../data/stackData'
-
 
 export default function Home() {
 
@@ -32,23 +32,12 @@ export default function Home() {
    const domStack = StackFilter(stackData, 'jQuery', 'HTML5', 'CSS3')
       .map(item => item)
    
-   
    return (
     <Layout>
-     <Head>
-            <title>FC</title>
-            <link rel="icon" href="/favicon.ico" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"/>
-     </Head>
       <div className={style.container}>
-         <div className={style.badge}>
-            <img src='/assets/sailin.jpg'/>
-            <h2>Koran Agan</h2>
-            <h3>Web Developer | Software Engineer</h3>
-         </div>
-            <h1>Recent Posts</h1>
-         <RecentPosts position='top homepage'/>
+         <Badge /> 
+         <h1>Recent Posts</h1>
+         <RecentPosts/>
          <h1>Current Projects</h1>
          <Project
             name='LaraBello.com'
