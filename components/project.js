@@ -1,24 +1,40 @@
 import React from 'react'
+import { useState } from 'react'
+
 import style from './project.module.css'
 
+
 export default function Project(props) {
-   console.log(props)
+   const [ imgIndex, setImgIndex] = useState()
    return (
       <div className={style.container}>
          {/* Project Name */}
          <h2>
-            <a href={props.url}>{props.name}</a>
+         {props.name}
+            {/* <a href={props.url}>{props.name}</a> */}
          </h2>
          {/* Stack Used */}
-         <h3>Stack:&nbsp;
+         {/* <h3>Stack:&nbsp;
             {props.stack.map(item => 
                `${item.name} `
             )}
-         </h3>
+         </h3> */}
+
+         <div className={style.stack_info}>
+            {props.stack.map((item, index) =>
+                  index == imgIndex ?
+                     <h3>{item.name}</h3> :
+                     <h3></h3>
+                     )}
+         </div>
+
          {/* Stack Logos */} 
          <div className={style.logos}>
-            {props.stack.map(item => 
-               <img key={item.id} src={item.src} />
+            {props.stack.map((item, index) => 
+               <img
+                  onMouseOver={() => setImgIndex(index)}
+                  onMouseOut={() => setImgIndex(null)}
+                  key={item.id} src={item.src} />
             )}
          </div>
             {/* Source Repo */} 

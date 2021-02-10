@@ -4,7 +4,7 @@ const stackData = [
    { id: 3, name: 'JavaScript', src: '/assets/javascript.png' },
    { id: 4, name: 'ReactJS', src: '/assets/reactJS.png' },
    { id: 5, name: 'NextJS', src: '/assets/nextJS.png' },
-   { id: 6, name: 'API', src: '' },
+   { id: 6, name: 'API', src: '/assets/api.png' },
    { id: 7, name: 'CMS', src: '' },
    { id: 8, name: 'Prismic', src: '/assets/prismic-io.jpg' },
    { id: 9, name: 'PostgreSQL', src: '/assets/postgresql.png' },
