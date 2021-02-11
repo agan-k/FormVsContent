@@ -12,7 +12,6 @@ body {
   background-color: rgb(250, 248, 248);
 }
 
-
 p {
    line-height: 1.5rem;
    margin: 1rem 0;
@@ -33,7 +32,7 @@ li {
    transition: .2s;
 }
 
-/* Markdown styles */
+/* Markdown (Blog Posts) styles */
 a {
    color: #689FF1;  
   text-decoration: underline;

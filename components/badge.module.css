@@ -3,7 +3,7 @@
    height: 10rem;
    width: 100%;
    margin-top: 0rem;
-   margin-bottom: 5rem;
+   margin-bottom: 10rem;
    padding-top: 3rem;
    padding-bottom: 1rem;
    background-color: white;
@@ -65,6 +65,19 @@
    opacity: 1;
 }
 @media only screen and (max-width: 414px) {
+   .badge {
+      text-align: center;
+      height: 7rem;
+      width: 100%;
+      margin-top: 0rem;
+      margin-bottom: 10rem;
+      padding-top: 3rem;
+      padding-bottom: 1rem;
+      background-color: white;
+      background-size: 100%;
+      background-position: top right;
+   
+   }
    
    .avatar {
       width: 5rem;

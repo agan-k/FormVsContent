@@ -1,26 +1,33 @@
 .container {
    width: 100%;
+   height: 100%;
    margin: 0 auto;
+   height: min-content;
 }
-.container h3 {
-   font-size: 1rem;
-   margin: 0;
+.resume_wrapper {
+   width: 100%;
+   margin: 0 auto;
+   padding: 2rem 0;
+   /* background-color: white; */
 }
-.container p {
-   width: 90%;
+
+.resume_wrapper p {
+   width: 60%;
    font-size: .9rem;
    line-height: 1rem;
    font-weight: 400;
-   text-align: justify;
+   /* text-align: j; */
    margin: .3rem auto;
 }
-.container ul {
+.resume_wrapper ul {
    margin-left: 1rem;
 }
-.container li {
+.resume_wrapper li {
    font-size: .8rem;
 }
 
 @media only screen and (max-width: 414px) {
-  
+   .resume_wrapper p {
+      width: 90%;
+   }
 }

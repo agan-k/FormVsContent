@@ -6,22 +6,22 @@
    padding: 2rem 0;
 }
 .container span {
-   /* height: 3.5rem; */
-   width: 3.5rem;
+   height: 3rem;
+   width: 3rem;
+   padding-top: .3rem;
+   vertical-align: text-top;
    font-size: 3rem;
    font-weight: 200;
    position: absolute;
    top: 0;
    right: 0;
    margin: 1rem;
-   display: block;
-   text-align: right;
+   /* text-align: right; */
    transition: .2s;
 }
 .container span:hover {
-   font-size: 3.5rem;
+   background-color: rgb(247, 247, 247);
    transition: .2s;
-   background-color: rgb(245, 245, 245);
 }
 .container h2 {
    margin: 1rem; /* global.css override */

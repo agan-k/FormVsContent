@@ -5,7 +5,6 @@
    flex-wrap: wrap;
    width: 100%;
    margin: 0 auto;
-   /* padding-top: 1.5rem; */
    text-align: initial;
 }
 .post {
@@ -46,16 +45,15 @@
 .post span {
    font-size: 1.5rem;
    font-weight: 200;
+   color: #689FF1;
    position: absolute;
-   top: 0;
-   right: 0;
+   top: .5rem;
+   right: .5rem;
    /* margin: 1rem; */
    display: block;
    text-align: right;
 }
-.post span:hover {
-   /* margin: 1rem; */
-}
+
 @media only screen and (max-width: 414px){
    .posts_container {
       flex-wrap: wrap;
@@ -63,17 +61,6 @@
    .post {
       width: 95%;
       margin: .5rem auto;
+      min-height: 10rem;
    }
-   /* .posts_container h2 {
-      font-size: .2rem;
-      line-height: initial;
-      padding: .5rem;
-      margin: .1rem;
-      color: #689FF1;
-      color: red;
-   }
-   .recent_post p {
-      font-size: .9rem;
-      margin: 1rem;
-   } */
 }
