@@ -29,13 +29,15 @@ export default function Project(props) {
          </div>
 
          {/* Stack Logos */} 
-         <div className={style.logos}>
+         <div className={style.logos_wrapper}>
             {props.stack.map((item, index) => 
-               <img
-                  onMouseOver={() => setImgIndex(index)}
-                  onMouseOut={() => setImgIndex(null)}
-                  key={item.id} src={item.src} />
-            )}
+               <div className={style.logo_container}>
+                  <img
+                     onMouseOver={() => setImgIndex(index)}
+                     onMouseOut={() => setImgIndex(null)}
+                     key={item.id} src={item.src} />
+               </div>
+               )}
          </div>
             {/* Source Repo */} 
          <div className={style.github_logo}>

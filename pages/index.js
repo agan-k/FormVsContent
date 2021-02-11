@@ -21,7 +21,7 @@ export default function Home() {
       }
       return filteredArr
    }
-   const laraStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript', 'ReactJS', 'NextJS', 'CMS', 'Prismic')
+   const laraStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript', 'ReactJS', 'NextJS', 'API', 'Prismic')
       .map(item => item)
    const rajStack = StackFilter(stackData, 'ReactJS', 'JavaScript', 'CSS3', 'HTML5')
       .map(item => item)
