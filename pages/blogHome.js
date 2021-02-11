@@ -3,34 +3,29 @@ import Link from 'next/link'
 import Layout from '../components/layout'
 import style from './blogHome.module.css'
 import postsData from '../data/postsData'
-import RecentPosts from '../components/recent_posts'
+import PostsCards from '../components/posts_cards'
 // import { render } from 'react-dom'
 
 export default function BlogHome() {
 
-   const linksList = postsData.map(item =>
-      <div className={style.post_link_container}>
-         <div className={style.img_mask}>
-            <img src={item.img}/>
-         </div>
-         <li className={style.article_title}>
-            <Link href={item.link}>
-               <a>{item.title}</a>
-            </Link>
-         </li>
-         <p>{item.description}</p>
-      </div>
+   const posts = postsData.map(post =>
+      <Link href={post.link}>
+         <a>
+            <div className={style.post}>
+               <span>&#8599;</span>
+               <img src={post.img} />
+               <h2>{post.title}</h2>
+               <p>{post.description}</p>
+            </div>
+         </a>
+      </Link>
       )
 
    return (
       <Layout>
          <div className={style.container}>
-            <h3>Articles</h3>
-            <RecentPosts />
-            {/* <ul> */}
-               {/* {linksList} */}
-            {/* </ul> */}
-            {/* <h2>Tech</h2> */}
+            <h2>Articles</h2>
+          <PostsCards />
             
 
          </div>

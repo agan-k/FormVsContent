@@ -8,6 +8,11 @@ export default function Project(props) {
    const [ imgIndex, setImgIndex] = useState()
    return (
       <div className={style.container}>
+         {/* Project Outside Link */}
+         <a href={props.url} target='_blank'>
+                  {/* <span>&#8594;</span> */}
+                  <span>&#8599;</span>
+         </a>
          {/* Project Name */}
          <h2>
          {props.name}

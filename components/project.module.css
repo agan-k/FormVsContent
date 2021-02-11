@@ -1,8 +1,27 @@
 .container {
+   position: relative;
    width: 100%;
    background-color:white;
    margin: 0 0 2rem 0;
    padding: 2rem 0;
+}
+.container span {
+   /* height: 3.5rem; */
+   width: 3.5rem;
+   font-size: 3rem;
+   font-weight: 200;
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin: 1rem;
+   display: block;
+   text-align: right;
+   transition: .2s;
+}
+.container span:hover {
+   font-size: 3.5rem;
+   transition: .2s;
+   background-color: rgb(245, 245, 245);
 }
 .container h2 {
    margin: 1rem; /* global.css override */
@@ -41,7 +60,7 @@
 
 }
 .logo_container {
-   display: inline;
+   /* display: inline; */
    height: 3rem;
    width: 3rem;
 }
@@ -58,10 +77,12 @@
 }
 .github_logo img {
    height: 90%;
+   border: 1px solid rgba(245, 245, 245, 0);
    transition: .2s;
 }
 .github_logo img:hover {
    height: 99%;
+   border: 1px solid rgb(226, 226, 226);
    transition: .2s;
 }
 .screenshots {
@@ -99,29 +120,23 @@
    margin: 0 .1rem;
 }
 @media only screen and (max-width: 414px){
+   .container span {
+      font-size: 2rem;
+   }
    .container h2 {
-      padding-bottom: 0;
+      font-size: 1.5rem; /* global.css override */
    }
-   .container h2 a {
-      padding-bottom: .5rem;
-      font-size: 1rem;
-      
+   .stack_info {
+      display: none;
    }
-   .container h3 {
-      padding: .5rem;
-      font-weight: 200;
-      /* color: red; */
-   }
-   .container {
-      background-color:white;
-      margin: 1rem 0;
-      padding: 0;
+   .logo_container {
+      height: 2rem;
+      width: 2rem;
    }
    .tablet_and_mobile_container {
       display: initial;
    }
    .desktop_screenshots img {
-      /* display: block */
       width: 80%;
       margin: .3rem auto;
       border: .1px solid grey;

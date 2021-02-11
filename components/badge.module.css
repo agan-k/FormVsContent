@@ -1,12 +1,12 @@
 .badge {
    text-align: center;
-   height: min-content;
+   height: 10rem;
    width: 100%;
    margin-top: 0rem;
+   margin-bottom: 5rem;
    padding-top: 3rem;
    padding-bottom: 1rem;
    background-color: white;
-   /* background-image: url('/assets/sailin.jpg'); */
    background-size: 100%;
    background-position: top right;
 
@@ -15,8 +15,8 @@
 .avatar {
    display: block;
    margin: 0 auto;
-   width: 7rem;
-   height: 7rem;
+   width: 9rem;
+   height: 9rem;
    border-radius: 15%;
    transform: rotate(-8deg);
    box-shadow: 3px 2px 5px 0px grey;

@@ -2,7 +2,7 @@ import Layout from '../components/layout'
 
 import Badge from '../components/badge'
 import Project from '../components/project'
-import RecentPosts from '../components/recent_posts'
+import PostsCards from '../components/posts_cards'
 
 import style from './index.module.css'
 import stackData from '../data/stackData'
@@ -21,7 +21,7 @@ export default function Home() {
       }
       return filteredArr
    }
-   const laraStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript', 'ReactJS', 'NextJS', 'API', 'Prismic')
+   const laraStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript', 'ReactJS', 'NextJS', 'API', 'Prismic CMS')
       .map(item => item)
    const rajStack = StackFilter(stackData, 'ReactJS', 'JavaScript', 'CSS3', 'HTML5')
       .map(item => item)
@@ -29,7 +29,7 @@ export default function Home() {
       .map(item => item)
    const katStack = StackFilter(stackData, 'ReactJS', 'JavaScript', 'HTML', 'CSS3')
       .map(item => item)
-   const domStack = StackFilter(stackData, 'jQuery', 'HTML5', 'CSS3')
+   const domStack = StackFilter(stackData, 'JavaScript', 'HTML5', 'CSS3')
       .map(item => item)
    
    return (
@@ -37,7 +37,7 @@ export default function Home() {
       <div className={style.container}>
          <Badge /> 
          <h1>Recent Posts</h1>
-         <RecentPosts/>
+            <PostsCards recent='true'/>
          <h1>Current Projects</h1>
          <Project
             name='LaraBello.com'

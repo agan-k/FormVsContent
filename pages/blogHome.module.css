@@ -3,36 +3,7 @@
    width: 100%;
    margin: 0;
 }
-.post_link_container {
-   position: relative;
-   display: block;
-   width: 100%;
-   min-height: 10rem;
-   padding: .8rem;
-   background-color: white;
-   margin: 2rem 0;
+.container h2 {
+   font-size: 2rem;
 }
-.img_mask {
-   width: 80%;
-   height: 20%;
-   overflow: hidden;
-}
-.img_mask img {
-   width: 100%;
-}
-.article_title {
-   /* position: absolute; */
-   /* bottom: 0; */
-   font-size: 1.5rem;
-   line-height: 1.5rem;
-   /* text-align: center; */
-   list-style: none;
-   margin: .2rem;
-}
-.article_title a {
-   color: #689FF1;  
-   text-decoration: none;
-}
-.container a:hover {
-   color: #495057;
-}
+

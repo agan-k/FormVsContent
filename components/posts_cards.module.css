@@ -2,64 +2,65 @@
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
+   flex-wrap: wrap;
    width: 100%;
-   
    margin: 0 auto;
+   /* padding-top: 1.5rem; */
    text-align: initial;
 }
-.recent_post {
+.post {
    position: relative;
-   background-color: white;
+   background-color: rgb(253, 253, 253);
    width: 32%;
    min-height: 25rem;
-   opacity: .6;
+   margin-top: 1rem;
    cursor: pointer;
    border: 1px solid rgba(128, 128, 128, 0);
    transition: inherit;
 
 }
-.recent_post:hover {
-   opacity: 1;
+.post:hover {
+   background-color: white;
    border: 1px solid rgba(128, 128, 128, 0.308);
 }
-.recent_post img {
+.post img {
    width: 100%;
    display: block;
    padding: 1rem;
-   /* opacity: .6; */
+   margin-top: 1rem;
 }
 .posts_container h2 {
    font-size: 1rem;
    margin: 1rem;
    color: #689FF1;
 }
-.recent_post p {
+.post p {
    font-size: .9rem;
    margin: 1rem;
 }
-.recent_post a {
+.post a {
    
    color: #689FF1;
    text-decoration: none;
 }
-.recent_post span {
-   font-size: 2rem;
+.post span {
+   font-size: 1.5rem;
    font-weight: 200;
    position: absolute;
-   bottom: 0;
+   top: 0;
    right: 0;
-   margin: 1rem;
+   /* margin: 1rem; */
    display: block;
    text-align: right;
 }
-.recent_post span:hover {
+.post span:hover {
    /* margin: 1rem; */
 }
 @media only screen and (max-width: 414px){
    .posts_container {
       flex-wrap: wrap;
    }
-   .recent_post {
+   .post {
       width: 95%;
       margin: .5rem auto;
    }
