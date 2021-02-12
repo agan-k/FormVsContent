@@ -13,7 +13,7 @@ export default function Badge({children}) {
                <a href='https://github.com/agan-k' target='_blank'>
                   <img className={style.social} src='/assets/github_logo.png' />
                </a>
-         {children}
+         {/* {children} */}
          </div>
    )
 }

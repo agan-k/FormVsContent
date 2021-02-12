@@ -27,7 +27,7 @@ export default function About() {
                   <br/>
                   <p><strong>Experience</strong>
                      <br /><br />
-                     FORM VERSUS CONTENT - (2018 - present)<br/>
+                     FORM VERSUS CONTENT (2018 - present)<br/>
                      <em>Independent Contractor - Web Developer/Software Engineer</em><br />
                      <ul>
                         <li>
@@ -40,7 +40,7 @@ export default function About() {
 
                      </ul>
                      <br/>
-                     MUSICIAN  - (2002 - 2018)<br />
+                     MUSICIAN (2002 - 2018)<br />
                      <em>Performer, Composer and Educator</em><br />
                      <ul>
                         <li>Toured internationally and performed major music festivals</li>
@@ -48,7 +48,7 @@ export default function About() {
                         <li>Gave masterclasses, workshops and published educational materials</li>
                      </ul>
                      <br/>
-                     MICRON TECHNOLOGY - (1998)<br />
+                     MICRON TECHNOLOGY (1998)<br />
                      <em>Facilities Instrumentation and Controls Technician</em><br />
                      <ul>
                         <li>Service, maintenance, modification and repair of instrumentation and controls
@@ -62,13 +62,13 @@ export default function About() {
                   <p>
                      <strong>Education</strong>
                      <br /><br />
-                     GENERAL ASSEMBLY, NEW YORK, NY - (2020)<br/>
+                     GENERAL ASSEMBLY, NEW YORK, NY<br/>
                      <em>Software Engineering Immersive</em>
                      <br /><br />
-                     BERKLEE COLLEGE OF MUSIC - (2002)<br/>
+                     BERKLEE COLLEGE OF MUSIC<br/>
                      <em>BM - Performance/Composition</em>
                      <br /><br />
-                     EL. ENGINEERING VOCATIONAL, BOSNIA HERZEGOVINA - (1995)<br/>
+                     EL. ENGINEERING VOCATIONAL, <em>(Bosnia Herzegovina)</em><br/>
                      <em>Associate's degree equivalent</em>
                      <br />
                      <br />

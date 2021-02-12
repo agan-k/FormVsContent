@@ -35,7 +35,8 @@ export default function Home() {
    return (
     <Layout>
       <div className={style.container}>
-         <Badge /> 
+            <Badge /> 
+            <br/>
          <h1>Recent Posts</h1>
             <PostsCards recent='true'/>
          <h1>Current Projects</h1>

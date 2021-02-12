@@ -23,10 +23,6 @@ export default function Post({ content, data }) {
   return (
      <Layout>
         <div className='container'>
-
-            {/* <div className='post-list'>
-            <BlogHome />
-            </div> */}
             <div className='post-container'>
                <div className='title-image'>
                   <img src={frontmatter.image}/>
@@ -51,10 +47,8 @@ export default function Post({ content, data }) {
             }
             .post-container {
                width: 100%;
-               // padding: 1rem;
                margin: 5rem auto;
-               text-align: initial;
-               // background-color: white;
+               // text-align: initial;
             }
             .post-container h1 {
                font-size: 2rem;
@@ -85,15 +79,44 @@ export default function Post({ content, data }) {
                border: 2px solid rgb(240, 226, 202);
             }
             .post-body {
+               background-color: white;
+               padding: 2rem;
                font-weight: 400;
                font-size: .9rem;
-               width: 70%;
-               margin-left: 6rem;
+               width: 90%;
+               margin: 2rem 0 2rem 10%;
             }
             .post-body p a {
                color: red;
             }
-            
+            @media only screen and (max-width: 414px) {
+               .post-container {
+                  margin-top: 2rem;
+                  margin-bottom: 0;
+               }
+               .post-container h1 {
+                  font-size: 1.1rem;
+                  font-weight: 600;
+                  margin: 1rem .3rem .3rem .3rem;
+               }
+               .date {
+                  margin: 0 .3rem;
+               }
+               .title-image {
+                  display: initial;
+                  width: 100%;
+                  margin: 0 auto;
+               }
+               .title-image img {
+                  display: block;
+                  margin: 0 auto;
+               }
+               .post-body {
+                  margin: 1rem 0;
+                  width: 100%;
+                  padding: .7rem;
+               }
+            }
             
          `}</style>
         

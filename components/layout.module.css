@@ -19,11 +19,11 @@
  .header li{
    text-transform: uppercase;
    list-style: none;
-   padding: 1rem 0;
-   margin: 1rem 1rem 1rem 1rem;
+   padding: .5rem 0;
+   margin: .5rem;
  }
  .header a {
-    padding: 1rem;
+    padding: .5rem;
     color: #495057;  
     text-decoration: none;
  }
@@ -64,7 +64,7 @@
  .logos img {
     height: 2rem;
  }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 768px) {
    .container {
       width: 97%;
    }
@@ -79,7 +79,7 @@
       margin: .5rem 0 0 0;
     }
     .header a {
-       padding: 1rem;
+       padding: .3rem;
     }
     .footer {
       height: min-content;

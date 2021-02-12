@@ -1,0 +1,33 @@
+.container {
+   min-height: 70vh;
+   background-color: white;
+}
+.container form {
+   position: relative;
+   width: 60%;
+   margin: 2rem auto;
+   padding: 1rem;
+   /* background-color: white; */
+}
+.container form p {
+   display: flex;
+   justify-content: space-between;
+   color: grey;
+}
+.container form p input {
+   width: 80%;
+   border: 1px solid rgb(243, 242, 242);
+}
+.container form p textarea {
+   width: 80%;
+   height: 10rem;
+   border: 1px solid rgb(245, 245, 245);
+}
+.container form p button {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   margin: 1rem;
+   border: none;
+   padding: .4rem .7rem;
+}

@@ -11,7 +11,7 @@
    position: relative;
    background-color: rgb(253, 253, 253);
    width: 32%;
-   min-height: 25rem;
+   min-height: 22rem;
    margin-top: 1rem;
    cursor: pointer;
    border: 1px solid rgba(128, 128, 128, 0);
@@ -35,6 +35,7 @@
 }
 .post p {
    font-size: .9rem;
+   line-height: 1rem;
    margin: 1rem;
 }
 .post a {
