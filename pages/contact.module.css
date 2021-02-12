@@ -2,6 +2,20 @@
    min-height: 70vh;
    background-color: white;
 }
+.contact_box {
+   width: 30%;
+   margin: 0 auto;
+   padding: 1rem;
+   padding-top: 2rem;
+}
+.contact_box p {
+   margin: 0;
+   width: 30%;
+   color: grey;
+}
+.container img {
+   height: 1rem;
+}
 .container form {
    position: relative;
    width: 60%;

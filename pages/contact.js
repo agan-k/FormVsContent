@@ -6,7 +6,21 @@ export default function Contact() {
    return (
       <Layout>
          <div className={style.container}>
-            <form name="contact" method="POST" data-netlify="true">
+            <div className={style.contact_box}>
+               <p>e-mail: koranagan@gmail.com</p>
+               <p><a href='https://www.linkedin.com/in/koran-agan/' target='_blank'>Linkedin</a></p>
+               <p><a href='https://github.com/agan-k' target='_blank'>GitHub</a></p>
+            </div>
+            {/* <div className={style.contact_box}>
+
+            </div>
+            <div className={style.contact_box}>
+
+            </div>
+            <div className={style.contact_box}>
+
+            </div> */}
+            {/* <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="contact" value="contact" />
                <p>
                   <label for="name">name:</label>
@@ -23,7 +37,7 @@ export default function Contact() {
                <p>
                   <button type="submit">Send</button>
                </p>
-            </form>
+            </form> */}
          </div>
       </Layout>
    )

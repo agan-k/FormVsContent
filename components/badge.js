@@ -10,7 +10,10 @@ export default function Badge({children}) {
                <a href='https://www.linkedin.com/in/koran-agan/' target='_blank'>
                   <img className={style.social} src='/assets/linkedin.png' />
                </a>
-               <a href='https://github.com/agan-k' target='_blank'>
+               <a href='mailto:koranagan@gmail.com'>
+                  <img className={style.social} src='/assets/mail2.png' />
+               </a>
+               <a href='https://github.com/agan-k'  target='_blank'>
                   <img className={style.social} src='/assets/github_logo.png' />
                </a>
          {/* {children} */}
