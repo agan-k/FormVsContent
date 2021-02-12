@@ -9,15 +9,15 @@ export default function Contact() {
             <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="contact" value="contact" />
                <p>
-                  <label for="name">Name:</label>
+                  <label for="name">name:</label>
                   <input type="text" id="name" name="name" />
                </p>
                <p>
-                  <label for="email">Email:</label>
+                  <label for="email">e-mail:</label>
                   <input type="text" id="email" name="email" />
                </p>
                <p>
-                  <label for="message">Message:</label>
+                  <label for="message">message:</label>
                   <textarea id="message" name="message"></textarea>
                </p>
                <p>
