@@ -72,6 +72,10 @@
 .github_logo{
    height: 3rem;
 }
+.github_logo h3{
+   font-size: 1rem;
+   margin: .5rem 0 .2rem 0;
+}
 .github_logo img {
    height: 90%;
    border: 1px solid rgba(245, 245, 245, 0);
@@ -79,7 +83,7 @@
 }
 .github_logo img:hover {
    height: 99%;
-   border: 1px solid rgb(226, 226, 226);
+   /* border: 1px solid rgb(226, 226, 226); */
    transition: .2s;
 }
 .screenshots {
