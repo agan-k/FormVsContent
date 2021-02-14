@@ -37,9 +37,10 @@ export default function Home() {
       <div className={style.container}>
             <Badge /> 
             <br/>
-         <h1>Recent Posts</h1>
-            <PostsCards recent='true'/>
-         <h1>Current Projects</h1>
+            <h1>&#123;recent posts&#125;</h1>
+            <PostsCards recent='true' />
+            
+            <h1>&#123;current projects&#125;</h1>
          <Project
             name='LaraBello.com'
             url='https://larabello.com'

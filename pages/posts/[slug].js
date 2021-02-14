@@ -28,6 +28,7 @@ export default function Post({ content, data }) {
                   <img src={frontmatter.image}/>
                   <h1>{frontmatter.title}</h1>
                </div>
+               <h3 className='subtitle'>{frontmatter.subtitle}</h3>
                <span className='date'>{frontmatter.date}</span>&nbsp;<span className='author'>{frontmatter.author}</span>
                <div className='post-body'>
                   <ReactMarkdown
@@ -40,22 +41,17 @@ export default function Post({ content, data }) {
         </div>
         <style jsx>{`
             .container {
-            
+            // background-color: white;
             }
             .post-list {
                width: 22%;
             }
             .post-container {
-               width: 100%;
+               width: 95%;
                margin: 5rem auto;
                // text-align: initial;
             }
-            .post-container h1 {
-               font-size: 2rem;
-               font-weight: 700;
-               line-height: initial;
-               margin: 2rem 0 0 1rem;
-            }
+            
             .post-container span {
                font-size: .8rem;
             }
@@ -66,9 +62,16 @@ export default function Post({ content, data }) {
             .author {
                font-weight: 700;
             }
+            
             .title-image {
                display: flex;
-               margin-left: 2rem;
+               margin: 0 0 0 2rem;
+            }
+            .title-image h1 {
+               font-size: 2rem;
+               font-weight: 700;
+               line-height: initial;
+               margin: 2rem 0 0 1rem;
             }
             .title-image img {
                height: 4rem;
@@ -78,27 +81,25 @@ export default function Post({ content, data }) {
                box-shadow: 3px 2px 5px 0px grey;
                border: 2px solid rgb(240, 226, 202);
             }
+            .subtitle {
+               margin: 0 0 0 6rem;
+               font-size: 1.2rem;
+            }
             .post-body {
+               width: 70%;
                background-color: white;
                padding: 2rem;
                font-weight: 400;
                font-size: .9rem;
-               width: 90%;
-               margin: 2rem 0 2rem 10%;
+               margin: 2rem 0 2rem 11%;
             }
-            .post-body p a {
-               color: red;
-            }
+            
             @media only screen and (max-width: 414px) {
                .post-container {
                   margin-top: 2rem;
                   margin-bottom: 0;
                }
-               .post-container h1 {
-                  font-size: 1.1rem;
-                  font-weight: 600;
-                  margin: 1rem .3rem .3rem .3rem;
-               }
+               
                .date {
                   margin: 0 .3rem;
                }
@@ -107,9 +108,20 @@ export default function Post({ content, data }) {
                   width: 100%;
                   margin: 0 auto;
                }
+               .title-image h1 {
+                  font-size: 1.6rem;
+                  font-weight: 600;
+                  line-height: initial;
+                  // margin: 1rem 0 0 .3rem;
+                  margin: 1rem auto;
+               }
                .title-image img {
                   display: block;
                   margin: 0 auto;
+               }
+               .subtitle {
+                  margin-left: .3rem;
+                  font-size: 1rem;
                }
                .post-body {
                   margin: 1rem 0;

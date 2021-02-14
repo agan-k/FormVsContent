@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import style from './posts_cards.module.css'
 import postsData from '../data/postsData'
-import recent_postsData from '../data/postsData'
 
 
 export default function PostsCards(props) {
@@ -12,7 +11,9 @@ export default function PostsCards(props) {
          <Link href={post.link}>
             <div className={style.post}>
                <span>&#8599;</span>
+            <div className={style.mask}>
                <img src={post.img} />
+            </div>
                <h2>{post.title}</h2>
                <p>{post.description}</p>
             </div>

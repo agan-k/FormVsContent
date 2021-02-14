@@ -1,24 +1,42 @@
 .badge {
+   position: relative;
    text-align: center;
    height: 10rem;
    width: 100%;
    margin-top: 0rem;
    margin-bottom: 10rem;
-   padding-top: 3rem;
+   padding-top: 1rem;
    padding-bottom: 1rem;
    background-color: white;
    background-size: 100%;
    background-position: top right;
 
 }
+.fvc {
+   font-size: 2rem;
+   position: absolute;
+   bottom: -6rem;
+   right: 45%;
+   /* color: red; */
+   transform: rotate(-3deg);
+   display: none;
+}
+.fvc span {
+   font-size: 1rem;
+   vertical-align: middle;
+   padding: 0 .3rem;
+   color: yellow;
+   background-color: rgba(255, 0, 0, 0.548);
+
+}
 
 .avatar {
    display: block;
-   margin: 0 auto;
+   margin: 2rem auto 0;
    width: 9rem;
    height: 9rem;
    border-radius: 15%;
-   transform: rotate(-8deg);
+   transform: rotate(-6deg);
    box-shadow: 3px 2px 5px 0px grey;
    border: 2px solid rgb(240, 226, 202);
    background-image: url('/assets/avatar.jpg');
@@ -36,18 +54,8 @@
    border-radius: 15%;
    transform: rotate(-8deg);
    margin-top: 4rem;
-   margin-left: -1rem;
    box-shadow: 3px 2px 5px 0px grey;
    border: 2px solid rgb(240, 226, 202);
-}
-#crab {
-   width: 10%;
-   border-radius: 15%;
-   transform: rotate(-8deg);
-   margin-left: -1rem;
-   box-shadow: 3px 2px 5px 0px grey;
-   border: 2px solid rgb(240, 226, 202);
-   z-index: -199;
 }
 .badge h2 {
    text-transform: uppercase;

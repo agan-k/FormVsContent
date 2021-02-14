@@ -1,6 +1,7 @@
 ---
 image: '/assets/reactJS.png'
-title: "Conditional Rendering in React - A Somewhat Personal Journey trough a Powerhouse - Pt.2"
+title: "Conditional Rendering in React"
+subtitle: "A Somewhat Personal Journey trough a Powerhouse - Pt.2"
 date: "January 2021 by"
 author: 'K. Agan'
 ---

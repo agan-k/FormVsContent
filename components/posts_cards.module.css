@@ -7,11 +7,12 @@
    margin: 0 auto;
    text-align: initial;
 }
+
 .post {
    position: relative;
    background-color: rgb(253, 253, 253);
    width: 32%;
-   min-height: 22rem;
+   min-height: 20rem;
    margin-top: 1rem;
    cursor: pointer;
    border: 1px solid rgba(128, 128, 128, 0);
@@ -21,12 +22,6 @@
 .post:hover {
    background-color: white;
    border: 1px solid rgba(128, 128, 128, 0.308);
-}
-.post img {
-   width: 100%;
-   display: block;
-   padding: 1rem;
-   margin-top: 1rem;
 }
 .posts_container h2 {
    font-size: 1rem;
@@ -46,13 +41,27 @@
 .post span {
    font-size: 1.5rem;
    font-weight: 200;
-   color: #689FF1;
+   color: white;
    position: absolute;
-   top: .5rem;
-   right: .5rem;
-   /* margin: 1rem; */
+   top: .1rem;
+   right: .1rem;
    display: block;
    text-align: right;
+   z-index: 99;
+}
+.posts_container .mask {
+   width: 100%;
+   background-color: rgb(243, 136, 65);
+   height: 7rem;
+   overflow: hidden;
+   border-radius: none;
+}
+.posts_container img {
+   border-radius: none;
+   width: 100%;
+   opacity: .7;
+   /* padding: 1rem; */
+   /* margin-top: 1rem; */
 }
 
 @media only screen and (max-width: 414px){

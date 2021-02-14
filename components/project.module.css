@@ -13,8 +13,8 @@
    font-size: 3rem;
    font-weight: 200;
    position: absolute;
-   top: 0;
-   right: 0;
+   top: -1rem;
+   right: -1rem;
    margin: 1rem;
    transition: .2s;
 }

@@ -1,9 +1,11 @@
 ---
 image: '/assets/content/posts/recursion_article/javascript_square.png'
-title: "Understanding the Recursion "
+title: "Understanding the Recursion"
+subtitle: "Taking a Closer Look at the Recursive Method"
 date: "Nov 2020 by"
 author: 'K. Agan'
 ---
+
 
 Here is another personal take on a subject I struggled with in the beginning until one of those great 'Aha!' moments which give us the desire to keep tackling new challenges.
 
@@ -12,16 +14,18 @@ Recursion is a concept in which we can make a function call itself and by doing 
 Quickly, the <a href="https://en.wikipedia.org/wiki/Factorial" target="blank">factorial</a> of a given number represents a product of all the positive integers which are less then or equal to the given number in question. For example <span class='command'>*!4 = `1*2*3*4` = 24*</span>. We can extract a rough formula for calculating the factorial like so: <span class='command'>*`!n = (n-1) * (n-2) * (n-3)...`*</span>
 
 First, let's create a function that will calculate factorial for us with the help of a <span class='command'>for</span> loop.
+
 ```javascript
 function facLoop(n) {
-  let result = n
+   let result = n
   for (let i = 1; i < n; i++) {
-    result *= i 
+     result *= i 
   }
   return result
 }
 console.log(facLoop(4)) // logs 24
 ```
+
 This is a straight forward approach in which we declare a variable ***result*** and assign to it the value (given positive integer) of the argument <span class='command'>(n)</span>.  
 Next, we use the <span class='command'>for</span> loop to extract all the values (positive integers) that are less than the value of the argument <span class='command'>(n)</span>.  
 Then, we multiply the value of ***result*** with each value that was extracted with the <span class='command'>for</span> loop.
@@ -81,26 +85,8 @@ function facRecursion(4) {
       }
    //now starts with the value of 6 and the function computes: 6 * 4 = 24
    }
-}
 ```
-<!-- 
-```javascript
-facRec_D_(0) * 1 { //condition to stop(0) finally reached!
-   return 1; // facRec_D_(0) returns value of 1 and now we can compute: 1 * 1 = 1
 }
-facRec_D_(1) * 2 { // facRec_C_(1) now starts with value of 1 (returned by facRec_D_(0)) and now we can compute: 1 * 2 = 2
-   return 2
-}
-facRec_B_(2) * 3 { // facRec_B_(2) now starts with value of 2 and now we can compute: 2 * 3 = 6
-   return 6
-}
-facRec_A_(3) * 4 { // facRec_B_(3) now starts with value of 6 and now we can compute: 6 * 4 = 24
-
-   return 24 // this is the final result value!
-}
-
-``` -->
-
 And so, the function with its original arguments returns a value. There is always just a single function which we made into an infinite loop by calling it inside it's own body. But we also altered the arguments and set the conditions in such way that it had to duplicate itself exactly the right number of times we needed. Then, we gave it (returned) a value with our base case so each of the function duplicates can compute and return the appropriate value.
 
 ## The "Aha!" ##
@@ -131,7 +117,7 @@ Next, we set the recursion off and assign its value to the variable ***range***.
 Once we meet the condition, ***range*** receives a value of an empty array and is finally able to <span class='command'>.push()</span> the corresponding value of <span class='command'>(endNum)</span>. In this case 3. 
 This was the last instance (recursion) of the <span class='command'>function rangeOfNumbers()</span> that got into the stack and first one that gets out. The fact that the first element of the array ***range*** is 3, confirms this.
 
+
 <hr/>
 <p class='signature'>K.Agan - Dec '20, Brooklyn NY</p>
-
 

@@ -1,6 +1,7 @@
 const recent_postsData = [
+   
    {
-      title: 'Conditional Rendering in React - A Somewhat Personal Jurney trough a Powerhouse - Pt.2',
+      title: 'Conditional Rendering in React',
       description: `Continuing to explore the main concepts in React, this article focuses on using
       props as condition to render components.`,
       img: '/assets/content/posts/react.png',
@@ -9,12 +10,19 @@ const recent_postsData = [
    {
       title: 'Understanding Recursion',
       description: `Functions which employ recursion to produce effect of a loop can sometimes appear confusing,
-                    especially if we try to think of them as loops. Here are my notes on trying to understand the recursive method.`,
+      especially if we try to think of them as loops. Here are my notes on trying to understand the recursive method.`,
       img: '/assets/content/posts/recursion_article/javascript_rectang.webp',
       link: 'posts/javascript-understanding-recursion'
    },
    {
-      title: 'Introduction to React - A Somewhat Personal Jurney trough a Powerhouse - Pt.1',
+      title: 'Connecting to a Public API',
+      description: `Connecting to the Art Institute of Chicago public API, understanding its structure and making
+      that first successful GET request is what gave me that extra spark of inspiration to never stop learning.`,
+      img: '/assets/content/posts/aic_api_article/nighthawks.jpg',
+      link: 'posts/api-axios-react-art-institute-chicago'
+   },
+   {
+      title: 'React, Introduction',
       description: `There are countless of excelent introducions to this powerful framework out there. 
                     This is the one I wish I'd had when I started my jurney in React.`,
       img: '/assets/content/posts/react.png',

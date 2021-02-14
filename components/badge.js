@@ -4,7 +4,14 @@ import style from './badge.module.css'
 export default function Badge({children}) {
    return (
       <div className={style.badge}>
-               <div className={style.avatar} ></div>
+         <div className={style.fvc}>
+               {/* &#123; */}
+            <span>
+               koran agan
+            </span>
+               {/* &#125; */}
+         </div>
+         <div className={style.avatar}/>
                <h2>Koran Agan</h2>
                <h3>Web Developer | Software Engineer</h3>
                <a href='https://www.linkedin.com/in/koran-agan/' target='_blank'>
