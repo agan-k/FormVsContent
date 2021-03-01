@@ -21,6 +21,8 @@ export default function Home() {
       }
       return filteredArr
    }
+   const sloohStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript')
+      .map(item => item)
    const laraStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript', 'ReactJS', 'NextJS', 'API', 'Prismic CMS')
       .map(item => item)
    const rajStack = StackFilter(stackData, 'ReactJS', 'JavaScript', 'CSS3', 'HTML5')
@@ -41,6 +43,15 @@ export default function Home() {
             <PostsCards recent='true' />
             
             <h1>&#123;current projects&#125;</h1>
+         <Project
+            name='slo͞oh.app'
+            url='https://slooh.app'
+            stack={sloohStack}
+            repo_link='https://github.com/agan-k/slooh-app'
+            desktop_sshot={['/assets/screen_shots/slooh.png']}
+            // tablet_sshot={['', '']}
+            mobile_sshot={['', '']}
+         />
          <Project
             name='LaraBello.com'
             url='https://larabello.com'
