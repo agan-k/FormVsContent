@@ -11,16 +11,16 @@ The term API *(application programming interface)* has been buzzing around long 
 
 Application programming interface is a concept in which the original underlying implementation is abstracted and only relevant information and/or actions are exposed for the developer to use in their own implementations. 
 
-This concept has a long history in the field of programming, today, API has become somewhat of a synonym for RESTful API which is a standard used to create interactive applications that relay on multiple web API services. 
+This concept has a long history in the field of programming. Today, API has become somewhat of a synonym for RESTful API, which is a standard used to create interactive applications that relay on multiple web API services. 
 
 ## Web API
 In the context of web development, an API is typically defined as a set of specifications, such as HTTP request messages, and definition of corresponding responses, usually in form of javascript object notation (JSON). The specifications need to comply to the standards and prescribed conventions but they vary in accordance to the specific design and this is presented in the accompanying documentation. 
 
 A basic example of incorporating API would be if a streaming radio app pulls some data from a weather API and adjusts their playlist accordingly (jazz for rainy days, anyone?). Or a map app pulls some data from public transit API and aside from showing you where you need to go, it also shows you how to get there with public transit. And so forth, you get the idea..
 
-I was first familiarized with the concept after hearing about this new effort the Met was putting forward to make as much as possible of its vast collection available to the public. The data itself was already publicly available in, some sense. One could download it, but in such form that it was too clunky and in need of sorting out. In 2017 the plans to move forward were in place and a while later the developers in charge built a RESTful API ready to be used and integrated.
+I was first familiarized with the concept after hearing about this new effort the Met Museum was putting forward to make as much as possible of its vast collection available to the public. The data itself was already publicly available in some sense. One could download it, but in such form that it was too clunky and in need of sorting out. In 2017 the plans to move forward were in place and a while later the developers in charge built a RESTful API ready to be used and integrated.
 
-For couple of years I found myself clicking, enjoying the art from many places around the world, itching to try and incorporate one of the APIs in a passion project of my own. I was looking to gain access to a photography collection that would be fitting my idea for a photography hub of sorts and I found an amazing collection in the Art Institute of Chicago. Their API was well organized and easy to access.
+I found myself clicking and enjoying the art from many places around the world, itching to try and incorporate one of the APIs in a passion project of my own. I was looking to gain access to a photography collection that would be fitting my idea for a photography hub of sorts and I found an amazing collection in the Art Institute of Chicago. Their API was well organized and easy to access.
 
 ## Making the Connection
 

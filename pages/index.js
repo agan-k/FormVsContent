@@ -47,7 +47,7 @@ export default function Home() {
             name='slo͞oh.app'
             url='https://slooh.app'
             stack={sloohStack}
-            repo_link='https://github.com/agan-k/slooh-app'
+            repo_link='https://github.com/agan-k/slooh-app1.2'
             desktop_sshot={['/assets/screen_shots/slooh.png']}
             // tablet_sshot={['', '']}
             mobile_sshot={['', '']}
