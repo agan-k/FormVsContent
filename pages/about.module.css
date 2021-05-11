@@ -5,19 +5,28 @@
    height: min-content;
 }
 .resume_wrapper {
-   width: 100%;
+   width: 80%;
    margin: 0 auto;
    padding: 2rem 0;
    /* background-color: white; */
 }
+.resume_wrapper h4 {
+   margin: 0 0 .5rem 0;
+}
+
+.resume_wrapper .job_title {
+   font-weight: 900;
+   margin: 0 0 0 1rem;
+
+}
 
 .resume_wrapper p {
-   width: 60%;
-   font-size: .9rem;
+   font-size: .8rem;
    line-height: 1.2rem;
    font-weight: 400;
    /* text-align: j; */
-   margin: .3rem auto;
+   margin: 0 auto;
+   margin-left: 2rem;
 }
 .resume_wrapper ul {
    margin-left: 1.2rem;
@@ -27,8 +36,8 @@
    line-height: 1rem;
 }
 
-@media only screen and (max-width: 414px) {
-   .resume_wrapper p {
-      width: 90%;
+@media only screen and (max-width: 600px) {
+   .resume_wrapper {
+      width: 100%;
    }
 }
