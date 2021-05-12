@@ -48,6 +48,7 @@ export default function About() {
                      
                      </ul>
                </p>
+               
                <p className={style.job_title}>Performer, Composer and Educator</p>
                   <p>
                   <em>Music, Multiple Brands and Events, (2002 - 2018)</em><br />
