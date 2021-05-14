@@ -35,5 +35,11 @@
       font-weight: 800;
       margin-top: 2rem;
       padding: .2rem;
+      overflow-wrap: nowrap;
+   }
+   .sloohVideo {
+      width: 100%;
+      margin: 0 auto;
+      height: 200px;
    }
 }
