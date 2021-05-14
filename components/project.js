@@ -15,9 +15,13 @@ export default function Project(props) {
          </a>
          {/* Project Name */}
          <h2>
-         {props.name}
-            {/* <a href={props.url}>{props.name}</a> */}
+         {/* {props.name} */}
+            <a href={props.url}>{props.name}</a>
          </h2>
+         {/* Project Description */}
+         <p className={style.project_description}>
+         {props.description}
+         </p>
          {/* Stack Used */}
          {/* <h3>Stack:&nbsp;
             {props.stack.map(item => 

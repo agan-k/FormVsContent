@@ -28,17 +28,24 @@
 }
 .container h2 a {
    padding: 1rem;
-   color: #495057;
    text-decoration: none;
-   border: .5px solid rgba(128, 128, 128, 0);
-
+   transition: .2s;
+   
 }
 .container h2 a:hover {
-   border: .5px solid rgba(128, 128, 128, 0.199);
+   color: #495057;
+   transition: .2s;
+}
+.project_description {
+   font-size: .7rem;
+   width: 30%;
+   line-height: .8rem;
+   color: grey;
+   margin: 0 auto;
 }
 .stack_info {
    height: 2rem;
-   margin: 1rem;
+   margin: .3rem;
 }
 .stack_info h3 {
    width: 40%;
@@ -119,12 +126,15 @@
    width: 20%;
    margin: 0 .1rem;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 800px){
    .container span {
       font-size: 2rem;
    }
    .container h2 {
       font-size: 1.5rem; /* global.css override */
+   }
+   .project_description {
+      margin-bottom: 1rem;
    }
    .stack_info {
       display: none;
@@ -148,5 +158,15 @@
    .mobile_screenshots {
       width: 100%;
       text-align: center;
+   }
+}
+@media (max-width: 600px) {
+   .project_description {
+      font-size: .7rem;
+      width: 80%;
+      line-height: .8rem;
+      color: grey;
+      margin: 0 auto;
+      margin-bottom: 1rem;
    }
 }

@@ -58,7 +58,9 @@ export default function Home() {
             
             <h1>&#123;current projects&#125;</h1>
          <Project
-         name='RajivJayaveera.com'
+               name='RajivJayaveera.com'
+               description='Music artist profile web app. Headless CMS, responsive design, third party 
+               music distribution integration, form submission.'
          url='https://rajivJayaweera.com'
          stack={rajStack}
          repo_link='https://github.com/agan-k/raj'
@@ -68,7 +70,9 @@ export default function Home() {
          '/assets/screen_shots/raj_mobile2.jpg', '/assets/screen_shots/raj_mobile3.jpg',]}
          />
          <Project
-            name='slo͞oh.app'
+               name='slo͞oh.app'
+               description='Interactive ear-training tool with built-in algorithmic logic based on the 
+               "movable do" method.'
             url='https://slooh.app'
             stack={sloohStack}
             repo_link='https://github.com/agan-k/slooh-app1.2'
@@ -78,6 +82,7 @@ export default function Home() {
          />
          <Project
             name='LaraBello.com'
+            description='Web app. Integration with Bandcamp and headless CMS.'
             url='https://larabello.com'
             stack={laraStack}
             repo_link='https://github.com/agan-k/lara'
@@ -87,6 +92,8 @@ export default function Home() {
          />
          <Project
             name='AIC-Photography.info'
+               description='Educational photography hub featuring selected artwork from the Art Institute 
+            Of Chicago public API.'
             url='https://aic-photography-collection.info'
             stack={aicStack}
             repo_link='https://github.com/agan-k/aic-photography-selection'
