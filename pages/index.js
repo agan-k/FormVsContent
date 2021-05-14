@@ -3,9 +3,11 @@ import Layout from '../components/layout'
 import Badge from '../components/badge'
 import Project from '../components/project'
 import PostsCards from '../components/posts_cards'
+import ReactPlayer from 'react-player'
 
 import style from './index.module.css'
 import stackData from '../data/stackData'
+// import sloohVideo from '../public/assets/sailin.jpg'
 
 export default function Home() {
 
@@ -38,7 +40,19 @@ export default function Home() {
     <Layout>
       <div className={style.container}>
             <Badge /> 
-            <br/>
+            <br />
+            
+            <h1>&#123;News: slo͞oh is here&#125;</h1>
+
+            <div className={style.sloohVideo}>
+               <ReactPlayer
+                  url="slooh.mp4"
+                  light="slooh_thumbnail.png"
+                  controls={true}
+                  height="100%"
+                  width="100%"
+               />
+            </div>
             <h1>&#123;recent posts&#125;</h1>
             <PostsCards recent='true' />
             

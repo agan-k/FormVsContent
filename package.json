@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-   "dev": "next dev",
+    "dev": "next dev",
     "build": "next build",
     "export": "next export",
     "deploy": "npm run build && npm run export",
@@ -11,12 +11,13 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.2",
-    "next": "10.0.5",
+    "next": "^10.2.0",
     "raw-loader": "^4.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-gist": "^1.2.2",
     "react-markdown": "^5.0.3",
+    "react-player": "^2.9.0",
     "react-syntax-highlighter": "^15.4.3"
   }
 }
