@@ -42,7 +42,7 @@ export default function Home() {
             <Badge /> 
             <br />
 
-            <h1>&#123;News:<br/> slo͞oh is here&#125;</h1>
+            <h1>&#123;News: slo͞oh is here&#125;</h1>
 
             <div className={style.sloohVideo}>
                <ReactPlayer
