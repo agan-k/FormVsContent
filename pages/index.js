@@ -35,14 +35,17 @@ export default function Home() {
       .map(item => item)
    const domStack = StackFilter(stackData, 'JavaScript', 'HTML5', 'CSS3')
       .map(item => item)
-   
+   const curlyL = <span className={style.curly_brackets}>&#123;</span>
+   const curlyR = <span className={style.curly_brackets}>&#125;</span>
    return (
     <Layout>
       <div className={style.container}>
             <Badge /> 
             <br />
 
-            <h1>&#123;News: slo͞oh is here&#125;</h1>
+            <div className={style.section_description}>
+               {curlyL}<h1>News: slo͞oh is here</h1>{curlyR}
+            </div>
 
             <div className={style.sloohVideo}>
                <ReactPlayer
@@ -53,10 +56,16 @@ export default function Home() {
                   width="100%"
                />
             </div>
-            <h1>&#123;recent posts&#125;</h1>
+            <div className={style.section_description}>
+               {curlyL}<h1>recent posts</h1>{curlyR}
+            </div>
+            {/* <h1>&#123;recent posts&#125;</h1> */}
             <PostsCards recent='true' />
             
-            <h1>&#123;current projects&#125;</h1>
+            <div className={style.section_description}>
+               {curlyL}<h1>current projects</h1>{curlyR}
+            </div>
+            {/* <h1>&#123;current projects&#125;</h1> */}
          <Project
                name='RajivJayaveera.com'
                description='Music artist profile web app. Headless CMS, responsive design, third party 

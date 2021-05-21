@@ -3,16 +3,24 @@
    margin: 0 auto;
    text-align: center;
 }
-.container h1 {
-   padding: .1rem;
+.section_description {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   padding: 2rem;
    font-size: 4rem;
    font-weight: 400;
-   /* color: rgb(236, 180, 58); */
-   /* background-color: black; */
-   margin: 2rem 0 .5rem 0;
-   letter-spacing: .3rem;
-   text-align: left;
 }
+   .curly_brackets {
+      font-size: 7rem;
+      font-weight: 100;
+      vertical-align: middle;
+      color: orange;
+   }
+   .section_description h1 {
+      margin: 1.6rem 0;
+      letter-spacing: .3rem;
+   }
 .sloohVideo {
    width: 100%;
    margin: 0 auto;
@@ -20,14 +28,15 @@
 }
 
 @media only screen and (max-width: 800px) {
-   .container h1 {
-      text-align: center;
-      font-size: 2.3rem;
-      font-weight: 400;
-      margin-top: 2rem;
-      padding: .2rem;
-      letter-spacing: .5rem;
+   .section_description {
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+      font-weight: 200;
    }
+      .curly_brackets {
+         font-size: 6rem;
+      }
+   
    .sloohVideo {
       width: 100%;
       margin: 0 auto;
@@ -35,7 +44,7 @@
    }
 }
 @media only screen and (max-width: 600px) {
-   .container h1 {
+   /* .container h1 {
       text-align: center;
       font-size: 1.7rem;
       font-weight: 300;
@@ -43,7 +52,15 @@
       margin-top: 2rem;
       margin-bottom: 1rem;
       padding: .2rem;
+   } */
+   .section_description {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      font-weight: 200;
    }
+      .curly_brackets {
+         font-size: 4rem;
+      }
    .sloohVideo {
       width: 100%;
       margin: 0 auto;
