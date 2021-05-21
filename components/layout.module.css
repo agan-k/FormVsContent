@@ -32,12 +32,14 @@
     border-radius: 0;
  }
  .header a:hover {
+    box-shadow: 0 2px 1px rgb(240, 240, 240);
+    color: black;
  }
  .active a {
    box-shadow: 0 2px 1px rgb(240, 240, 240);
  }
  .active a:hover {
-   color: black;
+   color: grey;
    cursor: auto;
 
  }
