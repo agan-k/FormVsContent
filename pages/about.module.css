@@ -15,28 +15,40 @@
 .resume_wrapper .job_title {
    margin: 0 0 0 1rem;
    font-style: italic;
-
 }
-
-
+.resume_wrapper .section_title {
+   letter-spacing: .3rem;
+}
 .resume_wrapper p {
-   font-size: .8rem;
-   line-height: 1.2rem;
-   font-weight: 400;
-   /* text-align: j; */
-   margin: 0 auto;
-   margin-left: 2rem;
+  font-size: .8rem;
+  line-height: 1.2rem;
+  font-weight: 400;
+  margin: 0 auto;
+  margin-left: 2rem;
 }
 .resume_wrapper ul {
-   margin-left: 3rem;
+  margin-left: 3rem;
 }
 .resume_wrapper li {
-   font-size: .8rem;
-   line-height: 1rem;
+  font-size: .8rem;
+  line-height: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
-   .resume_wrapper {
-      width: 98%;
-   }
+  .container {
+    width: 100%;
+  }
+  .resume_wrapper {
+    width: 90%;
+  }
+  .resume_wrapper ul {
+    margin-left: 1.5rem;
+  }
+  .resume_wrapper .job_title {
+     margin: 0 0 0 0;
+  
+  }
+  .resume_wrapper p {
+    margin-left: 0.5rem;
+  }
 }

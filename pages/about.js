@@ -7,7 +7,7 @@ export default function About() {
       <Layout>
          <div className={style.container}>
             <div className={style.resume_wrapper}>
-              <h4>Summary</h4>
+              <h4 class={style.section_title}>Summary</h4>
               <p>
                 Detail-oriented Software Engineer delivering UX /UI design and content development across the E-commerce, 
                 entertainment, hospitality, and education industries. Specialized in translating client vision into actionable 
@@ -21,7 +21,7 @@ export default function About() {
                 RESTful API, Headless CMS, others.  
               </p>
               <br/>
-              <h4>Experience</h4>
+              <h4 class={style.section_title}>Experience</h4>
               <div>
                 <div className={style.job_title}>Front End/Shopify Developer</div>
                 <p><em>Contract, Softlimit - E-commerce Experts (2021)</em></p>
@@ -85,7 +85,7 @@ export default function About() {
                 </ul>
               </div><br/>
               
-              <h4>Education</h4>
+              <h4 class={style.section_title}>Education</h4>
               <p>
                   GENERAL ASSEMBLY, NEW YORK, NY<br/>
                   <em>Software Engineering Immersive</em>
@@ -98,11 +98,11 @@ export default function About() {
                   <br />
               </p>
               <br/>
-              <h4>Other interests</h4>
+              <h4 class={style.section_title}>Other interests</h4>
               <p>
                 Blogging, Photography, Music 
                 <br />
-                <strong>Fluent in:</strong>&nbsp;
+                Fluent in:&nbsp;
                 English, German, Bosnian <em>(Croatian, Serbian)</em>
               </p>
                

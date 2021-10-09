@@ -27,27 +27,29 @@ export default function Layout({ children, title = 'FormVsContent' }) {
       
    return (
       <div className={style.container}>
-         <div className={style.banner_mask}></div>
-         <Head>
-            <title>{title}</title>
-            <link rel="icon" href="/favicon.ico" />
-         </Head>
-         <header className={style.header}>
-            <ul>{linksList}</ul>
-         </header>
-         <main className={style.main}>
-            {children}
-         </main>
-         <footer className={style.footer}>
-            <div className={style.logos}>
-            {stackData.map(logo => 
-               <img src={logo.src}/>
-            )}
-            </div>
-            <p>
-               FormVsContent&copy;2021
-            </p>
-         </footer>
+        <div className={style.banner_mask}></div>
+        <Head>
+          <title>{title}</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <header className={style.header}>
+          <ul>{linksList}</ul>
+        </header>
+        <main className={style.main}>
+          {children}
+        </main>
+        <footer className={style.footer}>
+          <div className={style.logos}>
+             {stackData.map(logo =>
+              <div class={style.img_wrapper}>
+                 <img src={logo.src} />
+              </div>
+             )}
+          </div>
+          <p>
+            FormVsContent&copy;2021
+          </p>
+        </footer>
          
       </div>
    )

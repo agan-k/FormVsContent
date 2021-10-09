@@ -8,7 +8,7 @@ const stackData = [
    { id: 7, name: 'Liquid', src: '/assets/liquid.png' },
    { id: 8, name: 'Prismic CMS', src: '/assets/prismic-io.jpg' },
    { id: 9, name: 'PostgreSQL', src: '/assets/postgresql.png' },
-   { id: 10, name: 'NodeExpress', src: '/assets/nodeAndExpress.png' },
+  //  { id: 10, name: 'NodeExpress', src: '/assets/nodeAndExpress.png' },
    { id: 11, name: 'Sass', src: '/assets/sass.png' },
    { id: 12, name: 'Tailwind', src: '/assets/tailwind.png' },
    { id: 13, name: 'TypeScript', src: '/assets/typescript.png' },
