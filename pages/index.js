@@ -23,6 +23,10 @@ export default function Home() {
       }
       return filteredArr
    }
+   const kworqStack = StackFilter(stackData, 'Tailwind', 'NextJS', 'TypeScript', 'Prismic CMS')
+      .map(item => item)
+   const lamoreStack = StackFilter(stackData, 'Sass', 'Liquid', 'JavaScript')
+      .map(item => item)
    const sloohStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript')
       .map(item => item)
    const laraStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript', 'ReactJS', 'NextJS', 'API', 'Prismic CMS')
@@ -40,94 +44,87 @@ export default function Home() {
    return (
     <Layout>
       <div className={style.container}>
-            <Badge /> 
-            <br />
+        <Badge /> 
+        <br />
 
-            <div className={style.section_description}>
-               {curlyL}<h1>News: slo͞oh is here</h1>{curlyR}
-            </div>
+        <div className={style.section_description}>
+          {curlyL}<h1>News: slo͞oh is here</h1>{curlyR}
+        </div>
 
-            <div className={style.sloohVideo}>
-               <ReactPlayer
-                  url="slooh.mp4"
-                  light="slooh_thumbnail.png"
-                  controls={true}
-                  height="100%"
-                  width="100%"
-               />
-            </div>
-            <div className={style.section_description}>
-               {curlyL}<h1>recent posts</h1>{curlyR}
-            </div>
-            {/* <h1>&#123;recent posts&#125;</h1> */}
-            <PostsCards recent='true' />
-            
-            <div className={style.section_description}>
-               {curlyL}<h1>current projects</h1>{curlyR}
-            </div>
-            {/* <h1>&#123;current projects&#125;</h1> */}
-         <Project
-               name='RajivJayaveera.com'
-               description='Music artist profile web app. Headless CMS, responsive design, third party 
-               music distribution integration, form submission.'
-         url='https://rajivJayaweera.com'
-         stack={rajStack}
-         repo_link='https://github.com/agan-k/raj'
-         desktop_sshot={['/assets/screen_shots/raj_desktop.jpg', '/assets/screen_shots/raj_desktop1.jpg']}
-         // tablet_sshot={['', '']}
-         mobile_sshot={['/assets/screen_shots/raj_mobile.jpg', '/assets/screen_shots/raj_mobile1.jpg',
-         '/assets/screen_shots/raj_mobile2.jpg', '/assets/screen_shots/raj_mobile3.jpg',]}
-         />
-         <Project
-               name='slo͞oh.app'
-               description='Interactive ear-training tool with built-in algorithmic logic based on the 
-               "movable do" method.'
-            url='https://slooh.app'
-            stack={sloohStack}
-            repo_link='https://github.com/agan-k/slooh-app1.2'
-            desktop_sshot={['/assets/screen_shots/slooh.png']}
-            // tablet_sshot={['', '']}
-            mobile_sshot={['', '']}
-         />
-         <Project
-            name='LaraBello.com'
-            description='Web app. Integration with Bandcamp and headless CMS.'
-            url='https://larabello.com'
-            stack={laraStack}
-            repo_link='https://github.com/agan-k/lara'
-            desktop_sshot={['/assets/screen_shots/lara_desktop1.jpg', '/assets/screen_shots/lara_desktop2.jpg']}
-            // tablet_sshot={['', '']}
-            mobile_sshot={['', '']}
-         />
-         <Project
-            name='AIC-Photography.info'
-               description='Educational photography hub featuring selected artwork from the Art Institute 
-            Of Chicago public API.'
-            url='https://aic-photography-collection.info'
-            stack={aicStack}
-            repo_link='https://github.com/agan-k/aic-photography-selection'
-            desktop_sshot={['/assets/screen_shots/aic_desktop.jpg', '/assets/screen_shots/aic_desktop1.jpg']}
-            tablet_sshot={['/assets/screen_shots/aic_tablet.png']}
-            mobile_sshot={['/assets/screen_shots/aic_mobile.png', '/assets/screen_shots/aic_mobile1.png',]}
-         />
-         {/* <Project
-            name='KatarinaOlujic.com'
-            url='https://katarina-olujic.netlify.app'
-            stack={katStack}
-            repo_link='https://github.com/agan-k/katarinaolujic'
-            desktop_sshot={['/assets/screen_shots/kat_desktop1.png', '/assets/screen_shots/kat_desktop2.png']}
-            // tablet_sshot={['', '']}
-            mobile_sshot={['', '']}
-         />
-         <Project
-            name='DominiqueCarre.fr'
-            url='https://dominiquecarre.fr'
-            stack={domStack}
-            repo_link=''
-            desktop_sshot={['/assets/screen_shots/dom_desktop.jpg']}
-            tablet_sshot={['/assets/screen_shots/dom_tablet.jpg']}
-            mobile_sshot={['/assets/screen_shots/dom_mobile.jpg', '/assets/screen_shots/dom_mobile1.jpg',]}
-         /> */}
+        <div className={style.sloohVideo}>
+          <ReactPlayer
+              url="slooh.mp4"
+              light="slooh_thumbnail.png"
+              controls={true}
+              height="100%"
+              width="100%"/>
+        </div>
+        
+        <div className={style.section_description}>
+            {curlyL}<h1>current projects</h1>{curlyR}
+        </div>
+        
+        <Project
+          name='RajivJayaveera.com'
+          description='Music artist profile web app. Headless CMS, responsive design, third party 
+          music distribution integration, form submission.'
+          url='https://rajivJayaweera.com'
+          stack={rajStack}
+          repo_link='https://github.com/agan-k/raj'
+          desktop_sshot={['/assets/screen_shots/raj_desktop.jpg', '/assets/screen_shots/raj_desktop1.jpg']}
+          mobile_sshot={['/assets/screen_shots/raj_mobile.jpg', '/assets/screen_shots/raj_mobile1.jpg',
+          '/assets/screen_shots/raj_mobile2.jpg', '/assets/screen_shots/raj_mobile3.jpg',]}
+        />
+        <Project
+          name='Lamoredesign.com'
+          description='Custom PDP for a Shopify Plus store.'
+          url='https://lamoredesign.com'
+          stack={lamoreStack}
+          desktop_sshot={['/assets/screen_shots/lamore.png']}
+        />
+        <Project
+          name='slo͞oh.app'
+          description='Interactive ear-training tool with built-in algorithmic logic based on the 
+          "movable do" method.'
+          url='https://slooh.app'
+          stack={sloohStack}
+          repo_link='https://github.com/agan-k/slooh-app1.2'
+          desktop_sshot={['/assets/screen_shots/slooh.png']}
+          mobile_sshot={['', '']}
+        />
+        <Project
+          name='kworq.com'
+          description='Creative agency homepage with Prismic CMS'
+          url='https://kworq.com'
+          stack={kworqStack}
+          desktop_sshot={['/assets/screen_shots/kworq.png']}
+        />
+        <Project
+          name='LaraBello.com'
+          description='Web app. Integration with Bandcamp and headless CMS.'
+          url='https://larabello.com'
+          stack={laraStack}
+          repo_link='https://github.com/agan-k/lara'
+          desktop_sshot={['/assets/screen_shots/lara_desktop1.jpg', '/assets/screen_shots/lara_desktop2.jpg']}
+          mobile_sshot={['', '']}
+        />
+        <Project
+          name='AIC-Photography.info'
+          description='Educational photography hub featuring selected artwork from the Art Institute 
+          Of Chicago public API.'
+          url='https://aic-photography-collection.info'
+          stack={aicStack}
+          repo_link='https://github.com/agan-k/aic-photography-selection'
+          desktop_sshot={['/assets/screen_shots/aic_desktop.jpg', '/assets/screen_shots/aic_desktop1.jpg']}
+          tablet_sshot={['/assets/screen_shots/aic_tablet.png']}
+          mobile_sshot={['/assets/screen_shots/aic_mobile.png', '/assets/screen_shots/aic_mobile1.png',]}
+        />
+        
+        <div className={style.section_description}>
+            {curlyL}<h1>recent posts</h1>{curlyR}
+        </div>
+        <PostsCards recent='true' />
+        
       </div>
    </Layout>
   )

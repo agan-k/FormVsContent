@@ -1,24 +1,23 @@
 .container {
-   width: 100%;
-   height: 100%;
-   margin: 0 auto;
+   width: 80%;
    height: min-content;
 }
 .resume_wrapper {
    width: 80%;
+   max-width: 600px;
    margin: 0 auto;
    padding: 2rem 0;
-   /* background-color: white; */
 }
 .resume_wrapper h4 {
    margin: 0 0 .5rem 0;
 }
 
 .resume_wrapper .job_title {
-   font-weight: 900;
    margin: 0 0 0 1rem;
+   font-style: italic;
 
 }
+
 
 .resume_wrapper p {
    font-size: .8rem;
@@ -29,7 +28,7 @@
    margin-left: 2rem;
 }
 .resume_wrapper ul {
-   margin-left: 1.2rem;
+   margin-left: 3rem;
 }
 .resume_wrapper li {
    font-size: .8rem;
