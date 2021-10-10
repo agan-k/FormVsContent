@@ -13,11 +13,13 @@
 }
 
 .resume_wrapper .job_title {
+  font-size: .9rem;
    margin: 0 0 0 1rem;
    font-style: italic;
 }
 .resume_wrapper .section_title {
    letter-spacing: .3rem;
+   color: rgb(122, 166, 195);
 }
 .resume_wrapper p {
   font-size: .8rem;

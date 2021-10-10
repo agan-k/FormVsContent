@@ -70,17 +70,29 @@ export default function About() {
                   development and content writing to enhance brand voice.
                   </li>
                   <li>
-                  Created marketing website with CMS to increase exposure via online presence by developing concept and
-                  design of web application to distribute and sell merchandise, integrated into third-party online store.
-                  </li>
-                  <li>
                   Designed an interactive music education learning and development application modeled on movable do solfège;
                   incorporated training and testing methods for upskilling end-users, project leveraged HTML5, CSS and Javascript
                   technologies to develop engaging and accessible user experience
                   </li>
+                </ul>
+              </div><br/>
+              
+              <div>
+                <div className={style.job_title}>Performer, Composer and Educator</div>
+                <p><em>Music, Multiple Brands and Events (2002 - 2019)</em></p>
+                <p>
+                  Toured internationally and performed major music festivals, collaborating with production companies and brands.
+                </p> 
+                <ul>
                   <li>
-                  Identified opportunity to leverage Art Institute of Chicago public API to create a responsive image gallery
-                  for 3 different browsers by extracting image data and centralizing access.
+                    Worked as session musician and composed music for film.
+                  </li>
+                  <li>
+                    Taught masterclasses and workshops to lead aspiring professionals through fundamentals, advanced training, 
+                    and continuing education topics.
+                  </li>
+                  <li>
+                    Developed and composed several educational materials for publishing outlets and book formats.
                   </li>
                 </ul>
               </div><br/>
