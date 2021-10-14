@@ -17,7 +17,7 @@ export default function About() {
               </p><br/>
               <p><strong>Languages, Frameworks, Skills ...</strong></p>
               <p>
-                HTML5, Liquid, CSS (Sass, Tailwind, CSS-in-JS), JavaScript, React, Next.JS, Express, PostgreSQL, MongoDB, Ruby, 
+                HTML5, Liquid, CSS (Sass, Tailwind, CSS-in-JS), JavaScript, React, Next.JS, Express, GraphQL, PostgreSQL, MongoDB, Ruby, 
                 RESTful API, Headless CMS, others.  
               </p>
               <br/>
