@@ -9,19 +9,42 @@ export default function About() {
             <div className={style.resume_wrapper}>
               <h4 class={style.section_title}>Summary</h4>
               <p>
-                Detail-oriented Software Engineer delivering UX /UI design and content development across the E-commerce, 
-                entertainment, hospitality, and education industries. Specialized in translating client vision into actionable 
-                suggestions, UX roadmaps, and a unique user-journey that grows brands and recognition. Experience front end developer 
-                collaborating with stakeholders and design teams to create a tailored customer journey to lead users through improved 
-                experiences and deep understanding of the brand.
+              Detail-oriented Web Developer delivering user friendly and robust front end
+              applications across the Fintech, E-commerce, entertainment, hospitality,
+              and education industries. Specialized in translating client vision into
+              actionable suggestions, UX roadmaps, and a unique user-journey that
+              grows brands and recognition. Experienced in collaborating with stakeholders,
+              product designers, large and small engineering teams to create a tailored
+              customer journey to lead users through improved experiences and deep 
+              understanding of the brand.
               </p><br/>
               <p><strong>Languages, Frameworks, Skills ...</strong></p>
               <p>
-                HTML5, Liquid, CSS (Sass, Tailwind, CSS-in-JS), JavaScript, React, Next.JS, Express, GraphQL, PostgreSQL, MongoDB, Ruby, 
-                RESTful API, Headless CMS, others.  
+                
+HTML5, Liquid, CSS (Sass, Tailwind, CSS-in-JS), Jest, JavaScript, React, Next.JS, Express, 
+GraphQL, PostgreSQL, MongoDB, RESTful API, Headless CMS... 
               </p>
               <br/>
               <h4 class={style.section_title}>Experience</h4>
+              <div>
+                <div className={style.job_title}>Front End Engineer</div>
+                <p><em>Full time, Renofi - Fintech (2021 - 2023)</em></p>
+                <p>
+                Worked as a part of the product team of thirty plus members divided
+                into multiple work streams.
+                </p> 
+                <ul>
+                  <li>
+                  Built and maintained the company's internal and client facing applications
+                  </li>
+                  <li>
+                    Maintained static homepage/blog
+                  </li>
+                  <li>
+                    Worked on A/B testing implementations with the growth team
+                  </li>
+                </ul>
+              </div><br/>
               <div>
                 <div className={style.job_title}>Front End/Shopify Developer</div>
                 <p><em>Contract, Softlimit - E-commerce Experts (2021)</em></p>
@@ -59,7 +82,7 @@ export default function About() {
               
               <div>
                 <div className={style.job_title}>Web Developer/Software Engineer</div>
-                <p><em>Contract, FORM VS CONTENT Studio (2018 - present)</em></p>
+                <p><em>Contract, FORM VS CONTENT Studio (2018 - 2021)</em></p>
                 <p>
                   Worked closely with clients to design user friendly solutions for their online presentations and content
                   distributions, while leveraging the latest software engineering tools.
@@ -73,26 +96,6 @@ export default function About() {
                   Designed an interactive music education learning and development application modeled on movable do solfège;
                   incorporated training and testing methods for upskilling end-users, project leveraged HTML5, CSS and Javascript
                   technologies to develop engaging and accessible user experience
-                  </li>
-                </ul>
-              </div><br/>
-              
-              <div>
-                <div className={style.job_title}>Performer, Composer and Educator</div>
-                <p><em>Music, Multiple Brands and Events (2002 - 2019)</em></p>
-                <p>
-                  Toured internationally and performed major music festivals, collaborating with production companies and brands.
-                </p> 
-                <ul>
-                  <li>
-                    Worked as session musician and composed music for film.
-                  </li>
-                  <li>
-                    Taught masterclasses and workshops to lead aspiring professionals through fundamentals, advanced training, 
-                    and continuing education topics.
-                  </li>
-                  <li>
-                    Developed and composed several educational materials for publishing outlets and book formats.
                   </li>
                 </ul>
               </div><br/>

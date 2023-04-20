@@ -7,7 +7,7 @@ export default function Badge() {
          
          <div className={style.avatar}/>
                <h2>Koran Agan</h2>
-               <h3>Web Developer | Software Engineer</h3>
+               <h3>Frontend Engineer</h3>
                <a href='https://www.linkedin.com/in/koran-agan/' target='_blank'>
                   <img className={style.social} src='/assets/linkedin.png' />
                </a>
