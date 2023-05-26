@@ -8,27 +8,15 @@ export default function Project(props) {
    const [ imgIndex, setImgIndex] = useState()
    return (
       <div className={style.container}>
-        {/* Project Outside Link */}
         <a href={props.url} target='_blank'>
-          {/* <span>&#8594;</span> */}
           <span>&#8599;</span>
         </a>
-        {/* Project Name */}
         <h2>
-        {/* {props.name} */}
           <a href={props.url}>{props.name}</a>
         </h2>
-        {/* Project Description */}
         <p className={style.project_description}>
         {props.description}
         </p>
-        {/* Stack Used */}
-        {/* <h3>Stack:&nbsp;
-          {props.stack.map(item => 
-              `${item.name} `
-          )}
-        </h3> */}
-
         <div className={style.stack_info}>
           {props.stack.map((item, index) =>
             index == imgIndex ?
