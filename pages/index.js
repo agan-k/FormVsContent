@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 import Badge from '../components/badge'
 import Project from '../components/project'
-import OngoingProject from '../components/ongoingProject'
+import OngoingProject from '../components/OngoingProject'
 import PostsCards from '../components/posts_cards'
 import ReactPlayer from 'react-player'
 
