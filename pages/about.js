@@ -7,7 +7,7 @@ export default function About() {
       <Layout>
          <div className={style.container}>
             <div className={style.resume_wrapper}>
-              <h4 class={style.section_title}>Summary</h4>
+              <h4 className={style.section_title}>Summary</h4>
               <p>
               Detail-oriented Web Developer delivering user friendly and robust front end
               applications across the Fintech, E-commerce, entertainment, hospitality,
@@ -25,7 +25,7 @@ HTML5, Liquid, CSS (Sass, Tailwind, CSS-in-JS), Jest, JavaScript, React, Next.JS
 GraphQL, PostgreSQL, MongoDB, RESTful API, Headless CMS... 
               </p>
               <br/>
-              <h4 class={style.section_title}>Experience</h4>
+              <h4 className={style.section_title}>Experience</h4>
               <div>
                 <div className={style.job_title}>Front End Engineer</div>
                 <p><em>Full time, Renofi - Fintech (2021 - 2023)</em></p>
@@ -100,7 +100,7 @@ GraphQL, PostgreSQL, MongoDB, RESTful API, Headless CMS...
                 </ul>
               </div><br/>
               
-              <h4 class={style.section_title}>Education</h4>
+              <h4 className={style.section_title}>Education</h4>
               <p>
                   GENERAL ASSEMBLY, NEW YORK, NY<br/>
                   <em>Software Engineering Immersive</em>
@@ -113,7 +113,7 @@ GraphQL, PostgreSQL, MongoDB, RESTful API, Headless CMS...
                   <br />
               </p>
               <br/>
-              <h4 class={style.section_title}>Other interests</h4>
+              <h4 className={style.section_title}>Other interests</h4>
               <p>
                 Blogging, Photography, Music 
                 <br />

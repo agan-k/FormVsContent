@@ -8,6 +8,7 @@ import stackData from '../data/stackData'
 
 export default function Layout({ children, title = 'FormVsContent' }) {
    const router = useRouter()
+   const currentYear = new Date().getFullYear();
    const linkData = [
       {name: 'home', link: '/'},
       {name: 'blog', link: '/blogHome'},
@@ -15,16 +16,12 @@ export default function Layout({ children, title = 'FormVsContent' }) {
    ]
    const linksList = linkData.map(item =>
       <li key={item.name} className={router.pathname == `${item.link}` ? `${style.active}` : ''}>
-          
-            <Link href={item.link}>
-               
-                  <a>{item.name}</a>
-                  
-            </Link>
-          
+        <Link href={item.link}>
+          <span>{item.name}</span>
+        </Link>
       </li>
-      )
-      
+    )
+  
    return (
       <div className={style.container}>
         <div className={style.banner_mask}></div>
@@ -41,13 +38,13 @@ export default function Layout({ children, title = 'FormVsContent' }) {
         <footer className={style.footer}>
           <div className={style.logos}>
              {stackData.map(logo =>
-              <div class={style.img_wrapper}>
+              <div key={logo.src} className={style.img_wrapper}>
                  <img src={logo.src} />
               </div>
              )}
           </div>
           <p>
-            FormVsContent&copy;2021
+          ©<span>{currentYear}</span> FormVsContent
           </p>
         </footer>
          
