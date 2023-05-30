@@ -23,9 +23,9 @@ const lamoreStack = StackFilter(stackData, 'Sass', 'Liquid', 'JavaScript')
   .map(item => item)
 const sloohStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript')
   .map(item => item)
-const laraStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript', 'ReactJS', 'NextJS', 'API', 'Headless CMS')
+const laraStack = StackFilter(stackData, 'NextJS', 'Headless CMS')
   .map(item => item)
-const rajStack = StackFilter(stackData, 'CSS3', 'HTML5', 'JavaScript', 'ReactJS', 'NextJS', 'API', 'Headless CMS')
+const rajStack = StackFilter(stackData, 'ReactJS', 'Headless CMS', 'Styled Components', 'Jest')
   .map(item => item)
 const aicStack = StackFilter(stackData, 'ReactJS', 'JavaScript', 'CSS3', 'HTML', 'API')
   .map(item => item)
@@ -123,8 +123,8 @@ const data = [
     tools: ['ReactJS', 'JavaScript', 'CSS3', 'HTML', 'API'],
     // githubLink: '',
     desktopScreenshot: ['/assets/screen_shots/aic_desktop.jpg', '/assets/screen_shots/aic_desktop1.jpg'],
-    mobileScreenshot: ['/assets/screen_shots/aic_tablet.png'],
-    tabletScreenShot: ['/assets/screen_shots/aic_mobile.png', '/assets/screen_shots/aic_mobile1.png',],
+    mobileScreenshot: null,
+    tabletScreenShot: null,
   },
 ]
 export default data

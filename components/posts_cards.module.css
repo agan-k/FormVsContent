@@ -4,20 +4,19 @@
    align-items: flex-start;
    flex-wrap: wrap;
    width: 100%;
-   margin: 0 auto;
-   text-align: initial;
+   /* margin: 0 auto; */
+   text-align: left;
 }
 
 .post {
    position: relative;
    background-color: rgb(253, 253, 253);
-   width: 32%;
+   width: 33%;
    min-height: 20rem;
    margin-top: 1rem;
    cursor: pointer;
    border: 1px solid rgba(128, 128, 128, 0);
    transition: inherit;
-
 }
 .post:hover {
    background-color: white;
@@ -33,12 +32,11 @@
    line-height: 1rem;
    margin: 1rem;
 }
-.post a {
-   
-   color: #689FF1;
+.posts_container a {
+   color: grey;
    text-decoration: none;
 }
-.post span {
+.arrow {
    font-size: 1.5rem;
    font-weight: 200;
    color: white;

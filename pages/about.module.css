@@ -1,9 +1,9 @@
 .container {
-   width: 80%;
+   width: 90%;
    height: min-content;
 }
 .resume_wrapper {
-   width: 80%;
+   width: 100%;
    max-width: 600px;
    margin: 0 auto;
    padding: 2rem 0;

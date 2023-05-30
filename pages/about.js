@@ -81,7 +81,7 @@ GraphQL, PostgreSQL, MongoDB, RESTful API, Headless CMS...
               </div><br/>
               
               <div>
-                <div className={style.job_title}>Web Developer/Software Engineer</div>
+                <div className={style.job_title}>Web Developer</div>
                 <p><em>Contract, FORM VS CONTENT Studio (2018 - 2021)</em></p>
                 <p>
                   Worked closely with clients to design user friendly solutions for their online presentations and content

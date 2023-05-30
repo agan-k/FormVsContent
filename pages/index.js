@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 import Badge from '../components/badge'
 import Project from '../components/project'
-import OngoingProject from '../components/OngoingProject'
+import OngoingProject from '../components/ongoingProject'
 import PostsCards from '../components/posts_cards'
 import ReactPlayer from 'react-player'
 
@@ -43,7 +43,6 @@ export default function Home() {
               url="slooh.mp4"
               light="slooh_thumbnail.png"
               controls={true}
-              height="100%"
               width="100%"/>
           }
         </div>
