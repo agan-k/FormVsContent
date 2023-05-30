@@ -3,7 +3,6 @@ import style from './ongoingProject.module.css'
 
 export default function OngoinProject({data}) {
    const [ imgIndex, setImgIndex] = useState()
-   // console.log(data.stack)
    return (
       <div className={style.container}>
          <a href={data.url} target='_blank'>
