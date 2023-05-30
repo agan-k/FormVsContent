@@ -18,19 +18,19 @@ export default function Home() {
       setHasWindow(true);
     }
   }, []);
+
   const ongoingProjects = projectsData?.map((item) => {
     return (
         <OngoingProject data={item} key={item.name} />
     )
   });
 
-   const curlyL = <span className={style.curly_brackets}>&#123;</span>
-   const curlyR = <span className={style.curly_brackets}>&#125;</span>
-   return (
+  const curlyL = <span className={style.curly_brackets}>&#123;</span>
+  const curlyR = <span className={style.curly_brackets}>&#125;</span>
+  return (
     <Layout>
       <div className={style.container}>
-        <Badge /> 
-        <br />
+        <Badge />
 
         <div className={style.section_description}>
           {curlyL}<h1>News: slo͞oh is here</h1>{curlyR}
@@ -59,6 +59,6 @@ export default function Home() {
         </div>
         <PostsCards recent='true' />
       </div>
-   </Layout>
+    </Layout>
   )
 }
