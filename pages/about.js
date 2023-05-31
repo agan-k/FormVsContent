@@ -9,20 +9,19 @@ export default function About() {
             <div className={style.resume_wrapper}>
               <h4 className={style.section_title}>Summary</h4>
               <p>
-              Detail-oriented Web Developer delivering user friendly and robust front end
-              applications across the Fintech, E-commerce, entertainment, hospitality,
-              and education industries. Specialized in translating client vision into
-              actionable suggestions, UX roadmaps, and a unique user-journey that
-              grows brands and recognition. Experienced in collaborating with stakeholders,
-              product designers, large and small engineering teams to create a tailored
-              customer journey to lead users through improved experiences and deep 
-              understanding of the brand.
+                Detail-oriented Web Developer delivering user friendly and robust front end
+                applications across the Fintech, E-commerce, entertainment, hospitality,
+                and education industries. Specialized in translating client vision into
+                actionable suggestions, UX roadmaps, and a unique user-journey that
+                grows brands and recognition. Experienced in collaborating with stakeholders,
+                product designers, large and small engineering teams to create a tailored
+                customer journey to lead users through improved experiences and deep 
+                understanding of the brand.
               </p><br/>
               <p><strong>Languages, Frameworks, Skills ...</strong></p>
               <p>
-                
-HTML5, Liquid, CSS (Sass, Tailwind, CSS-in-JS), Jest, JavaScript, React, Next.JS, Express, 
-GraphQL, PostgreSQL, MongoDB, RESTful API, Headless CMS... 
+                HTML5, Liquid, CSS (Sass, Tailwind, CSS-in-JS), Jest, JavaScript, React, Next.JS, Express, 
+                GraphQL, PostgreSQL, MongoDB, RESTful API, Headless CMS... 
               </p>
               <br/>
               <h4 className={style.section_title}>Experience</h4>
@@ -30,8 +29,8 @@ GraphQL, PostgreSQL, MongoDB, RESTful API, Headless CMS...
                 <div className={style.job_title}>Front End Engineer</div>
                 <p><em>Full time, Renofi - Fintech (2021 - 2023)</em></p>
                 <p>
-                Worked as a part of the product team of thirty plus members divided
-                into multiple work streams.
+                  Worked as a part of the product team of thirty plus members divided
+                  into multiple work streams.
                 </p> 
                 <ul>
                   <li>
@@ -102,15 +101,15 @@ GraphQL, PostgreSQL, MongoDB, RESTful API, Headless CMS...
               
               <h4 className={style.section_title}>Education</h4>
               <p>
-                  GENERAL ASSEMBLY, NEW YORK, NY<br/>
-                  <em>Software Engineering Immersive</em>
-                  <br />
-                  BERKLEE COLLEGE OF MUSIC<br/>
-                  <em>BM - Performance/Composition</em>
-                  <br />
-                  EL. ENGINEERING VOCATIONAL, <em>(Bosnia Herzegovina)</em><br/>
-                  <em>Associate's degree equivalent</em>
-                  <br />
+                GENERAL ASSEMBLY, NEW YORK, NY<br/>
+                <em>Software Engineering Immersive</em>
+                <br />
+                BERKLEE COLLEGE OF MUSIC<br/>
+                <em>BM - Performance/Composition</em>
+                <br />
+                EL. ENGINEERING VOCATIONAL, <em>(Bosnia Herzegovina)</em><br/>
+                <em>Associate's degree equivalent</em>
+                <br />
               </p>
               <br/>
               <h4 className={style.section_title}>Other interests</h4>
@@ -120,7 +119,6 @@ GraphQL, PostgreSQL, MongoDB, RESTful API, Headless CMS...
                 Fluent in:&nbsp;
                 English, German, Bosnian <em>(Croatian, Serbian)</em>
               </p>
-               
             </div>
          </div>
       </Layout>

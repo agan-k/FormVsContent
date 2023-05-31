@@ -47,7 +47,6 @@ export default function Layout({ children, title = 'FormVsContent' }) {
           ©<span>{currentYear}</span> FormVsContent
           </p>
         </footer>
-         
       </div>
    )
 }
