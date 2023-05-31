@@ -7,8 +7,8 @@ import postsData from '../data/postsData'
 
 export default function PostsCards(props) {
    const posts = postsData.map(post =>
-      <div className={style.post}>
-         <Link href={post.link} key={post.id}>
+      <div key={post.id} className={style.post}>
+         <Link href={post.link}>
             <div className={style.arrow}>
                <span>&#8599;</span>
             </div>
