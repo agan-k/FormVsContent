@@ -21,7 +21,7 @@ export default function Home() {
 
   const ongoingProjects = projectsData?.map((item) => {
     return (
-        <OngoingProject data={item} key={item.name} />
+      <OngoingProject data={item} key={item.name} />
     )
   });
 
