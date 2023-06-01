@@ -86,7 +86,7 @@ const data = [
     stack: sloohStack,
     url: 'https://slooh.app',
     name: 'slo͞oh.app',
-    description: 'Interactive ear-training tool with built-in algorithmic logic based on the "movable do" method.',
+    description: 'Interactive ear-training tool based on the "movable do" method.',
     tools: ['CSS3', 'HTML5', 'JavaScript'],
     // githubLink: '',
     desktopScreenshot: ['/assets/screen_shots/slooh.png'],
