@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
+import {Layout} from '../components'
 import style from './about.module.css'
 
 export default function About() {
