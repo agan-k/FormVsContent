@@ -2,7 +2,7 @@ import React from 'react'
 import {Layout} from '../components'
 import style from './blogHome.module.css'
 import {PostCard} from '../components';
-import {PostsWrapper} from './styled';
+import {PostsWrapper} from '../styles/styled';
 import postsData from '../data/postsData'
 
 export default function BlogHome() {

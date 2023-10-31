@@ -6,7 +6,7 @@ import {
   Layout,
   PostCard,
 } from '../components';
-import {PostsWrapper} from './styled';
+import {PostsWrapper} from '../styles/styled';
 // import PostsCards from '../components/posts_cards';
 import style from './index.module.css';
 import projectsData from '../data/projectsData';
