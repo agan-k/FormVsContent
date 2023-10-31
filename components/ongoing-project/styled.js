@@ -5,7 +5,6 @@ export const Wrapper = styled('div')({
   position: 'relative',
   background: ({theme}) => theme.colors.background,
   width: staticTheme.space[16],
-  margin: `40px auto`,
   margin: `${staticTheme.space[5]}px auto`,
   textAlign: 'center',
 });

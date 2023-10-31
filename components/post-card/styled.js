@@ -22,14 +22,14 @@ export const Container = styled('div')({
 });
 export const Arrow = styled('span')({
   fontSize: '1.5rem',
-   fontWeight: '200',
-   color: 'white',
-   position: 'absolute',
-   top: '.1rem',
-   right: '.1rem',
-   display: 'block',
-   textAlign: 'right',
-   zIndex: '99',
+  fontWeight: '200',
+  color: 'white',
+  position: 'absolute',
+  top: '.1rem',
+  right: '.1rem',
+  display: 'block',
+  textAlign: 'right',
+  zIndex: '99',
 });
 export const Heading = styled('h2')({
   fontSize: '1rem',
