@@ -1,6 +1,6 @@
 .container {
    position: relative;
-   width: 80%;
+   /* width: 50%; */
    margin: 0 auto;
 }
 .header {
@@ -26,7 +26,6 @@
  .header a {
     padding: .5rem;
     text-decoration: none;
-    color: green;
     color: grey;
     border-radius: 0;
  }
@@ -61,7 +60,6 @@
     margin-bottom: 0;
  }
  .logos {
-   /* width: 620px; */
    display: flex;
    flex-wrap: wrap;
    justify-content: space-evenly;
@@ -69,7 +67,6 @@
  .logos .img_wrapper {
     width: 2rem;
     height: 2rem;
-    /* border: 1px solid red; */
     display: flex;
     align-content: center;
     justify-content: center;
@@ -107,24 +104,13 @@
       opacity: .4;
       padding-bottom: 1rem;
     }
-    /* .logos img {
-      height: 1.9rem;
-      padding-top: .2rem;
-    } */
   }
   @media only screen and (max-width: 600px) {
     .header li {
       font-size: .8rem;
     }
-    .logos img {
-      /* height: 1.6rem; */
-    }
     .logos .img_wrapper {
       width: 1rem;
       height: 1rem;
     }
-    /* .logos img {
-      height: 100%;
-      
-     } */
   }

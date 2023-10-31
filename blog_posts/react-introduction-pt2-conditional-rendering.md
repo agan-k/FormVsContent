@@ -1,9 +1,10 @@
 ---
 image: '/assets/reactJS.png'
 title: "Conditional Rendering in React"
-subtitle: "A Somewhat Personal Journey trough a Powerhouse - Pt.2"
+subtitle: "A Personal Journey trough a Powerhouse - Pt.2"
 date: "January 2021 by"
 author: 'K. Agan'
+signature: "K.Agan - Dec '20, Brooklyn, NY"
 ---
 
 In the [first part](react-introduction-pt1) of the introductory post on React we talked about how the framework operates and how it delivers content to the HTML DOM. In this part we'll start adding little bit of javascript magic to see how with some basic programing tools we can deliver content in a more dynamic fashion. We are also going to start getting our hands dirty and go trough the necessary steps to start developing with React.
@@ -123,7 +124,7 @@ From the react-intro directory:
 ```
 Go to your browser and navigate to  
 http://localhost:3000/
-<img class='markdown-img' src='/assets/content/posts/react_article/check.png' />
+<img src='/assets/content/posts/react_article/check.png' />
 
 Now that we are connected to our local host, we can start developing. Lets try and make some components.
 
@@ -131,7 +132,7 @@ Now that we are connected to our local host, we can start developing. Lets try a
 ## Creating Components 
 <hr/>
 
-<h3>Top Level Component</h3>
+### Top Level Component
 
 At the moment we are rendering just a heading in our <span class='command'>`index.js`</span> file. Let's create our top level component and use it to consolidate all of the elements from our app into a single place. Then, we can pass this top level component in the <span class='command'>index.html</span> file as the first argument of our <span class='command'>render()</span> method. By convention, this top level component is named ***`App.js`*** but for our demonstrative purposes lets name it ***`Parent.js`***.
 
@@ -290,9 +291,9 @@ And so we have managed to pass some static content from one component to another
 
 In this part we will go over:
 
-<h3 class='indent'>1. Passing props from top level component to a child component</h3>
-<h3 class='indent'>2. Storing data and assigning it to props</h3>
-<h3 class='indent'>3. Using conditional statements to render content inside of components</h3>
+1. Passing props from top level component to a child component</h3>
+2. Storing data and assigning it to props</h3>
+3. Using conditional statements to render content inside of components</h3>
 
 <h3>1. Passing Props</h3>
 
@@ -374,7 +375,7 @@ Which means that we can pass multiple properties inside and use them to pass dif
   }
 ```
 
-Let's place an Object inside of the body of our <span class='command'>function Parent()</span> component like so.
+Let's place an Object inside of the body of our **function Parent()** component like so.
 
 ```jsx
 function Parent() {
@@ -391,11 +392,11 @@ function Parent() {
 Now we can pass different pieces of information and use them as a condition to render different elements inside the **`<Child />`** component.
 
 
-<h3>3. Using Conditional Expression to Render the Content</h3>
+## 3. Using Conditional Expression to Render the Content
 
 Now let's make it so that the **`<Child />`** component will show itself in the browser only if our object property <span class='command'>exists:</span> evaluates to boolean <span class='command'>true</span> value.
 
-***<h3 class='indent'>The Conditional Operator</h3>***
+## The Conditional Operator
 
 Let's quickly review what the Conditional Operator is and how it works. Here is a simple conditional statement.
 
@@ -426,7 +427,7 @@ We could further simplify our expression above.
 This would simply read as: 
 is there such a thing as **<span class='command'>condition</span>** and if so, is it true?
 
-***<h3 class='indent'>Guard Operator</h3>***
+## Guard Operator
 
 A common practice is to use *logical operator* <span class='command'>&&</span>, in this context sometimes referred to as ***guard operator***.
 
@@ -557,8 +558,6 @@ Now, change the property <span class='command'>ripe: false</span> inside the ban
 
 And that would conclude our part on conditional rendering. In the next article we will learn about class components, state and event handlers. These concepts will give us the ability to render elements based on user input.
 
-<hr/>
-<p class='signature'>K.Agan - Jan. '21, Brooklyn NY</p>
 
 
 

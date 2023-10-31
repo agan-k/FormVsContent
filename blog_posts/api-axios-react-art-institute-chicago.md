@@ -4,6 +4,7 @@ title: "Connecting to a Public API"
 subtitle: "Art Institute of Chicago API"
 date: "Dec 2020 by"
 author: 'K. Agan'
+signature: "K.Agan - Dec '20, Brooklyn, NY"
 ---
 
 ## What is an API anyways?
@@ -112,8 +113,6 @@ Now that we know how to get to our data, we can start thinking about how to brin
 
 <a href='https://AIC-photography-collection.info' target=_blank>AIC-photography-collection</a> is a passion project which got me into working with APIs in the first place. Feel free to look at it and see how I went about getting all the data to create interactive image galleries. I used the <a href='https://www.npmjs.com/package/axios' target=_blank>axios</a> library (another API!) and search queries to pull data in bulk. You can find the source in <a href='https://github.com/agan-k/aic-photography-selection/tree/master/src' target=_blank>this repo</a>.
 
-<hr/>
-<p class='signature'>K.Agan - Dec '20, Brooklyn NY</p>
 
 
 

@@ -1,9 +1,10 @@
 ---
 image: '/assets/reactJS.png'
 title: "React, Introduction"
-subtitle: "A Somewhat Personal Journey trough a Powerhouse - Pt.1"
-date: "Nov 2020 by"
+subtitle: "A Somewhat Personal Journey trough a Powerhouse"
+date: "Dec 2020 by"
 author: 'K. Agan'
+signature: "K.Agan - Dec '20, Brooklyn, NY"
 ---
 
 When I first started getting into [React](https://reactjs.org/) library (framework) I already thought I had a decent sense for what DOM is. I could also write few lines of javascript to manipulate the HTML in the DOM and then style it with some CSS and this is how I was able to build simple websites. This is how one can build anything that a browser is capable of rendering, really. And the experienced ones, who could build anything this way, decided to take it a bit further by building frameworks and libraries in order to increase productivity and enhance performance. I finally arrived at the point where I could no longer avoid dealing with these frameworks. I took a course in React, started building with this new tool and never looked back. However, my transition to React was not exactly smooth and, by sharing my experience here, I'm hoping to provide some insight into certain ways of thinking which might be helpful. 
@@ -167,5 +168,3 @@ Now, think about it. We did not touch the original DOM. We didn't have to introd
 ## Conclusion
 We touched upon some of the topics from the above Essentials list. The DOM relates to ReactDOM, functions relate to React Components and we made use of some of the basic data types such as variables (arguments) and objects. In the next article we will take a look at conditional rendering. For this we will need to relay on what we know about *logical operators* and *conditional statements*.
 
-<hr/>
-<p class='signature'>K.Agan - Nov '20, Brooklyn NY</p>

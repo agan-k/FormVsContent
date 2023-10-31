@@ -1,123 +1,94 @@
 ---
 image: '/assets/content/posts/recursion_article/javascript_square.png'
-title: "Understanding the Recursion"
-subtitle: "Taking a Closer Look at the Recursive Method"
+title: "Understanding Recursion"
+subtitle: "Taking a Closer Look at Recursive Calls"
 date: "Nov 2020 by"
 author: 'K. Agan'
+signature: "K.Agan - Nov '20, Brooklyn, NY"
 ---
 
 
 Here is another personal take on a subject I struggled with in the beginning until one of those great 'Aha!' moments which give us the desire to keep tackling new challenges.
 
-Recursion is a concept in which we can make a function call itself and by doing so produce an effect of a loop. Lets look at a classic example of writing a function to calculate the factorial of a given positive integer.
+Recursion is a concept in which we can make a function call itself inside the body and by doing so produce an effect of a loop. Now, having said that, it took me a minute to realize that in order to wrap my head around a recursive call I had to avoid thinking in terms of iteration. Going back to the top of the function and looping over it every time we evaluate the recursive call is what gets us in trouble. More about it below.
 
-Quickly, the <a href="https://en.wikipedia.org/wiki/Factorial" target="blank">factorial</a> of a given number represents a product of all the positive integers which are less then or equal to the given number in question. For example <span class='command'>*!4 = `1*2*3*4` = 24*</span>. We can extract a rough formula for calculating the factorial like so: <span class='command'>*`!n = (n-1) * (n-2) * (n-3)...`*</span>
+> avoid thinking in terms of iteration. Going back to the top of the function and looping over it every time we evaluate the recursive call is what gets us in trouble.
 
-First, let's create a function that will calculate factorial for us with the help of a <span class='command'>for</span> loop.
+Lets look at a classic example of writing a function to calculate the factorial of a given positive integer.
+
+Quickly, the <a href="https://en.wikipedia.org/wiki/Factorial" target="blank">factorial</a> of a given number represents a product of all the positive integers which are less then or equal to the given number in question. For example *!4 = `1 * 2 * 3 * 4` = 24*. We can extract a rough formula for calculating the factorial like so: *!n = n * (n-1) * (n-2) * (n-3)...*
+
+First, let's create a function that will calculate factorial for us with the help of a *for* loop.
 
 ```javascript
 function facLoop(n) {
-   let result = n
+  let result = n;
   for (let i = 1; i < n; i++) {
-     result *= i 
-  }
-  return result
+    result *= i;
+  };
+  return result;
 }
-console.log(facLoop(4)) // logs 24
+console.log(facLoop(4)) // 24
+console.log(facLoop(5)) // 120
 ```
+While looking at this simple algorithm it is worth noticing that we had to go out of our way to declare a helper variable *result* first. To get an idea about how many consecutive integers we will be working with, we need to declare yet another variable *i* inside the for loop which will be compared to the given argument *(i < n)*. Luckily, despite all the extra little steps we took, this little block of code is easy to follow and that partially comes from the fact that the task is simple. However it is easy to imagine how attempting to solve a more complex task, while using similar approach, would result in much more verbose code.
 
-This is a straight forward approach in which we declare a variable ***result*** and assign to it the value (given positive integer) of the argument <span class='command'>(n)</span>.  
-Next, we use the <span class='command'>for</span> loop to extract all the values (positive integers) that are less than the value of the argument <span class='command'>(n)</span>.  
-Then, we multiply the value of ***result*** with each value that was extracted with the <span class='command'>for</span> loop.
-Finally, we <span class='command'>return</span> the value of the ***result***.
-
-Before looking at the recursive method, let's focus on a couple of things which will help us in understanding the following example. First being that the <span class='command'>for</span> loop has a built in condition <span class='command'>i < n</span> which will cause for it to terminate. And second, while computations are recurring inside of the loop, no value is returned **until** the condition for termination is met and we can move on to the next line and <span class='command'>return</span> the value of the ***result***.
-
-With this in mind, lets look at the <span class='command'>else</span> block; where the function itself is called recursively.
+With this in mind, lets look at the next example; where the function itself is called recursively.
 ```javascript
-function facRecursion(n) {
-   if (n <= 0) {
-    return 1
-  } else {
-    return fac(n - 1) * n
-  }
+function fac(n) {
+  if (n === 1) return n;
+  return n *= fac(n-1);
 }
-console.log(facLoop(4)) // logs 24
+console.log(fac(4)) // 24
+console.log(fac(5)) // 120
 ```
-First thing to notice is that, before we trigger the recursion <span class='command'>`fac(n-1) * n`</span>, we need to set the condition which will terminate it before it causes stack overflow. This part of the Recursive method is called the *base case* and this base case in particular returns value <span class='command'>1</span> once the argument <span class='command'>(n)</span> is less then or equal to <span class='command'>0</span>.
+First thing to notice is how much simpler our algorithm is now. We are not creating any new procedures or data structures that have little to do with the input and the initial task (multiplying given integers). We are simply dealing with the input and producing the output. We provide a conditional statement called **base case** which controls the flow. Once the condition in the base case is met the recursion ends and we get the result. 
 
-Secondly, let's look at the recursive line itself. This line does not produce (return) a value right away. In our particular example, (in pseudo code) it would look something like this:  
-*(Each one of the new functions in pseudo code is just a rough representation of order in which the javascript engine would perform the computations, and the given values represent the value of 'n' as it changes in each new instance)*
+>the real reason why we should not try to think this way is because the program does not execute like that.
+
+Why does this work? Our natural tendency is to try and work out the recursion in our head, as if it were a loop. This might as well be simple enough when trying to calculate a factorial of a small number but even slightly more complex operation could quickly make our head spin. The task at hand involves just a primitive procedure of multiplying, but what if we had a large input that requires rearranging of elements or sorting of some kind, and the body of our function required multiple primitive or compound procedures to produce our result? 
+
+This is little beside the point because the real reason why we should not try to think this way is because the program does not execute like that. For example, the first time we invoke the function recursively inside off *fac(4)* 
 ```javascript
-function facRecursion(4) {
-   //condition to stop (0) and return value '1'
-   facRec_A_(3) * 4 {
-
-      facRec_B_(2) * 3 {
-
-         facRec_C_(1) * 2 {
-
-            facRec_D_(0) * 1 { //condition to stop (0) finally reached!
-               return 1;
-            }
-         } 
-      }
-   }
-}
+/*
+fac(4)
+  base case -> not met
+  return n *= fac(4-1) // recursive call
 ```
-Both, recursion and the <span class='command'>for</span> loop do not return any value until the condition for termination is met, BUT unlike the <span class='command'>for</span> loop, the recursion does not compute either, until the termination happens. Now, this is important. What happens after the above <span class='command'>`facRec_D_(0)`</span> produces a value (1) it causes a chain reaction in which each one of the other wrapped instances now receive a value and the recursion retreats while computing the final returned value.
+we are not simply evaluating the value of *n* while assuming that *fac(4-1)* eqals *3* . *fac(4-1)* has no value because it returns none and, thus, the expected value is not available to us. 
+
+Instead of iterating trough the initial call, we are allocating new space in memory and runnning *fac()* with a new argument. Namely, *4-1* in this case. The interpreter evaluates the operands 4-1 to be 3 but evaluating the operator *fac* does NOT produce (return) a value which can be multiplied with *n*. Instead, it leads us to another recursive call. *f(3-1*), in this case.
+
+This continues until the arguments inside the recursive call evaluate and meet the base case inside the body of our function. In our case *n === 1*. 
+
+This is when our function finally returns a value, in this case 1. And now the recursion magic sets in and each previous call recieves its necessary value and returns a corresponding value for the previous call.
+
+Here is an attempt to trace calls and illustrate using some pseudo code.
+
 ```javascript
-function facRecursion(4) {
-   //condition to stop (0) and return value '1'
-   facRec_A_(3) * 4 {
+/*
 
-      facRec_B_(2) * 3 {
+fac(4)
+  base case -> not met (4>1)
+  returns n *= fac(4-1) 
+  |             base case -> not met (3>1)
+  |             returns n *= fac(3-1)
+  |             |              base case -> not met (2>1)
+  |             |              returns n *= fac(2-1)
+  |             |              |              base case -> (1===1)
+  |             |              |              returns 1
+  |             |              |
+  |             |              |---> evaluates fac(2 - 1) to 1. 
+  |             |              |     returns 2 * 1 = 2
+  |             |
+  |             |---> evaluates fac(3 - 1) to 2. 
+  |             |     returns 3 * 2 = 6
+  |             
+  |--> evaluates fac(4 - 1) to 6. 
+  |    returns 3 * 6 = 24
 
-         facRec_C_(1) * 2 {
-
-            facRec_D_(0) * 1 { //condition to stop (0) finally reached!
-               return 1;
-            //returns the value of 1 and now we can compute: 1 * 1 = 1
-            }
-         //now starts with the value of 1 and the function computes: 1 * 2 = 2
-         } 
-      //now starts with the value of 2 and the function computes: 2 * 3 = 6
-      }
-   //now starts with the value of 6 and the function computes: 6 * 4 = 24
-   }
+*/
 ```
-}
-And so, the function with its original arguments returns a value. There is always just a single function which we made into an infinite loop by calling it inside it's own body. But we also altered the arguments and set the conditions in such way that it had to duplicate itself exactly the right number of times we needed. Then, we gave it (returned) a value with our base case so each of the function duplicates can compute and return the appropriate value.
+Hopefully the difference between iteration and recursion is little more evident in the example above. In stead of counting number *n* and with each count executing the procedure, recursion schedules execution in a separate instance for later time; after the base case is met.
 
-## The "Aha!" ##
-
-Looking at the recursive function and trying to 'get it', the way it is possible to understand something like the <span class='command'>for</span> loop, is difficult without being familiar enough with the inner workings of the javascript engine. In particular, it is necessary to understand how function execution works in javascript and have some basic idea about the javascript Call Stack. I found myself struggling and disappointed, thinking that I just wasn't able to understand some advanced logic. I would try to picture in my head how the machine goes trough the program but in reality I was simply missing some important pieces of the puzzle.
-
-**Read a good <a href="https://www.freecodecamp.org/news/understanding-the-javascript-call-stack-861e41ae61d4/" target="blank">good article</a> about the javascript Call Stack. More about functions <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="blank">here</a>**.
-
-## `tl;dr` ##
-
-Main thing to get out of the resources above is that the call stack operates by the principle of last in, first out (LIFO). Which means that the last function that gets into the stack is the first one that comes out. 
-
-We can demonstrate this better with a function in which we try to calculate a range of numbers.
-```javascript
-function rangeOfNumbers(startNum, endNum) {
-   if (startNum > endNum) {
-      return []
-   } else {
-      const range = rangeOfNumbers(startNum, endNum - 1)
-      range.push(endNum)
-      return range
-   }
-}
-console.log(rangeOfNumbers(3, 10))// logs [3,4,5,6,7,8,9,10]
-```
-In this example we create a base case in which we set a condition that will return an empty array. 
-Next, we set the recursion off and assign its value to the variable ***range***. However, the value will not be assigned until the condition is met.
-Once we meet the condition, ***range*** receives a value of an empty array and is finally able to <span class='command'>.push()</span> the corresponding value of <span class='command'>(endNum)</span>. In this case 3. 
-This was the last instance (recursion) of the <span class='command'>function rangeOfNumbers()</span> that got into the stack and first one that gets out. The fact that the first element of the array ***range*** is 3, confirms this.
-
-
-<hr/>
-<p class='signature'>K.Agan - Dec '20, Brooklyn NY</p>
 

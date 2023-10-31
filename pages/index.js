@@ -1,17 +1,23 @@
 import { useEffect, useState } from 'react'
-import Layout from '../components/layout'
+import {
+  OngoingProject,
+  SectionTitle,
+  SiteLogo,
+  Layout,
+  PostCard,
+} from '../components';
+import {PostsWrapper} from './styled';
+// import PostsCards from '../components/posts_cards';
+import style from './index.module.css';
+import projectsData from '../data/projectsData';
+import postsData from '../data/postsData';
 
-import Badge from '../components/badge'
-import OngoingProject from '../components/OngoingProject'
-import PostsCards from '../components/posts_cards'
-import ReactPlayer from 'react-player'
-
-import style from './index.module.css'
-import stackData from '../data/stackData'
-import projectsData from '../data/projectsData'
 
 export default function Home() {
-  const [hasWindow, setHasWindow] = useState(false);
+  const [hasWindow, setHasWindow] = useState(false);//fixes next.js dependency error
+  const posts = postsData.map(post => <PostCard post={post} key={post.id} /> );
+  const recentPosts = posts.slice(0, 3);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHasWindow(true);
@@ -23,39 +29,14 @@ export default function Home() {
       <OngoingProject data={item} key={item.name} />
     )
   });
-
-  const curlyL = <span className={style.curly_brackets}>&#123;</span>
-  const curlyR = <span className={style.curly_brackets}>&#125;</span>
   return (
     <Layout>
       <div className={style.container}>
-        <Badge />
-
-        <div className={style.section_description}>
-          {curlyL}<h1>News: slo͞oh is here</h1>{curlyR}
-        </div>
-
-        <div className={style.sloohVideo}>
-          { 
-            hasWindow && 
-            <ReactPlayer
-              url="slooh.mp4"
-              light="slooh_thumbnail.png"
-              controls={true}
-              width="100%"/>
-          }
-        </div>
-        
-        <div className={style.section_description}>
-          {curlyL}<h1>ongoing projects</h1>{curlyR}
-        </div>
-
+        <SiteLogo />
+        <SectionTitle>ongoing projects</SectionTitle>
         {ongoingProjects}
-
-        <div className={style.section_description}>
-          {curlyL}<h1>recent posts</h1>{curlyR}
-        </div>
-        <PostsCards recent='true' />
+        <SectionTitle>recent posts</SectionTitle>
+        <PostsWrapper>{recentPosts}</PostsWrapper>
       </div>
     </Layout>
   )
