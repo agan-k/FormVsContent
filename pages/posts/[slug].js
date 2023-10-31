@@ -2,7 +2,7 @@ import React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown/with-html'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import Layout from '../../components/layout'
+import {Layout} from '../../components'
 import style from './slug.module.css'
 //changing 'esm' distribution to 'cjs' fixed the SyntaxError: Unexpected token 'export'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'; 
@@ -56,7 +56,5 @@ Post.getInitialProps = async (context) => {
 
    // Pass data to component props
    return { ...data }
- 
-   return { slug }
 }
  
