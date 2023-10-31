@@ -15,7 +15,8 @@ export const Container = styled('div')({
   h1: {
     fontFamily: 'courier',
     fontWeight: staticTheme.fontWeights.body,
-    fontSize: staticTheme.fontSizes[2],
+    fontSize: staticTheme.fontSizes[0],
+    marginLeft: staticTheme.space[3],
     color: ({theme}) => theme.colors.muted,
   },
   a: {
@@ -33,4 +34,7 @@ export const Avatar = styled('div')({
   border: '2px solid rgb(240, 226, 202)',
   backgroundImage: "url('/assets/sailin.jpg')",
   backgroundSize: '100%',
+})
+export const LinksContainer = styled('div')({
+  marginLeft: staticTheme.space[3],
 })
