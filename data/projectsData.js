@@ -43,7 +43,7 @@ const data = [
     name: 'Renofi Qualify App',
     description: 'Renovation Finance LLC - Client facing Web App',
     tools: ['React', 'JavaScript', 'Saas', 'Headless CMS'],
-    githubLink: 'https://google.com',
+    githubLink: null,
     desktopScreenshot: ['/assets/screen_shots/renofi_qualify.png'],
     mobileScreenshot: null,
     tabletScreenShot: null,
