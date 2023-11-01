@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme as staticTheme} from '../../theme';
 
 export const Container = styled('div')({
   display: 'flex',
@@ -16,10 +17,10 @@ export const NavList = styled('ul')({
   zIndex: '0',
 })
 export const NavItem = styled('li')({
-  textTransform: 'uppercase',
+  // textTransform: 'uppercase',
   listStyle: 'none',
-  padding: '.5rem 0',
-  margin: '.5rem',
+  paddingTop: staticTheme.space[1],
+  margin: staticTheme.space[3],
   a: {
     padding: '.5rem',
     textDecoration: 'none',
