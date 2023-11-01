@@ -15,11 +15,11 @@ const CodeBlock = ({ language, value }) => {
    )
  }
 
-export default function Post({ content, data }) {
+export default function Post({ content, data, theme, toggleTheme }) {
    const frontmatter = data
 
   return (
-     <Layout>
+     <Layout theme={theme} toggleTheme={toggleTheme}>
         <div className={style.container}>
             <div className={style.post_container}>
                <div className={style.title_image}>
@@ -45,7 +45,6 @@ export default function Post({ content, data }) {
    
 }
 Post.getInitialProps = async (context) => {
-   console.log(context)
    const { slug } = context.query
  
    // Import .md file using the `slug` from the URL

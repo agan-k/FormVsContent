@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import {Nav, Footer} from '../../components';
 import {Container, Main} from './styled';
 
-export default function Layout({ children, title = 'FormVsContent' }) {
+export default function Layout({ children, title = 'FormVsContent', theme, toggleTheme }) {
   const router = useRouter()
   
   return (
@@ -14,7 +14,7 @@ export default function Layout({ children, title = 'FormVsContent' }) {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav/>
+      <Nav theme={theme} toggleTheme={toggleTheme} />
       <Main>{children}</Main>
       <Footer/>
     </Container>

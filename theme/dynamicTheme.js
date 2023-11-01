@@ -1,6 +1,5 @@
 export const lightTheme = {
   colors: {
-    background: '#F1F1F1',
     background: 'white',
     border: 'grey',
     muted: '#dbdbdb',
@@ -8,6 +7,7 @@ export const lightTheme = {
     anchor: 'magenta',
     invertBg: 'black',
     invertText: 'white',
+    hover: 'black',
   },
   shadows: {
     nav: '0 2px 1px rgb(240, 240, 240)',
@@ -23,6 +23,7 @@ export const darkTheme = {
     anchor: 'cyan',
     invertBg: 'white',
     invertText: 'black',
+    hover: 'white',
   },
   shadows: {
     nav: '0 3px 8px 1px #242323',

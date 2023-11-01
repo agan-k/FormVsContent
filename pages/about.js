@@ -1,9 +1,9 @@
 import {Layout} from '../components'
 import style from './about.module.css'
 
-export default function About() {
+export default function About({theme, toggleTheme}) {
    return (
-      <Layout>
+      <Layout theme={theme} toggleTheme={toggleTheme}>
          <div className={style.container}>
             <div className={style.resume_wrapper}>
               <h4 className={style.section_title}>Summary</h4>

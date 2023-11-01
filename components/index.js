@@ -5,3 +5,4 @@ export {Nav} from './nav';
 export {Footer} from './footer';
 export {Layout} from './layout';
 export {PostCard} from './post-card';
+export {ThemeToggle} from './theme-toggle';

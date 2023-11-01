@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled('div')({
   display: 'flex',
+  justifyContent: 'space-between',
   width: '100%',
   padding: '0',
   borderRadius: '0',
@@ -28,6 +29,6 @@ export const NavItem = styled('li')({
   },
   'a:hover': {
     boxShadow: ({theme}) => theme.shadows.nav,
-    color: 'black',
+    color: ({theme}) => theme.colors.hover,
   }
 })
