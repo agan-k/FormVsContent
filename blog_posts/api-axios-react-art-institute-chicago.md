@@ -8,7 +8,7 @@ signature: "K.Agan - Dec '20, Brooklyn, NY"
 ---
 
 ## What is an API anyways?
-The term API *(application programming interface)* has been buzzing around long enough and it seems like it is almost impossible for anyone in the tech sphere, be it an enterprise, business or a single professional, to describe their product without having to refer to it. 
+The term API **(application programming interface)** has been buzzing around long enough and it seems like it is almost impossible for anyone in the tech sphere, be it an enterprise, business or a single professional, to describe their product without having to refer to it. 
 
 Application programming interface is a concept in which the original underlying implementation is abstracted and only relevant information and/or actions are exposed for the developer to use in their own implementations. 
 
@@ -48,7 +48,7 @@ The expected result should give us an Object in form of JSON.
 ```
 Once we have the access to a JSON object like the one above, we can then store it and get all the parameters we need by pointing to any of the Object's keys.
 
-Let's make a GET request by simply pasting an artwork's *id (87165)* at the end of the API's *endpoint (https://api.artic.edu/api/v1/artworks)*
+Let's make a GET request by simply pasting an artwork's **id (87165)** at the end of the API's **endpoint (https://api.artic.edu/api/v1/artworks)**
 
 <img class='markdown-img' src='/assets/content/posts/aic_api_article/browser_get.png' />
 
@@ -67,7 +67,7 @@ The IIIF URLs translate to following structure:
 ```html
 https://www.artic.edu/iiif/2/{identifier}
 ```
-The {identifier} above can represent the artwork's *id* or a *search query* and an optional set of fields which correspond to the parameter keys inside of the Object.
+The {identifier} above can represent the artwork's **id** or a **search query** and an optional set of fields which correspond to the parameter keys inside of the Object.
 
 ```html
 https://www.artic.edu/iiif/2/{id}?{list_of_fields}
