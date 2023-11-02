@@ -10,15 +10,15 @@ import {
 export default function PostCard({post, recentPosts}) {
   
   return (
-    <Container>
-       <Link href={post.link}>
-          <Arrow>&#8599;</Arrow>
-          <Mask><img src={post.img} /></Mask>
-          <>
-            <Heading>{post.title}</Heading>
-            <Description>{post.description}</Description>
-          </>
-       </Link>
-    </Container>
+    <Link href={post.link}>
+      <Container>
+        <Arrow>&#8599;</Arrow>
+        <Mask><img src={post.img} /></Mask>
+        <>
+          <Heading>{post.title}</Heading>
+          <Description>{post.description}</Description>
+        </>
+      </Container>
+    </Link>
   );
 }

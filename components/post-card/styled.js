@@ -3,22 +3,14 @@ import {theme as staticTheme} from '../../theme';
 
 export const Container = styled('div')({
   position: 'relative',
-  backgroundColor: 'rgb(253, 253, 253)',
-  width: '33%',
-  minHeight: '20rem',
+  backgroundColor: ({theme}) => theme.colors.backgroundColor,
+  minHeight: `calc(${staticTheme.space[5]}px + ${staticTheme.space[7]}px)`,
   marginTop: '1rem',
   cursor: 'pointer',
-  border: '1px solid rgba(128, 128, 128, 0)',
-  transition: 'inherit',
-  border: staticTheme.borders.gray,
-  a: {
-    color: 'grey',
-    textDecoration: 'none',
+  border: ({theme}) => theme.borders.understated,
+  '*': {
+    pointerEvents: 'none',
   },
-  ':hover': {
-    backgroundColor: 'white',
-    border: '1px solid rgba(128, 128, 128, 0.308)',
-  }
 });
 export const Arrow = styled('span')({
   fontSize: '1.5rem',

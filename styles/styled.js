@@ -6,7 +6,14 @@ export const PostsWrapper = styled('div')({
   justifyContent: 'space-between',
   alignItems: 'flex-start',
   flexWrap: 'wrap',
-  width: '100%',
-  marginTop: staticTheme.space[5],
+  width: '90%',
+  margin: `${staticTheme.space[5]}px auto`,
   textAlign: 'left',
+  ':hover': {
+    boxShadow: ({theme}) => theme.shadows.card,
+  },
+  a: {
+    width: '32%',
+    color: staticTheme.colors.text,
+  }
 });

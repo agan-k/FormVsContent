@@ -2,9 +2,7 @@ import { createGlobalStyle} from "styled-components"
 import {theme} from "./theme"
 
 export const GlobalStyles = createGlobalStyle({
-//   '*': {
-//   boxSizing: 'border-box'
-// },
+
   body: {
     maxWidth: '1200px',
     margin: '0 auto',

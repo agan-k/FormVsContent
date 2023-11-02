@@ -6,7 +6,7 @@ export const theme = {
     background: '#f2f2f2',
     text: 'gray',
   },
-  space: [0, 4, 8, 16, 32, 64, 128],
+  space: [0, 4, 8, 16, 32, 64, 128, 236, 472],
   fonts: {
     body: 'system-ui, sans-serif',
     heading: 'inherit',
