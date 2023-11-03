@@ -11,6 +11,7 @@ export const PostsWrapper = styled('div')({
   textAlign: 'left',
   ':hover': {
     boxShadow: ({theme}) => theme.shadows.card,
+    transition: '.2s',
   },
   a: {
     width: '32%',

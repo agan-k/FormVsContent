@@ -16,7 +16,7 @@ Recursion is a concept in which we can make a function call itself inside the bo
 
 Lets look at a classic example of writing a function to calculate the factorial of a given positive integer.
 
-Quickly, the <a href="https://en.wikipedia.org/wiki/Factorial" target="blank">factorial</a> of a given number represents a product of all the positive integers which are less then or equal to the given number in question. For example *!4 = `1 * 2 * 3 * 4` = 24*. We can extract a rough formula for calculating the factorial like so: *!n = n * (n-1) * (n-2) * (n-3)...*
+Quickly, the <a href="https://en.wikipedia.org/wiki/Factorial" target="blank">factorial</a> of a given number represents a product of all the positive integers which are less then or equal to the given number in question. For example **!4 = `1 * 2 * 3 * 4` = 24**. We can extract a rough formula for calculating the factorial like so: **!n = n * (n-1) * (n-2) * (n-3)...**
 
 First, let's create a function that will calculate factorial for us with the help of a *for* loop.
 
@@ -55,9 +55,9 @@ fac(4)
   base case -> not met
   return n *= fac(4-1) // recursive call
 ```
-we are not simply evaluating the value of *n* while assuming that *fac(4-1)* eqals *3* . *fac(4-1)* has no value because it returns none and, thus, the expected value is not available to us. 
+we are not simply evaluating the value of *n* while assuming that *fac(4-1)* eqals **3** . *fac(4-1)* has no value because it returns none and, thus, the expected value is not available to us. 
 
-Instead of iterating trough the initial call, we are allocating new space in memory and runnning *fac()* with a new argument. Namely, *4-1* in this case. The interpreter evaluates the operands 4-1 to be 3 but evaluating the operator *fac* does NOT produce (return) a value ( *n* ) which can be multiplied with itself. Remember, on the right side of the equation *n \*= fac(n-1)*, we have a procedure, NOT a number. And because of this we are lead to another recursive call. *f(3-1*), in this case.
+Instead of iterating trough the initial call, we are allocating new space in memory and runnning *fac()* with a new argument. Namely, **4-1** in this case. The interpreter evaluates the operands 4-1 to be 3 but evaluating the operator *fac* does NOT produce (return) a value ( *n* ) which can be multiplied with itself. Remember, on the right side of the equation *n \*= fac(n-1)*, we have a procedure, NOT a number. And because of this we are lead to another recursive call. *f(3-1*), in this case.
 
 This continues until the arguments inside the recursive call evaluate and meet the base case inside the body of our function ( *n === 1* ) and the procedure on the right side of the equation *n \*= fac(n-1)* becomes a number. 
 
