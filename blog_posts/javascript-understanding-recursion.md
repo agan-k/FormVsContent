@@ -57,9 +57,9 @@ fac(4)
 ```
 we are not simply evaluating the value of *n* while assuming that *fac(4-1)* eqals *3* . *fac(4-1)* has no value because it returns none and, thus, the expected value is not available to us. 
 
-Instead of iterating trough the initial call, we are allocating new space in memory and runnning *fac()* with a new argument. Namely, *4-1* in this case. The interpreter evaluates the operands 4-1 to be 3 but evaluating the operator *fac* does NOT produce (return) a value which can be multiplied with *n*. Instead, it leads us to another recursive call. *f(3-1*), in this case.
+Instead of iterating trough the initial call, we are allocating new space in memory and runnning *fac()* with a new argument. Namely, *4-1* in this case. The interpreter evaluates the operands 4-1 to be 3 but evaluating the operator *fac* does NOT produce (return) a value ( *n* ) which can be multiplied with itself. Remember, on the right side of the equation *n \*= fac(n-1)*, we have a procedure, NOT a number. And because of this we are lead to another recursive call. *f(3-1*), in this case.
 
-This continues until the arguments inside the recursive call evaluate and meet the base case inside the body of our function. In our case *n === 1*. 
+This continues until the arguments inside the recursive call evaluate and meet the base case inside the body of our function ( *n === 1* ) and the procedure on the right side of the equation *n \*= fac(n-1)* becomes a number. 
 
 This is when our function finally returns a value, in this case 1. And now the recursion magic sets in and each previous call recieves its necessary value and returns a corresponding value for the previous call.
 
@@ -67,6 +67,10 @@ Here is an attempt to trace calls and illustrate using some pseudo code.
 
 ```javascript
 /*
+function fac(n) {
+  if (n === 1) return n;
+  return n *= fac(n-1);
+}
 
 fac(4)
   base case -> not met (4>1)
