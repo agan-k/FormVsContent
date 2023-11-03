@@ -3,7 +3,7 @@ import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown/with-html'
 import {codeBlock} from '../../utils'
 import {Layout} from '../../components'
-import {Body, Container, Header, Signature, Title} from './styled/styled'
+import {Body, Container, Header, Signature, Title} from '../../styles/posts/styled'
 
 export default function Post({ content, data, theme, toggleTheme }) {
    const frontmatter = data
