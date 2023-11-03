@@ -1,45 +1,33 @@
 import React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown/with-html'
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import {codeBlock} from '../../utils'
 import {Layout} from '../../components'
-import style from './slug.module.css'
-//changing 'esm' distribution to 'cjs' fixed the SyntaxError: Unexpected token 'export'
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'; 
-
-const CodeBlock = ({ language, value }) => {
-   return (
-      <SyntaxHighlighter language={language} style={vscDarkPlus}>
-         {value}
-      </SyntaxHighlighter> 
-   )
- }
+import {Body, Container, Header, Signature, Title} from './styled'
 
 export default function Post({ content, data, theme, toggleTheme }) {
    const frontmatter = data
 
-  return (
-     <Layout theme={theme} toggleTheme={toggleTheme}>
-        <div className={style.container}>
-            <div className={style.post_container}>
-               <div className={style.title_image}>
-                  <img src={frontmatter.image}/>
-                  <h1>{frontmatter.title}</h1>
-               </div>
-               <h3 className={style.subtitle}>{frontmatter.subtitle}</h3>
-               <span className={style.date}>{frontmatter.date}</span>&nbsp;
-               <span className={style.author}>{frontmatter.author}</span>
-               <div className={style.post_body}>
-                  <ReactMarkdown
-                     escapeHtml={false}
-                     source={content}
-                     renderers={{ code: CodeBlock }}
-                  />
-               </div>
-               <hr/>
-               <span className={style.signature}>{frontmatter.signature}</span>
-            </div>
-        </div>
+   return(
+      <Layout theme={theme} toggleTheme={toggleTheme}>
+         <Container>
+            <Header>
+               <img src={frontmatter.image}/>
+               <Title>
+                  <h2>{frontmatter.title}</h2>
+                  <h3>{frontmatter.subtitle}</h3>
+               </Title>
+            </Header>
+            <Body>
+               <ReactMarkdown
+                  escapeHtml={false}
+                  source={content}
+                  renderers={{ code: codeBlock }}
+               />
+            </Body>
+            <hr/>
+            <Signature>{frontmatter.signature}</Signature>
+        </Container>
       </Layout>
   )
    

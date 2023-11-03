@@ -13,6 +13,7 @@ export const theme = {
     monospace: 'Menlo, monospace',
   },
   fontWeights: {
+    thin: 100,
     body: 400,
     heading: 700,
     bold: 700,
