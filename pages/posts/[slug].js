@@ -1,4 +1,3 @@
-import React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown/with-html'
 import {codeBlock} from '../../utils'

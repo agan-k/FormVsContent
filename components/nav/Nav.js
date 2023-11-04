@@ -9,7 +9,7 @@ export default function Nav({theme, toggleTheme}) {
   const navLinks = [
     {name: 'home', link: '/'},
     {name: 'blog', link: '/blogHome'},
-    {name: 'resume', link: '/about'},
+    {name: 'resume', link: '/resume'},
  ]
   const navigation = navLinks.map(item =>
     <NavItem key={item.name} active={router.pathname == `${item.link}` ? 'true' : 'false'}>

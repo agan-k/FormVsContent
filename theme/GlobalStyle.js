@@ -1,5 +1,5 @@
-import { createGlobalStyle} from "styled-components"
-import {theme} from "./theme"
+import {createGlobalStyle} from 'styled-components';
+import {theme as staticTheme} from '../theme';
 
 export const GlobalStyles = createGlobalStyle({
 
@@ -13,6 +13,6 @@ export const GlobalStyles = createGlobalStyle({
   },
   a: {
     textDecoration: 'none',
-    color: '#6cbcf5'
+    color: staticTheme.colors.link,
   }
 });

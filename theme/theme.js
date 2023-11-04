@@ -5,6 +5,7 @@ export const theme = {
   colors: {
     background: '#f2f2f2',
     text: 'gray',
+    link: '#6cbcf5',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 236, 472],
   fonts: {
@@ -13,10 +14,8 @@ export const theme = {
     monospace: 'Menlo, monospace',
   },
   fontWeights: {
-    thin: 100,
     body: 400,
     heading: 700,
-    bold: 700,
   },
   lineHeights: {
     body: 1.5,
