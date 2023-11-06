@@ -7,7 +7,7 @@ export const Container = styled('div')({
   height: '10rem',
   width: '100%',
   marginTop: '0rem',
-  marginBottom: '10rem',
+  marginBottom: staticTheme.space[6],
   paddingTop: '1rem',
   paddingBottom: '1rem',
   backgroundSize: '100%',

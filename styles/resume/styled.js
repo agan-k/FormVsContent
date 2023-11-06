@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import {theme as staticTheme} from '../../theme';
+import {mediaQuery} from '../../utils';
 
 export const ResumeContainer = styled('div')({
-  width: '60%',
   margin: '0 auto',
   h2: {
     fontWeight: staticTheme.fontWeights.body,
@@ -35,4 +35,11 @@ export const ResumeContainer = styled('div')({
   strong: {
     fontWeight: staticTheme.fontWeights.heading
   },
-});
+},
+mediaQuery({
+  width: ['95%', '60%'],
+  ul: {
+    paddingLeft: '25px',
+  }
+})
+);

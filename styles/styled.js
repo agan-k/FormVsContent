@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import {theme as staticTheme} from '../theme'
+import {theme as staticTheme} from '../theme';
+import {mediaQuery} from '../utils';
 
 export const PostsWrapper = styled('div')({
-  display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'flex-start',
   flexWrap: 'wrap',
@@ -17,4 +17,8 @@ export const PostsWrapper = styled('div')({
     width: '32%',
     color: staticTheme.colors.text,
   }
-});
+},
+mediaQuery({
+  display: ['block', 'flex']
+})
+);

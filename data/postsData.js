@@ -1,20 +1,19 @@
 const recent_postsData = [
-   
    {
       id: 1,
-      title: 'Conditional Rendering in React',
-      description: `Continuing to explore the main concepts in React, this article focuses on using
-      props as condition to render components.`,
-      img: '/assets/content/posts/react.png',
-      link: 'posts/react-introduction-pt2-conditional-rendering'
-   },
-   {
-      id: 2,
       title: 'Understanding Recursion',
       description: `Functions which employ recursion to produce effect of a loop can sometimes appear confusing,
       especially if we try to think of them as loops. Here are my notes on trying to understand the recursive method.`,
       img: '/assets/content/posts/recursion_article/javascript_rectang.webp',
       link: 'posts/javascript-understanding-recursion'
+   },
+   {
+      id: 2,
+      title: 'Conditional Rendering in React',
+      description: `Continuing to explore the main concepts in React, this article focuses on using
+      props as condition to render components.`,
+      img: '/assets/content/posts/react.png',
+      link: 'posts/react-introduction-pt2-conditional-rendering'
    },
    {
       id: 3,
