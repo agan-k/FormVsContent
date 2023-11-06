@@ -58,6 +58,12 @@ export const Body = styled('div')({
     width: '90%',
     margin: '0 auto!important',
     borderRadius: '5px'
+  },
+  img: {
+    width: '92%',
+    display: 'block',
+    margin: '0 auto',
+    border: ({theme}) => theme.borders.understated
   }
 });
 export const Signature = styled('span')({
