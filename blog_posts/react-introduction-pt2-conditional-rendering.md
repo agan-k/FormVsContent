@@ -1,9 +1,10 @@
 ---
 image: '/assets/reactJS.png'
 title: "Conditional Rendering in React"
-subtitle: "A Somewhat Personal Journey trough a Powerhouse - Pt.2"
+subtitle: "A Personal Journey trough a Powerhouse - Pt.2"
 date: "January 2021 by"
 author: 'K. Agan'
+signature: "K.Agan - Dec '20, Brooklyn, NY"
 ---
 
 In the [first part](react-introduction-pt1) of the introductory post on React we talked about how the framework operates and how it delivers content to the HTML DOM. In this part we'll start adding little bit of javascript magic to see how with some basic programing tools we can deliver content in a more dynamic fashion. We are also going to start getting our hands dirty and go trough the necessary steps to start developing with React.
@@ -47,13 +48,13 @@ Looking inside the React starter project for the first time can be somewhat over
 ## The HTML DOM
 <hr/>
 
-In the */public* folder, lets go to the terminal and touch <span class='command'>index.html</span> file.
+In the **/public** folder, lets go to the terminal and create index file.
 
 ```zsh
 ~ cd public && touch index.html
 ```
-Now, let's create a new HTML document in our <span class='command'>index.html</span> file.
-
+Now, let's create a new HTML document in our **index.html** file.
+**
 ```html
 <!DOCTYPE html>
 <html>
@@ -64,7 +65,7 @@ Now, let's create a new HTML document in our <span class='command'>index.html</s
 ```
 Again, we are omitting any unnecessary elements and keeping things extra skim to maintain a clear overview.
 
-As we mentioned in the [first part](react-introduction-pt1) of the article, The ReactDOM renders its new elements in the original DOM, in an HTML *element* which carries the *id* of *'root'*. Lets place one such element inside of our <span class='command'>index.html</span> file.
+As we mentioned in the [first part](react-introduction-pt1) of the article, The ReactDOM renders its new elements in the original DOM, in an HTML element which carries the id of 'root'. Lets place one such element inside of our **index.html** file.
 ```html
 <!DOCTYPE html>
 <html>
@@ -81,7 +82,7 @@ As we mentioned in the [first part](react-introduction-pt1) of the article, The 
 ## Rendering React Elements
 <hr/>
 
-In order to serve the newly created *elements* to the DOM we will need to touch a new file in the */src* folder. From the react-intro directory:
+In order to serve the newly created node elements to the DOM we will need to touch a new file in the **/src** folder. From the react-intro directory:
 ```zsh
 ~ cd src && touch index.js
 ```
@@ -99,23 +100,23 @@ Lets first look at our *`package.json`* file for a moment.
 ```
 The first object in the file lists the available "dependencies". This is where we can find anything we might later add to our project. Things like "`react-router-dom`" or some add-ons like "font-awesome" etc. Basically anything we might acquire from the extensive list of available packages which we could use in our project.
 
-Once the package is added to our list of "dependencies" all we need to do is import it to our corresponding file. Lets import the necessary packages for our <span class='command'>index.html</span> file.
+Once the package is added to our list of "dependencies" all we need to do is import it to our corresponding file. Lets import the necessary packages for our **index.html**file.
 ```jsx
 import React from "react"
 import ReactDOM from "react-dom"
 ```
-And just like that, these resources are now available to us. Let's use ReactDOM and call the <span class='command'>render()</span>method on it. 
+And just like that, these resources are now available to us. Let's use ReactDOM and call the *render()* method on it. 
 ```jsx
 ReactDOM.render(<h1></h1>, document.getElementById('root'))
 ```
-As discussed in [part one](/posts/react-introduction-pt1), the <span class='command'>render()</span> method will take two arguments. One React element (in this case a JSX heading), and one function which points to the *div* element with the *id* of *'root'* in the <span class='command'>index.html</span> file. 
+As discussed in [part one](/posts/react-introduction-pt1), the *render()* method will take two arguments. One React element (in this case a JSX heading), and one function which points to the div element with the id of 'root' in the ••index.html•• file. 
 ```jsx
 import React from "react"
 import ReactDOM from "react-dom"
 
 ReactDOM.render(<h1>Check, check! This mic is on!</h1>, document.getElementById('root'))
 ```
-This should tell the <span class='command'>index.html</span> file to display "Check, check! This mic is on!" in the browser.
+This should tell the **index.html** file to display "Check, check! This mic is on!" in the browser.
 
 From the react-intro directory:
 ```zsh
@@ -123,7 +124,8 @@ From the react-intro directory:
 ```
 Go to your browser and navigate to  
 http://localhost:3000/
-<img class='markdown-img' src='/assets/content/posts/react_article/check.png' />
+
+![browser screenshot](/assets/content/posts/react_article/check.png)
 
 Now that we are connected to our local host, we can start developing. Lets try and make some components.
 
@@ -131,16 +133,16 @@ Now that we are connected to our local host, we can start developing. Lets try a
 ## Creating Components 
 <hr/>
 
-<h3>Top Level Component</h3>
+### Top Level Component
 
-At the moment we are rendering just a heading in our <span class='command'>`index.js`</span> file. Let's create our top level component and use it to consolidate all of the elements from our app into a single place. Then, we can pass this top level component in the <span class='command'>index.html</span> file as the first argument of our <span class='command'>render()</span> method. By convention, this top level component is named ***`App.js`*** but for our demonstrative purposes lets name it ***`Parent.js`***.
+At the moment we are rendering just a heading in our **index.js** file. Let's create our top level component and use it to consolidate all of the elements from our app into a single place. Then, we can pass this top level component in the **index.html** file as the first argument of our *render()*. By convention, this top level component is named **App.js** but for our demonstrative purposes lets name it **Parent.js**.
 
-Let's touch ***`Parent.js`*** file in the */src* folder. From the react-intro directory:
+Let's touch **Parent.js** file in the */src* folder. From the react-intro directory:
 
 ```zsh
 ~ cd src && touch Parent.js
 ```
-In our editor, inside of the ***`Parent.js`*** file, let's first import the React dependency and make the library available to this file.
+In our editor, inside of the **Parent.js** file, let's first import the React dependency and make the library available to this file.
 
 ```jsx
 import React from 'react'
@@ -154,7 +156,7 @@ function Parent() {
 ```
 At this point we can guess that, by React convention, the component names are capitalized.
 
-To return React elements in our function we simply place them inside of the <span class='command'>return()</span> statement.
+To return React elements in our function we simply place them inside of the *return()* statement.
 
 ```jsx
 function Parent() {
@@ -166,9 +168,9 @@ function Parent() {
    )
 }
 ```
-Notice that we wrapped the two headings in to a **`<div>`** element. This is because, as we mentioned in [part one](react-introduction-pt1), there can only be one parent element in side of a return statement. This pattern of consolidation continues as we dig deeper in to the cluster of our application.
+Notice that we wrapped the two headings in to a div element. This is because, as we mentioned in [part one](react-introduction-pt1), there can only be one parent element in side of a return statement. This pattern of consolidation continues as we dig deeper in to the cluster of our application.
 
-One last thing we need to do before we pass our Parent component in <span class='command'>ReactDOM.render()</span>  is make sure we export it.
+One last thing we need to do before we pass our Parent component in *ReactDOM.render()* is make sure we export it.
 
 ```jsx
 export default Parent
@@ -190,11 +192,11 @@ function Parent() {
 export default Parent
 ```
 
-We can now pass the Parent component in our <span class='command'>`index.js`</span> file. First, let's import it.
+We can now pass the Parent component in our *index.js* file. First, let's import it.
 ```jsx
 import Parent from './Parent'
 ```
-Then, we can pass it in our <span class='command'>render()</span> method.
+Then, we can pass it in our *render()* method.
 ```jsx
 import React from "react"
 import ReactDOM from "react-dom"
@@ -208,12 +210,12 @@ If your server is not running, start it again with.
 ```zsh
 ~ npm run start
 ```
-Your browser at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a> should now display the **`<Parent />`** component with all of its elements.
+Your browser at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a> should now display the *<Parent />* component with all of its elements.
 
-<img class='markdown-img' src='/assets/content/posts/react_article/parent_check.png' />
+![browser screenshot](/assets/content/posts/react_article/parent_check.png)
 
 
-<h3>Child Component</h3>
+### Child Component
 
 Now that we have successfully rendered our top level component, let's create more content by adding a child component.
 
@@ -223,13 +225,13 @@ From the react-intro directory:
 ~ cd src && touch Child.js
 ```
 
-In our editor, let's follow the same process as we did with *`Parent.js`*.
+In our editor, let's follow the same process as we did with **Parent.js**.
 
 - import dependencies
-- create <span class='command'>function Child()</span> with a <span class='command'>return()</span> statement in the body
-- export the <span class='command'>function Child()</span>
+- create *function Child()* with a *return()* statement in the body
+- export the *function Child()*
 
-*`/src/Child.js`*
+**/src/Child.js**
 ```jsx
 import React from 'react'
 
@@ -244,15 +246,15 @@ function Child() {
 export default Child
 ```
 
-After adding some content, in this case a heading and a paragraph, let's render our new **`<Child />`** component inside of the Parent component. First we need to import it.
+After adding some content, in this case a heading and a paragraph, let's render our new *<Child />* component inside of the Parent component. First we need to import it.
 
 ```jsx
 import Child from './Child'
 ```
 
-And finally, right underneath **`<hr/>`** tag (just to `visualy` separate the content of the two components), we pass it inside of the <span class='command'>return()</span> statement.
+And finally, right underneath the horizontal rule tag (just to 'visualy' separate the content of the two components), we pass it inside of the *return()* statement.
 
-*`/src/Parent.js`*
+**/src/Parent.js**
 ```jsx
 import React from 'react'
 import Child from './Child'
@@ -278,9 +280,10 @@ If your server is not running already, start it from the react-intro directory.
 ~ npm run start
 ```
 
-And back at your browser at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a> we should see the elements (separated by the horizontal rule) of both **`<Parent />`** and **`<Child />`** components.
+And back at your browser at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a> we should see the elements (separated by the horizontal rule) of both parent and child components.
 
-<img class='markdown-img' src='/assets/content/posts/react_article/passing_child.png' />
+![browser screenshot](/assets/content/posts/react_article/passing_child.png)
+
 
 And so we have managed to pass some static content from one component to another. Now let's explore how we can use React Props to move some content around in a more programmatic fashion.
 
@@ -290,15 +293,15 @@ And so we have managed to pass some static content from one component to another
 
 In this part we will go over:
 
-<h3 class='indent'>1. Passing props from top level component to a child component</h3>
-<h3 class='indent'>2. Storing data and assigning it to props</h3>
-<h3 class='indent'>3. Using conditional statements to render content inside of components</h3>
+1. Passing props from top level component to a child component</h3>
+2. Storing data and assigning it to props</h3>
+3. Using conditional statements to render content inside of components</h3>
 
 <h3>1. Passing Props</h3>
 
-Let's pass a simple prop from the **`<Parent />`** component directly to the **`<Child />`** component like so: **`<Child prop_name='prop_value' />`**
+Let's pass a simple prop from the parent component directly to the child component like so:
 
-*`/src/Parent.js`*
+/src/Parent.js
 
 ```jsx
 import React from 'react'
@@ -353,7 +356,7 @@ We managed to distribute the content from one component to another, avoided repe
 
 <h3>2. Storing Data and Passing it to Props</h3>
 
-Now let's back up for a moment and take a look at the syntax inside our **`<h3></h3>`** within the Child component.
+Now let's back up for a moment and take a look at the syntax inside our **h3** within the Child component.
 ```jsx
 <h3>{props.message}</h3>
 ```
@@ -374,7 +377,7 @@ Which means that we can pass multiple properties inside and use them to pass dif
   }
 ```
 
-Let's place an Object inside of the body of our <span class='command'>function Parent()</span> component like so.
+Let's place an Object inside of the body of our **function Parent()** component like so.
 
 ```jsx
 function Parent() {
@@ -388,14 +391,14 @@ function Parent() {
    return (...)
 }
 ```
-Now we can pass different pieces of information and use them as a condition to render different elements inside the **`<Child />`** component.
+Now we can pass different pieces of information and use them as a condition to render different elements inside the **Child** component.
 
 
-<h3>3. Using Conditional Expression to Render the Content</h3>
+## 3. Using Conditional Expression to Render the Content
 
-Now let's make it so that the **`<Child />`** component will show itself in the browser only if our object property <span class='command'>exists:</span> evaluates to boolean <span class='command'>true</span> value.
+Now let's make it so that the child component will show itself in the browser only if our object property exists: evaluates to true.
 
-***<h3 class='indent'>The Conditional Operator</h3>***
+## The Conditional Operator
 
 Let's quickly review what the Conditional Operator is and how it works. Here is a simple conditional statement.
 
@@ -412,12 +415,9 @@ For this conditional statement to work inside of a <span class='command'>return(
  condition == true ? <Child /> : ''
 ```
 The line above reads as follows:  
-If (?) **<span class='command'>condition</span>** is (==) **<span class='command'>true</span>**,  
-then (produce this value) **<span class='command'>`<Child />`</span>**  
-**<span class='command'>:</span>** (else),  
-(produce a falsy value ) **' '**.
+If (?) condition is true, then render child component, otherwise render empty string ('').
 
-In the beginning, after using conditional statements, it took me a minute to get used to this javascript ternary expression. The Conditional Operator is generally considered slightly less 'readable', compared to *if/else* statements. However, when used appropriately, with time it becomes easier on our eyes.
+In the beginning, after using conditional statements, it took me a minute to get used to this javascript ternary expression. The Conditional Operator is generally considered slightly less 'readable', compared to **if/else** statements. However, when used appropriately, with time it becomes easier on our eyes.
 
 We could further simplify our expression above.
 ```javascript
@@ -426,20 +426,20 @@ We could further simplify our expression above.
 This would simply read as: 
 is there such a thing as **<span class='command'>condition</span>** and if so, is it true?
 
-***<h3 class='indent'>Guard Operator</h3>***
+## Guard Operator
 
 A common practice is to use *logical operator* <span class='command'>&&</span>, in this context sometimes referred to as ***guard operator***.
 
 ```javascript
  condition && (<Child />)
 ```
-This line of code above will execute if both sides of *logical operator* <span class='command'>&&</span> evaluate to truthy. In other words if they both exist.
+This line of code above will execute if both sides of *logical operator* *&&* evaluate to truthy. In other words if they both exist.
 
 <hr/>
 
-Let's use the ***guard operator*** from above to conditionally render our **`<Child />`** component inside of the <span class='command'>function Parent()</span> component.
+Let's use the ***guard operator*** from above to conditionally render our child component inside of the *function Parent()* component.
 
-First, let's set up our **`<Child />`** component by including some relevant content about the ***banana***!
+First, let's set up our child component by including some relevant content about the ***banana***!
 
 *`/src/Child.js`*
 ```jsx
@@ -481,17 +481,17 @@ function Parent() {
 }
 export default Parent
 ```
-The way we set up our conditional rendering for the **`<Child />`** component reads something like this: If ***banana.exists*** is evaluating to <span class='command'>true</span>, and if there is an element identified as **`<Child />`**, then include that particular element inside of this <span class='command'>return()</span> statement.
+The way we set up our conditional rendering for the child component reads something like this: If ***banana.exists*** is evaluating to **true**, and if there is an element identified as **child** then include that particular element inside of this *return()* statement.
 
 If we look in our browser at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a>
 
-<img class='markdown-img' src='/assets/content/posts/react_article/lets_talk_banana.png'  />
+![browseer screenshot](/assets/content/posts/react_article/lets_talk_banana.png)
 
-Now, inside the **banana** object change the property <span class='command'>exist: true</span> to <span class='command'>exist: false</span> and watch the **`<Child />`** component disappear from the browser.
+Now, inside the **banana** object change the property *exist: true* to *exist: false* and watch the child component disappear.
 
 Let's take it just a bit further and render some more elements inside of the Child component using the Conditional Operator.
 
-*`/src/Child.js`*
+/src/Child.js
 ```jsx
 import React from 'react'
 
@@ -514,11 +514,11 @@ function Child(props) {
 }
 export default Child
 ```
-The Conditional Operator from above can be read as: if (<span class='command'>?</span>) <span class='command'>props.ripe</span> evaluates to <span class='command'>true</span>, include elements `<h4>` (containing a string 'Known fact..') and `<li>` (containing the value of <span class='command'>props.fact</span>), else (<span class='command'>:</span>) include the  element `<h3>` with its content.
+The Conditional Operator from above can be read as: if *props.ripe* evaluates to **true**, include elements h4 (containing a string 'Known fact..') and li (containing the value of *props.fact*), otherwise include h3 with its content.
 
 And let's make sure all the required props are passed to the Child component.
 
-*`/src/Parent.js`*
+/src/Parent.js
 ```jsx
 import React from 'react'
 import Child from './Child'
@@ -548,17 +548,16 @@ function Parent() {
 export default Parent
 ```
 Let's make sure it works in our browser at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a>
-<img class='markdown-img' src='/assets/content/posts/react_article/green_bananas.png' />
 
-Now, change the property <span class='command'>ripe: false</span> inside the banana object to <span class='command'>ripe: true</span> and watch the content of the **`<Child />`** component change in the browser.
-<img class='markdown-img' src='/assets/content/posts/react_article/banana_fact.png' />
+![browser screenshot](/assets/content/posts/react_article/green_bananas.png)
 
+Now, change the property *ripe: false* inside the banana object to **true** and watch the content of the child component change in the browser.
+
+![browser screenshot](/assets/content/posts/react_article/banana_fact.png)
 
 
 And that would conclude our part on conditional rendering. In the next article we will learn about class components, state and event handlers. These concepts will give us the ability to render elements based on user input.
 
-<hr/>
-<p class='signature'>K.Agan - Jan. '21, Brooklyn NY</p>
 
 
 
