@@ -14,5 +14,5 @@ export const GlobalStyles = createGlobalStyle({
   a: {
     textDecoration: 'none',
     color: staticTheme.colors.link,
-  }
+  },
 });

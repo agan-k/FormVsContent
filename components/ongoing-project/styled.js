@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme as staticTheme } from '../../theme';
+import {mediaQuery} from '../../utils';
 
 export const Wrapper = styled('div')({
   position: 'relative',
@@ -7,7 +8,10 @@ export const Wrapper = styled('div')({
   width: staticTheme.space[16],
   margin: `${staticTheme.space[5]}px auto`,
   textAlign: 'center',
-});
+},
+mediaQuery({
+  padding: [staticTheme.space[2], 'none']
+  }),);
 export const Name = styled('h2')({
   fontSize: `${staticTheme.fontSizes[5]}px`,
   margin: '1rem',

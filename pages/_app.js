@@ -1,4 +1,3 @@
-import '../styles/global.css'
 import { useState } from "react"
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "../theme" 

@@ -15,6 +15,7 @@ export const NavList = styled('ul')({
   justifyContent: 'space-evenly',
   margin: '0',
   zIndex: '0',
+  padding: '0',
 })
 export const NavItem = styled('li')({
   // textTransform: 'uppercase',
