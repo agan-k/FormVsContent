@@ -8,7 +8,7 @@ export default function Nav({theme, toggleTheme}) {
   const router = useRouter();  
   const navLinks = [
     {name: 'home', link: '/'},
-    {name: 'blog', link: '/blogHome'},
+    {name: 'blog', link: '/blog'},
     {name: 'resume', link: '/resume'},
  ]
   const navigation = navLinks.map(item =>

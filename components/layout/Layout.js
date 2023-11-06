@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import {Nav, Footer} from '../../components';
 import {Container, Main} from './styled';
 
-export default function Layout({ children, title = 'FormVsContent', theme, toggleTheme }) {
+export default function Layout({ children, title = '(form (vs (content)))', theme, toggleTheme }) {
   const router = useRouter()
   
   return (
