@@ -6,7 +6,6 @@ export const PostsWrapper = styled('div')({
   justifyContent: 'space-between',
   alignItems: 'flex-start',
   flexWrap: 'wrap',
-  width: '90%',
   margin: `${staticTheme.space[5]}px auto`,
   textAlign: 'left',
   ':hover': {
@@ -19,6 +18,7 @@ export const PostsWrapper = styled('div')({
   }
 },
 mediaQuery({
-  display: ['block', 'flex']
+  display: ['block', 'flex'],
+  padding: [staticTheme.space[2], '']
 })
 );

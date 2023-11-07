@@ -14,7 +14,6 @@ mediaQuery({
   }),);
 export const Name = styled('h2')({
   fontSize: `${staticTheme.fontSizes[5]}px`,
-  margin: '1rem',
   padding: '0',
   a: {
     padding: '1rem',

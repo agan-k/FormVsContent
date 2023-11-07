@@ -8,7 +8,7 @@ export const Container = styled('div')({
   em: {//this is used for inline code block for now
     fontStyle: 'normal',
     fontFamily: 'monospace',
-    fontSize: '.8rem',
+    fontSize: staticTheme.fontSizes[1],
     fontWeight: '100',
     borderRadius: '4px',
     boxShadow: ({theme}) => theme.shadows.inlineCode,
@@ -18,7 +18,6 @@ export const Container = styled('div')({
 },
 mediaQuery({
   width: ['100%', '60%'],
-  paddingTop: [staticTheme.space[3], staticTheme.space[5]]
 }));
 export const Header = styled('div')({
   display: 'flex',
@@ -41,7 +40,6 @@ export const Title = styled('div')({
   },
   h3: {
     margin: '0',
-    fontSize: staticTheme.fontSizes[3],
     fontWeight: staticTheme.fontWeights.body,
   },
 },
@@ -59,7 +57,6 @@ mediaQuery({
 export const Body = styled('div')({
   padding: staticTheme.space[2],
   fontWeight: '400',
-  fontSize: '.9rem',
   pre: {
     width: '90%',
     margin: '0 auto!important',

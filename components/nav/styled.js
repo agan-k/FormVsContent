@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {theme as staticTheme} from '../../theme';
+import {mediaQuery} from "../../utils";
 
 export const Container = styled('div')({
   display: 'flex',
@@ -8,22 +9,32 @@ export const Container = styled('div')({
   padding: '0',
   borderRadius: '0',
   zIndex: '99',
-})
+},
+mediaQuery({
+  paddingTop: [staticTheme.space[1], staticTheme.space[3]],
+  marginBottom: [staticTheme.space[4], staticTheme.space[6]],
+
+}));
 export const NavList = styled('ul')({
-  minWidth: 'min-content',
   display: 'flex',
-  justifyContent: 'space-evenly',
+  
+  alignItems: 'center',
   margin: '0',
-  zIndex: '0',
   padding: '0',
-})
+},
+mediaQuery({
+  minWidth: ['50%', '25%'],
+  justifyContent: ['space-between'],
+
+}));
 export const NavItem = styled('li')({
-  // textTransform: 'uppercase',
   listStyle: 'none',
-  paddingTop: staticTheme.space[1],
-  margin: staticTheme.space[3],
+  padding: '0',
+  margin: '0',
+  fontSize: staticTheme.fontSizes[2],
   a: {
-    padding: '.5rem',
+    padding: staticTheme.space[2],
+    paddingTop: '0',
     textDecoration: 'none',
     color: 'grey',
     borderRadius: '0',
@@ -33,4 +44,10 @@ export const NavItem = styled('li')({
     boxShadow: ({theme}) => theme.shadows.nav,
     color: ({theme}) => theme.colors.hover,
   }
-})
+},
+mediaQuery({
+  a: {
+    // paddingLeft: [staticTheme.space[2], '0']
+  }
+
+}))

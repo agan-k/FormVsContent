@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 import {theme as staticTheme} from '../../theme';
 
+export const Wrapper = styled('div')({
+  display: 'flex',
+  justifyContent: 'center'
+})
+
 export const Container = styled('div')({
-  position: 'relative',
-  textAlign: 'center',
-  height: '10rem',
-  width: '100%',
-  marginTop: '0rem',
-  marginBottom: staticTheme.space[6],
-  paddingTop: '1rem',
-  paddingBottom: '1rem',
-  backgroundSize: '100%',
-  backgroundPosition: 'top right',
+  // position: 'relative',
+  height: ({size}) => `${size}px`,
+  width: ({size}) => `${size}px`,
   h1: {
+    width: '100%',
     fontFamily: 'courier',
     fontWeight: staticTheme.fontWeights.body,
     fontSize: staticTheme.fontSizes[0],
-    marginLeft: staticTheme.space[3],
+    textAlign: 'center',
     color: ({theme}) => theme.colors.muted,
   },
   a: {
@@ -24,17 +23,12 @@ export const Container = styled('div')({
   }
 })
 export const Avatar = styled('div')({
-  display: 'block',
-  margin: '2rem auto 0',
-  width: '9rem',
-  height: '9rem',
+  width: '100%',
+  height: '100%',
   borderRadius: '15%',
   transform: 'rotate(-6deg)',
   boxShadow: '3px 2px 5px 0px grey',
   border: '2px solid rgb(240, 226, 202)',
   backgroundImage: "url('/assets/sailin.jpg')",
   backgroundSize: '100%',
-})
-export const LinksContainer = styled('div')({
-  marginLeft: staticTheme.space[3],
 })

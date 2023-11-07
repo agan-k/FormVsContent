@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import {theme as staticTheme} from '../../theme';
 import { Container, NavItem, NavList } from './styled';
-import {ThemeToggle} from '../../components';
+import {ThemeToggle, SiteLogo} from '../../components';
 
 
 export default function Nav({theme, toggleTheme}) {
@@ -22,7 +23,9 @@ export default function Nav({theme, toggleTheme}) {
   const darkOn = <span>&#x263d;</span>
   return (
     <Container>
-      <NavList>{navigation}</NavList>
+      <NavList>
+        {navigation}
+      </NavList>
       {theme ?
         <ThemeToggle onClick={toggleTheme}>{theme == 'light' ? darkOn : lightOn}</ThemeToggle>
        : null}
