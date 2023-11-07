@@ -17,7 +17,6 @@ export const lightTheme = {
   borders: {
     understated: '1px solid #dbdbdb',
   }
-
 }
 
 export const darkTheme = {

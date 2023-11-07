@@ -8,7 +8,7 @@ export const Container = styled('div')({
   em: {//this is used for inline code block for now
     fontStyle: 'normal',
     fontFamily: 'monospace',
-    fontSize: '.8rem',
+    fontSize: staticTheme.fontSizes[1],
     fontWeight: '100',
     borderRadius: '4px',
     boxShadow: ({theme}) => theme.shadows.inlineCode,
