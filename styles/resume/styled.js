@@ -25,7 +25,6 @@ export const ResumeContainer = styled('div')({
 
   },
   p: {
-    fontSize: staticTheme.fontSizes[1],
     margin: `${staticTheme.space[2]}px 0`,
   },
   ul: {

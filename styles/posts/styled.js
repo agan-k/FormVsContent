@@ -40,7 +40,6 @@ export const Title = styled('div')({
   },
   h3: {
     margin: '0',
-    fontSize: staticTheme.fontSizes[3],
     fontWeight: staticTheme.fontWeights.body,
   },
 },
@@ -58,7 +57,6 @@ mediaQuery({
 export const Body = styled('div')({
   padding: staticTheme.space[2],
   fontWeight: '400',
-  fontSize: '.9rem',
   pre: {
     width: '90%',
     margin: '0 auto!important',

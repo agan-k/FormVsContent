@@ -3,9 +3,9 @@ export const theme = {
   breakpoints: ['480px', '769px', '1100px'],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   colors: {
-    background: '#f2f2f2',
-    text: 'gray',
-    link: '#6cbcf5',
+    // background: '#f2f2f2',
+    // text: 'gray',
+    // link: '#6cbcf5',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 236, 472],
   fonts: {

@@ -3,7 +3,7 @@ export const lightTheme = {
     background: 'white',
     border: 'grey',
     muted: '#dbdbdb',
-    text: 'gray',
+    text: '#575757',
     anchor: 'magenta',
     invertBg: 'black',
     invertText: 'white',
