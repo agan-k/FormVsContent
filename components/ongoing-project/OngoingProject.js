@@ -41,9 +41,9 @@ export default function OngoingProject({data}) {
       </LogosContainer>
       {data.githubLink && (
         <SourceLink>
-          <h3>Source:</h3>
+          <span>Source:</span>&nbsp;
           <a href={data.githubLink}>
-            <img src='/assets/github.png' />
+            GitHub
           </a>
         </SourceLink>
       )}
