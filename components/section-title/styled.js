@@ -17,23 +17,18 @@ export const Title = styled('h3')({
   textAlign: 'center',
 },
 mediaQuery({
-  fontSize: [`${staticTheme.fontSizes[6]}px`, `${staticTheme.fontSizes[7]}px`],
+  fontSize: [`${staticTheme.fontSizes[4]}px`, `${staticTheme.fontSizes[7]}px`],
 }));
 export const Container = styled('div')({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   letterSpacing: '.3rem',
-  h1: {
-    fontSize: staticTheme.space[5],
-    marginTop: staticTheme.space[3],
-    marginBottom: 0,
-  }
 });
 export const CurlyBracket = styled('span')({
   fontWeight: '100',
   color: 'orange',
 },
 mediaQuery({
-  fontSize: [`${staticTheme.space[6]}px`, `${staticTheme.space[6]}px`],
+  fontSize: [`${staticTheme.space[5]}px`, `${staticTheme.space[6]}px`],
 }));

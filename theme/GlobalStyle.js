@@ -2,10 +2,11 @@ import {createGlobalStyle} from 'styled-components';
 import {theme as staticTheme} from '../theme';
 
 export const GlobalStyles = createGlobalStyle({
-
+  
   body: {
+    width: '100%',
     maxWidth: '1200px',
-    margin: '0 auto',
+    margin: '0',
     background: ({ theme }) => theme.colors.background,
     color: ({ theme }) => theme.colors.text,
     fontFamily: 'Tahoma, Helvetica, Arial, Roboto, sans-serif',

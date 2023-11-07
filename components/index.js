@@ -1,6 +1,7 @@
 export {OngoingProject} from './ongoing-project';
 export {SectionTitle} from './section-title';
 export {SiteLogo} from './site-logo';
+export {Badge} from './badge';
 export {Nav} from './nav';
 export {Footer} from './footer';
 export {Layout} from './layout';

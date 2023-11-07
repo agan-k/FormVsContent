@@ -18,7 +18,6 @@ export const Container = styled('div')({
 },
 mediaQuery({
   width: ['100%', '60%'],
-  paddingTop: [staticTheme.space[3], staticTheme.space[5]]
 }));
 export const Header = styled('div')({
   display: 'flex',

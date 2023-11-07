@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react'
 import {
   OngoingProject,
   SectionTitle,
-  SiteLogo,
+  Badge,
   Layout,
   PostCard,
 } from '../components';
 import {PostsWrapper} from '../styles/styled';
-import style from './index.module.css';
 import projectsData from '../data/projectsData';
 import postsData from '../data/postsData';
 
@@ -30,8 +29,8 @@ export default function Home({theme, toggleTheme}) {
   });
   return (
     <Layout theme={theme} toggleTheme={toggleTheme}>
-      <div className={style.container}>
-        <SiteLogo />
+      <div>
+        <Badge />
         <SectionTitle>ongoing projects</SectionTitle>
         {ongoingProjects}
         <SectionTitle>recent posts</SectionTitle>
