@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle({
   body: {
     width: '100%',
     maxWidth: '1200px',
-    margin: '0',
+    margin: '0 auto',
     background: ({ theme }) => theme.colors.background,
     color: ({ theme }) => theme.colors.text,
     fontFamily: 'Tahoma, Helvetica, Arial, Roboto, sans-serif',
