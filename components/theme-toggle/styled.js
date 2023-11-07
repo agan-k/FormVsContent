@@ -13,7 +13,6 @@ export const Button = styled('button')({
   color: ({theme}) => theme.colors.text,
   background: ({theme}) => theme.colors.background,
   ':hover': {
-    boxShadow: ({theme}) => theme.shadows.nav,
     color: ({theme}) => theme.colors.hover,
   },
 });
