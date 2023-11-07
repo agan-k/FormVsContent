@@ -7,17 +7,6 @@ export const Wrapper = styled('div')({
   justifyContent: 'center'
 },
 mediaQuery({
-  // width: ['90%', '100%'],
-}));
-export const Title = styled('h3')({
-  // maxWidth: '600px',
-  margin: '0',
-  paddingTop: staticTheme.space[2],
-  verticalAlign: 'text',
-  textAlign: 'center',
-},
-mediaQuery({
-  fontSize: [`${staticTheme.fontSizes[4]}px`, `${staticTheme.fontSizes[7]}px`],
 }));
 export const Container = styled('div')({
   display: 'flex',
@@ -25,10 +14,19 @@ export const Container = styled('div')({
   justifyContent: 'center',
   letterSpacing: '.3rem',
 });
+export const Title = styled('h3')({
+  margin: '0',
+  paddingTop: staticTheme.space[2],
+  verticalAlign: 'text',
+  textAlign: 'center',
+},
+mediaQuery({
+  fontSize: [`${staticTheme.fontSizes[6]}px`, `${staticTheme.fontSizes[7]}px`],
+}));
 export const CurlyBracket = styled('span')({
   fontWeight: '100',
   color: 'orange',
 },
 mediaQuery({
-  fontSize: [`${staticTheme.space[5]}px`, `${staticTheme.space[6]}px`],
+  fontSize: [`${staticTheme.space[6]}px`, `${staticTheme.space[6]}px`],
 }));

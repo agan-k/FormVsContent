@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {theme as staticTheme} from '../../theme';
+import {mediaQuery} from '../../utils';
 
 export const Container = styled('div')({
   position: 'relative',
@@ -7,7 +8,6 @@ export const Container = styled('div')({
   height: '10rem',
   width: '100%',
   marginTop: '0rem',
-  marginBottom: staticTheme.space[6],
   paddingTop: '1rem',
   paddingBottom: '1rem',
   backgroundSize: '100%',
@@ -15,7 +15,10 @@ export const Container = styled('div')({
   a: {
     color: ({theme}) => theme.colors.anchor,
   }
-});
+},
+mediaQuery({
+  marginBottom: [staticTheme.space[5], staticTheme.space[6]]
+}));
 
 export const LinksContainer = styled('div')({
   marginLeft: staticTheme.space[3],
