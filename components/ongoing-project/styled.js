@@ -33,7 +33,6 @@ export const Description = styled('div')({
   margin: '0 auto',
 })
 export const LogoInfo = styled('div')({
-  height: '2rem;',
   margin: `${staticTheme.space[3]}px`,
   h3: {
     width: '40%',
@@ -43,7 +42,10 @@ export const LogoInfo = styled('div')({
     color: ({theme}) => theme.colors.invertText,
     fontSize: '2rem',
   }
-});
+},
+mediaQuery({
+  height: ['0', staticTheme.space[4]],
+}));
 export const LogosContainer = styled('div')({
   width: 'min-content',
   margin: '0 auto',
@@ -65,19 +67,9 @@ export const LogoWrapper = styled('div')({
   }
 });
 export const SourceLink = styled('div')({
-  height: '3rem',
-  h3: {
-    fontSize: '1rem',
-    margin: '.5rem 0 .2rem 0',
-  },
-  img: {
-    height: '90%',
-    border: '1px solid rgba(245, 245, 245, 0)',
-    transition: '.2s',
-  },
-  'img:hover': {
-    height: '99%',
-    transition: '.2s',
+  marginTop: staticTheme.space[3],
+  a: {
+    color: ({theme}) => theme.colors.anchor
   }
 })
 export const ScreenshotsContainer = styled('div')({
