@@ -1,6 +1,6 @@
 ## Summary
 
-Detail-oriented Web Developer delivering user friendly and robust front end applications across the Fintech E-commerce, entertainment, hospitality and education industries. Specialized in translating client vision into
+Detail-oriented Web Developer delivering user friendly and robust front end applications across the Fintech, E-commerce, entertainment, hospitality and education industries. Specialized in translating client vision into
 actionable suggestions, UX roadmaps, and a unique user-journey that grows brands and recognition. Experienced in collaborating with stakeholders,
 product designers, large and small engineering teams to create a tailored customer journey to lead users through improved experiences and deep understanding of the brand.
 
