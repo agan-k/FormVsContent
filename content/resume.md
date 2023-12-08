@@ -6,20 +6,28 @@ product designers, large and small engineering teams to create a tailored custom
 
 **Languages, Frameworks, Skills...**
 
-HTML5,CSS (Sass, Tailwind, CSS-in-JS), Jest, JavaScript, React, Next.JS, Python, Django, Hugo, GraphQL, PostgreSQL, MongoDB, Headless CMS...
+JavaScript, React, Next.JS, Python, Django, Hugo, HTML5, CSS (Sass, Tailwind, CSS-in-JS), Jest, GraphQL, PostgreSQL, MongoDB, Headless CMS, Git, GitHub…
 
 ## Experience 
 
+### Full Stack Developer
+#### FormVersusContent, self (2023)
+
+Working closely with clients to design user friendly solutions for their online presence and content distribution. 
+
+* Develop full stack web applications
+* Integrate Content Management Systems
+
 ### Frontend Engineer
-#### Full time, Renofi - Fintech (2021 - 2023)
+#### RenoFi (2021 - 2023)
 
 Worked as a part of the product team of thirty plus members divided into multiple work streams.
 * Built and maintained the company's internal and client facing applications
 * Maintained static homepage/blog
-* Worked on A/B testing implementations with the growth team
+* Implemented A/B testing with the growth team
 
 ### Frontend/Shopify Developer
-#### Contract, Softlimit - E-commerce Experts (2021)
+#### Softlimit (2021)
 
 Worked closely with a team of developers, designers and project managers to address client needs.
 * Created, enhanced and maintained custom Shopify Plus themes with strong emphasis on performance optimization.
@@ -27,7 +35,7 @@ Worked closely with a team of developers, designers and project managers to addr
 * Translated designs for email marketing campaigns into styled HTML email templates.
 
 ### Web Developer
-#### Contract, Kworq - Creative Agency (2021)
+#### Kworq (2021)
 
 Collaborated with developers and designers to build agencies’ homepage and enhance clients’ Shopify themes.
 
@@ -35,19 +43,19 @@ Collaborated with developers and designers to build agencies’ homepage and enh
 * Integrated and customized third party apps for the existing Shopify themes.
 
 ### Web Developer
-#### Contract, FORM VS CONTENT Studio (2018 - 2021)
+#### FormVsContent, self (2018 - 2021)
 
-Worked closely with clients to design user friendly solutions for their online presentations and content distributions, while leveraging the latest software engineering tools.
+Operated as one stop Design/Dev-Shop for clients with diverse business needs.
 
-* Communicate and liaise with client facing teams and decision makers, delivering UX/UI design, content development and content writing to enhance brand voice.
-* Designed an interactive music education learning and development application modeled on movable do solfège; incorporated training and testing methods for upskilling end-users, project leveraged HTML5, CSS and Javascript technologies to develop engaging and accessible user experience
+* Communicated and liaised with teams and decision makers
+* Designed and engineered UX/UI 
 
 ## Education
-**GENERAL ASSEMBLY** *New York, NY - Software Engineering Immersive*
+GENERAL ASSEMBLY *New York, NY - Software Engineering Immersive*
 
-**BERKLEE COLLEGE OF MUSIC** *Boston, MA - BM Performance/Composition*
+BERKLEE COLLEGE OF MUSIC *Boston, MA - BM Performance/Composition*
 
-**EL. ENGINEERING VOCATIONAL** *Bosnia Herzegovina - Associate's degree* equivalent
+ELECTROTECHNICAL VOCATIONAL *Bosnia Herzegovina - Associate's degree equivalent*
 
 ## Other interests
 Blogging, Photography, Music
