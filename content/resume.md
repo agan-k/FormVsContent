@@ -21,7 +21,8 @@ Working closely with clients to design user friendly solutions for their online 
 ### Frontend Engineer
 #### RenoFi (2021 - 2023)
 
-Worked as a part of the product team of thirty plus members divided into multiple work streams.
+Worked in fast paced rapidly growing environment with a large engineering team. 
+
 * Built and maintained the company's internal and client facing applications
 * Maintained static homepage/blog
 * Implemented A/B testing with the growth team
