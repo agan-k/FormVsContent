@@ -1,64 +1,55 @@
 ## Summary
 
-Detail-oriented Web Developer delivering user friendly and robust front end applications across the Fintech, E-commerce, entertainment, hospitality and education industries. Specialized in translating client vision into
-actionable suggestions, UX roadmaps, and a unique user-journey that grows brands and recognition. Experienced in collaborating with stakeholders,
-product designers, large and small engineering teams to create a tailored customer journey to lead users through improved experiences and deep understanding of the brand.
+Detail-oriented Web Developer with a proven track record of delivering high quality and user-friendly web applications across the Fintech, E-commerce, entertainment, hospitality, and education industries. Specialized in translating client vision into actionable suggestions, UX roadmaps, and unique user-journeys. Highly experienced in collaborating with stakeholders, product designers, agile engineering teams to create customer experiences which enable deep understanding of the product and brand. 
 
-**Languages, Frameworks, Skills...**
+## Skills
 
-JavaScript, React, Next.JS, Python, Django, Hugo, HTML5, CSS (Sass, Tailwind, CSS-in-JS), Jest, GraphQL, PostgreSQL, MongoDB, Headless CMS, Git, GitHub…
+**Languages:** JavaScript, PHP, Python, GraphQL, HTML, CSS
+
+**Frameworks:** React, Next.js, Django, Hugo, Styled-Components, Tailwind, Jest
+
+**Database:** PostgreSQL, MongoDB, 
+
+**Additional:** Webpack, Parcel, Prismic CMS, Git, GitHub
 
 ## Experience 
 
 ### Full Stack Developer
-#### FormVersusContent, self (2023)
+#### FormVersusContent, self-employed (2018 - )
 
-Working closely with clients to design user friendly solutions for their online presence and content distribution. 
+* Spearhead development of full-stack web applications, ensuring seamless user experience and performance
+* Integrate Content Management Systems tailored to clients’ specific needs
+* Communicate and liaise with teams and decision makers
 
-* Develop full stack web applications
-* Integrate Content Management Systems
-
-### Frontend Engineer
+### Front End Engineer
 #### RenoFi (2021 - 2023)
 
-Worked in fast paced rapidly growing environment with a large engineering team. 
+* Developed and maintained internal and client facing applications in a fast-paced, rapidly growing startup environment
+* Collaborated with QA to identify and resolve issues
+* Implemented A/B testing in partnership with the growth team
 
-* Built and maintained the company's internal and client facing applications
-* Maintained static homepage/blog
-* Implemented A/B testing with the growth team
-
-### Frontend/Shopify Developer
+### Front End / Shopify Developer
 #### Softlimit (2021)
 
-Worked closely with a team of developers, designers and project managers to address client needs.
-* Created, enhanced and maintained custom Shopify Plus themes with strong emphasis on performance optimization.
-* Integrated third party solutions with the existing themes.
-* Translated designs for email marketing campaigns into styled HTML email templates.
+* Enhanced and maintained custom Shopify Plus themes with strong emphasis on performance optimization 
+* Seamlessly integrated third party solutions with the existing themes 
+* Developed responsive HTML email templates for marketing campaigns
+
 
 ### Web Developer
 #### Kworq (2021)
 
-Collaborated with developers and designers to build agencies’ homepage and enhance clients’ Shopify themes.
-
-* Translated Figma designs into Web Apps.
-* Integrated and customized third party apps for the existing Shopify themes.
-
-### Web Developer
-#### FormVsContent, self (2018 - 2021)
-
-Operated as one stop Design/Dev-Shop for clients with diverse business needs.
-
-* Communicated and liaised with teams and decision makers
-* Designed and engineered UX/UI 
+* Translated Figma designs into interactive web applications
+* Customized Shopify themes with integrated third-party applications
 
 ## Education
 GENERAL ASSEMBLY *New York, NY - Software Engineering Immersive*
 
-BERKLEE COLLEGE OF MUSIC *Boston, MA - BM Performance/Composition*
+BERKLEE COLLEGE OF MUSIC *Boston, MA - Bachelor of Music*
 
-ELECTROTECHNICAL VOCATIONAL *Bosnia Herzegovina - Associate's degree equivalent*
+ELECTROTECHNICAL VOCATIONAL *Bosnia Herzegovina - Associate's Degree*
 
-## Other interests
+## Outside interests
 Blogging, Photography, Music
 
-Fluent in:  English, German, Bosnian (Serbian, Croatian)
+Multilingual:  English, German, Bosnian (Serbian, Croatian)
