@@ -6,6 +6,7 @@ import {
   LogoInfo,
   Name,
   SourceLink,
+  FloatingImage,
   ScreenshotsContainer,
   DesktopScreeshots,
   TabletAndMobileContainer,
@@ -14,8 +15,10 @@ import {
 } from './styled';
 
 export default function OngoingProject({data}) {
-  const [ imgIndex, setImgIndex] = useState()
-
+  const [ imgIndex, setImgIndex] = useState();
+  const floatingImages = data?.floatingImage || [];
+  const hasFloatingImages = Boolean(data.floatingImage != null);
+  console.log(floatingImages)
   return (
     <Wrapper>
       <Name><a href={data.url}>{data.name}</a></Name>
@@ -47,11 +50,18 @@ export default function OngoingProject({data}) {
           </a>
         </SourceLink>
       )}
+      {hasFloatingImages && (
+        floatingImages.map(fi => 
+          <FloatingImage>
+            <img key={fi.id} src={fi} />
+          </FloatingImage>
+        )
+      )}
       <ScreenshotsContainer>
         {data.desktopScreenshot && (
           <DesktopScreeshots>
             {data.desktopScreenshot.map((item, index) => 
-              <img key={item} src={item} width='200' />
+              <img key={item} src={item} />
             )}
           </DesktopScreeshots>
         )}

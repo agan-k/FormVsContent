@@ -73,7 +73,13 @@ export const SourceLink = styled('div')({
   }
 })
 export const ScreenshotsContainer = styled('div')({
+  position: 'relative',
   marginTop: '2rem',
+})
+export const FloatingImage = styled('div')({
+  width: 
+  position: 'absolute',
+
 })
 export const DesktopScreeshots = styled('div')({
   img: {
