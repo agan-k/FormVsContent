@@ -118,7 +118,9 @@ export const FloatingImagesContainer = styled('div')(
   );
   
   export const DesktopScreeshots = styled('div')({
+    width: '100%',
     margin: '0 auto',
+    justifyContent: 'center',
     img: {
       width: '100%',
       width: '100%',
@@ -127,6 +129,7 @@ export const FloatingImagesContainer = styled('div')(
     }
   },
   mediaQuery({
+    display: ['block', 'flex'],
     width: ['90%', '45%'],
     height: ['auto'],
   })
@@ -136,12 +139,11 @@ export const TabletAndMobileContainer = styled('div')(
     width: '80%',
     margin: '0 auto',
     textAlign: 'center',
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
   mediaQuery({
-    display: ['none', 'unset'],
+    display: ['none', 'flex'],
   })
 )
 export const MobileScreeshots = styled('div')({
