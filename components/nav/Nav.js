@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import {theme as staticTheme} from '../../theme';
 import { Container, NavItem, NavList } from './styled';
-import {ThemeToggle, SiteLogo} from '../../components';
+import {ThemeToggle} from '../../components';
 
 
 export default function Nav({theme, toggleTheme}) {

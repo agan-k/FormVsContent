@@ -24,7 +24,7 @@ export default function Home({theme, toggleTheme}) {
 
   const ongoingProjects = projectsData?.map((item) => {
     return (
-      <OngoingProject data={item} key={item.name} />
+      <OngoingProject data={item} key={item.name} theme={theme} />
     )
   });
   return (

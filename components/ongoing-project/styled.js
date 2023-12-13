@@ -32,20 +32,23 @@ export const Description = styled('div')({
   color: 'grey',
   margin: '0 auto',
 })
-export const LogoInfo = styled('div')({
-  margin: `${staticTheme.space[3]}px`,
-  h3: {
-    width: '40%',
-    margin: '0 auto',
-    backgroundColor: 'rgb(250, 248, 248)',
-    backgroundColor: ({theme}) => theme.colors.invertBg,
-    color: ({theme}) => theme.colors.invertText,
-    fontSize: '2rem',
-  }
-},
-mediaQuery({
-  height: ['0', staticTheme.space[4]],
-}));
+export const LogoInfo = styled('div')(
+  {
+    margin: `${staticTheme.space[3]}px`,
+    h3: {
+      width: '40%',
+      margin: '0 auto',
+      backgroundColor: 'rgb(250, 248, 248)',
+      backgroundColor: ({theme}) => theme.colors.invertBg,
+      color: ({theme}) => theme.colors.invertText,
+      fontSize: '2rem',
+    }
+  },
+  mediaQuery({
+    display: ['none', 'unset'],
+    height: ['0', staticTheme.space[4]],
+  })
+);
 export const LogosContainer = styled('div')({
   width: 'min-content',
   margin: '0 auto',
@@ -72,30 +75,75 @@ export const SourceLink = styled('div')({
     color: ({theme}) => theme.colors.anchor
   }
 })
-export const ScreenshotsContainer = styled('div')({
-  position: 'relative',
-  marginTop: '2rem',
-})
-export const FloatingImage = styled('div')({
-  width: 
-  position: 'absolute',
+export const ScreenshotsContainer = styled('div')(
+  {
+    position: 'relative',
+    marginTop: '2rem',
+  },
+  mediaQuery({
+    width: ['100%'],
+  })
+)
+export const FloatingImagesContainer = styled('div')(
+  {
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+  mediaQuery({
+    display: ['none', 'flex'],
+    width: ['unset', staticTheme.space[6]+ staticTheme.space[5]],
+    height: ['unset', staticTheme.space[7] + staticTheme.space[6]],
+    top: ['unset', '-20px'],
+    right: ['unset', staticTheme.space[7]],
+  })
+  );
+  
+  export const FloatingImage = styled('div')(
+    {
+    borderRadius: '10px',
+    overflow: 'hidden',
+    boxShadow: ({theme}) => theme.shadows.float,
+  },
+  mediaQuery({
+    width: [staticTheme.space[5], staticTheme.space[6]+ staticTheme.space[5]],
+    height: [staticTheme.space[3] + staticTheme.space[4], staticTheme.space[6] + staticTheme.space[4]],
+    img: {
+      width: '100%',
+      height: 'auto'
 
-})
-export const DesktopScreeshots = styled('div')({
-  img: {
-    width: '45%',
-    margin: '0 1%',
-    border: staticTheme.borders.gray,
-  }
-})
-export const TabletAndMobileContainer = styled('div')({
-  width: '80%',
-  margin: '0 auto',
-  textAlign: 'center',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-})
+    }
+  })
+  );
+  
+  export const DesktopScreeshots = styled('div')({
+    margin: '0 auto',
+    img: {
+      width: '100%',
+      width: '100%',
+      height: 'auto',
+      border: ({theme}) => theme.borders.understated ,
+    }
+  },
+  mediaQuery({
+    width: ['90%', '45%'],
+    height: ['auto'],
+  })
+);
+export const TabletAndMobileContainer = styled('div')(
+  {
+    width: '80%',
+    margin: '0 auto',
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  mediaQuery({
+    display: ['none', 'unset'],
+  })
+)
 export const MobileScreeshots = styled('div')({
   width: '50%',
   textAlign: 'left',

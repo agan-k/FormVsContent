@@ -12,9 +12,10 @@ import {
   TabletAndMobileContainer,
   TabletScreeshots,
   MobileScreeshots,
+  FloatingImagesContainer,
 } from './styled';
 
-export default function OngoingProject({data}) {
+export default function OngoingProject({data, theme}) {
   const [ imgIndex, setImgIndex] = useState();
   const floatingImages = data?.floatingImage || [];
   const hasFloatingImages = Boolean(data.floatingImage != null);
@@ -50,14 +51,16 @@ export default function OngoingProject({data}) {
           </a>
         </SourceLink>
       )}
-      {hasFloatingImages && (
-        floatingImages.map(fi => 
-          <FloatingImage>
-            <img key={fi.id} src={fi} />
-          </FloatingImage>
-        )
-      )}
       <ScreenshotsContainer>
+        {hasFloatingImages && (
+          <FloatingImagesContainer>
+            {floatingImages.map(fi => 
+                <FloatingImage>
+                  <img key={fi.id} src={fi} />
+                </FloatingImage>
+            )}
+          </FloatingImagesContainer>
+        )}
         {data.desktopScreenshot && (
           <DesktopScreeshots>
             {data.desktopScreenshot.map((item, index) => 

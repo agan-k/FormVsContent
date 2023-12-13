@@ -43,7 +43,7 @@ const data = [
     name: 'NYC Diver',
     description: 'Deep dive into New York City events. Full stack web app - database, user creation, authentication, event submission and management.',
     githubLink: 'https://github.com/agan-k/nycdiver',
-    floatingImage: ['/assets/screen_shots/nycdiver/logout.png'],
+    floatingImage: ['/assets/screen_shots/nycdiver/logout.png', '/assets/screen_shots/nycdiver/manage.png'],
     desktopScreenshot: ['/assets/screen_shots/nycdiver/nycdiver.jpg'],
     mobileScreenshot: null,
     tabletScreenshot: null,
