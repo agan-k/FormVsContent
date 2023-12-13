@@ -35,8 +35,21 @@ const domStack = StackFilter(stackData, 'ReactJS', 'Headless CMS', 'Styled Compo
   .map(item => item)
 const nycDiverStack = StackFilter(stackData, 'HTML5', 'CSS', 'JavaScript', 'Django', 'PostgreSQL', 'Webpack')
   .map(item => item)
+const formVscStack = StackFilter(stackData, 'JavaScript', 'NextJS', 'Styled Components')
+.map(item => item)
 
 const data = [
+  {
+    stack: formVscStack,
+    url: 'https://www.formversuscontent.com/',
+    name: 'FormVersusContent',
+    description: 'Source of FormVsContent',
+    githubLink: 'https://github.com/agan-k/formVsContent',
+    floatingImage: null,
+    desktopScreenshot: ['/assets/screen_shots/formvsc/formvsc.png'],
+    mobileScreenshot: null,
+    tabletScreenshot: null,
+  },
   {
     stack: nycDiverStack,
     url: 'https://www.nycdiver.com/',
