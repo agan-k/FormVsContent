@@ -25,16 +25,10 @@ export const Name = styled('h2')({
     transition: '.2s',
   }
 })
-export const Description = styled('div')({
-  fontSize: '.7rem',
-  width: '30%',
-  lineHeight: '.8rem',
-  color: 'grey',
-  margin: '0 auto',
-})
 export const LogoInfo = styled('div')(
   {
-    margin: `${staticTheme.space[3]}px`,
+    height: staticTheme.space[4],
+    marginBottom: staticTheme.space[3],
     h3: {
       width: '40%',
       margin: '0 auto',
@@ -45,18 +39,22 @@ export const LogoInfo = styled('div')(
     }
   },
   mediaQuery({
-    display: ['none', 'unset'],
-    height: ['0', staticTheme.space[4]],
+    display: ['none', 'block'],
   })
 );
-export const LogosContainer = styled('div')({
-  width: 'min-content',
-  margin: '0 auto',
-  display: 'flex',
-  justifyContent: 'space-evenly',
-  justifyItems: 'center',
-  height: '3rem',
-});
+export const LogosContainer = styled('div')(
+  {
+    width: 'min-content',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    // height: '3rem',
+  },
+  mediaQuery({
+      height: [staticTheme.space[4], staticTheme.space[4]],
+    })
+);
 export const LogoWrapper = styled('div')({
   height: '3rem',
   width: '3rem',
