@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import {
+  Greeting,
   OngoingProject,
   SectionTitle,
   Badge,
@@ -31,9 +32,10 @@ export default function Home({theme, toggleTheme}) {
     <Layout theme={theme} toggleTheme={toggleTheme}>
       <div>
         <Badge />
-        <SectionTitle>ongoing projects</SectionTitle>
+        <Greeting />
+        <SectionTitle>projects</SectionTitle>
         {ongoingProjects}
-        <SectionTitle>recent posts</SectionTitle>
+        <SectionTitle>posts</SectionTitle>
         <PostsWrapper>{recentPosts}</PostsWrapper>
       </div>
     </Layout>

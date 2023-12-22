@@ -19,7 +19,7 @@ export default function OngoingProject({data, theme}) {
   const [ imgIndex, setImgIndex] = useState();
   const floatingImages = data?.floatingImage || [];
   const hasFloatingImages = Boolean(data.floatingImage != null);
-  console.log(floatingImages)
+  
   return (
     <Wrapper>
       <Name><a href={data.url}>{data.name}</a></Name>

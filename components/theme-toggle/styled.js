@@ -2,9 +2,6 @@ import styled from 'styled-components';
 import {theme as staticTheme} from '../../theme';
 
 export const Button = styled('button')({
-  display: 'flex',
-  alignItems: 'end',
-  justifyContent: 'center',
   width: staticTheme.space[4],
   height: staticTheme.space[4],
   outline: 'none',

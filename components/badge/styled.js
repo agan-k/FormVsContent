@@ -5,11 +5,9 @@ import {mediaQuery} from '../../utils';
 export const Container = styled('div')({
   position: 'relative',
   textAlign: 'center',
-  height: '10rem',
+  height: '6rem',
   width: '100%',
   marginTop: '0rem',
-  paddingTop: '1rem',
-  paddingBottom: '1rem',
   backgroundSize: '100%',
   backgroundPosition: 'top right',
   a: {
@@ -17,7 +15,9 @@ export const Container = styled('div')({
   }
 },
 mediaQuery({
-  marginBottom: [staticTheme.space[5], staticTheme.space[6]]
+  display: ['initial', 'none'],
+  paddingBottom: [staticTheme.space[7]],
+  marginBottom: [staticTheme.space[6]]
 }));
 
 export const LinksContainer = styled('div')({

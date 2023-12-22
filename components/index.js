@@ -1,3 +1,4 @@
+export {Greeting} from './greeting';
 export {OngoingProject} from './ongoing-project';
 export {SectionTitle} from './section-title';
 export {SiteLogo} from './site-logo';

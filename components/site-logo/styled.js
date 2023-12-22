@@ -1,27 +1,35 @@
 import styled from 'styled-components';
 import {theme as staticTheme} from '../../theme';
+import { mediaQuery } from '../../utils';
+
+//breakpoints:
+const bp1 = ({size}) => `${size[0]}px`;
+const bp2 = ({size}) => `${size[1]}px`;
+const bp3 = ({size}) => `${size[2]}px`;
 
 export const Wrapper = styled('div')({
   display: 'flex',
   justifyContent: 'center'
 })
 
-export const Container = styled('div')({
-  // position: 'relative',
-  height: ({size}) => `${size}px`,
-  width: ({size}) => `${size}px`,
-  h1: {
-    width: '100%',
-    fontFamily: 'courier',
-    fontWeight: staticTheme.fontWeights.body,
-    fontSize: staticTheme.fontSizes[0],
-    textAlign: 'center',
-    color: ({theme}) => theme.colors.muted,
+export const Container = styled('div')(
+  {
+    h1: {
+      width: '100%',
+      fontWeight: staticTheme.fontWeights.body,
+      fontSize: staticTheme.fontSizes[0],
+      textAlign: 'center',
+      color: ({theme}) => theme.colors.muted,
+    },
+    a: {
+      color: ({theme}) => theme.colors.anchor,
+    }
   },
-  a: {
-    color: ({theme}) => theme.colors.anchor,
-  }
-})
+  mediaQuery({
+    width: [bp1, bp2, bp3],
+    height: [bp1, bp2, bp3],
+  })
+);
 export const Avatar = styled('div')({
   width: '100%',
   height: '100%',

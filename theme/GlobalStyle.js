@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle({
     margin: '0 auto',
     background: ({ theme }) => theme.colors.background,
     color: ({ theme }) => theme.colors.text,
-    fontFamily: 'Tahoma, Helvetica, Arial, Roboto, sans-serif',
+    fontFamily: 'Helvetica, Arial, Roboto, sans-serif',
     transition: 'all 0.50s linear',
   },
   a: {
