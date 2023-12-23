@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme as staticTheme} from '../../theme';
 
 export const Container = styled('div')({
-  paddingTop: staticTheme.space[5],
+  paddingTop: staticTheme.space[6],
   position: 'relative',
   margin: '0 auto',
 });

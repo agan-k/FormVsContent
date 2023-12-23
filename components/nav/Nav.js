@@ -4,14 +4,12 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Container, NavItem, NavList } from './styled';
-import {ThemeToggle, SiteLogo} from '../../components';
+import {ThemeToggle, SiteLogo, CurlyBrackets} from '../../components';
 import {theme as staticTheme} from '../../theme';
 import { useMediaQuery } from '../../utils/hooks';
-
-const MOBILE_BREAKPOINT = parseInt(staticTheme.breakpoints[0]);
+import { MOBILE_BREAKPOINT } from '../../utils/constants';
 
 export default function Nav({theme, toggleTheme}) {
-  console.log(MOBILE_BREAKPOINT)
   const router = useRouter(); 
   const isBreakpoint = useMediaQuery(MOBILE_BREAKPOINT)
   const navLinks = [
@@ -20,7 +18,7 @@ export default function Nav({theme, toggleTheme}) {
     {name: 'resume', link: '/resume'},
   ]
   const extLinks = [
-    {name: 'GitHub', link: 'https://github.com/agan-k'},
+    {name: 'GitHub', link: 'https://www.github.com/agan-k'},
     {name: 'LinkedIn', link: 'https://www.linkedin.com/in/koran-agan/'},
     {name: 'email', link: 'mailto:koranagan@gmail.com'},
   ]
@@ -44,18 +42,25 @@ export default function Nav({theme, toggleTheme}) {
     <Container>
       <NavList>
         {navigationRoutes}
+        {isBreakpoint && theme ?
+          <ThemeToggle onClick={toggleTheme}>
+            {theme == 'light' ? darkOn : lightOn}
+          </ThemeToggle> : null}
       </NavList>
       {!isBreakpoint ?
         <>
-          <SiteLogo size={[staticTheme.space[5]]}/>
+        <CurlyBrackets size={staticTheme.space[5]}>
+            <SiteLogo size={[staticTheme.space[5]]}/>
+        </CurlyBrackets>
           <NavList>
             {navigationExternal}
+            {theme ?
+              <ThemeToggle onClick={toggleTheme}>
+                {theme == 'light' ? darkOn : lightOn}
+              </ThemeToggle> : null}
           </NavList>
         </> : null
       }
-      {theme ?
-        <ThemeToggle onClick={toggleTheme}>{theme == 'light' ? darkOn : lightOn}</ThemeToggle>
-       : null}
     </Container>
   );
 }

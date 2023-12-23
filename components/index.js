@@ -8,3 +8,4 @@ export {Footer} from './footer';
 export {Layout} from './layout';
 export {PostCard} from './post-card';
 export {ThemeToggle} from './theme-toggle';
+export {CurlyBrackets} from './curly-brackets';

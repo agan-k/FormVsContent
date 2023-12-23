@@ -6,7 +6,7 @@ import {Container, LinksContainer} from "./styled";
 export default function Badge() {
   return(
     <Container>
-      <SiteLogo size={[staticTheme.space[6]]}/>
+        <SiteLogo size={[staticTheme.space[6]]}/>
       <LinksContainer>
         <a href='https://www.linkedin.com/in/koran-agan/' target='_blank'>
           Linkedin

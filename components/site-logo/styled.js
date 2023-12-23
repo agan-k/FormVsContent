@@ -23,7 +23,8 @@ export const Container = styled('div')(
     },
     a: {
       color: ({theme}) => theme.colors.anchor,
-    }
+    },
+    paddingRight: '10px',
   },
   mediaQuery({
     width: [bp1, bp2, bp3],

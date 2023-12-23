@@ -1,11 +1,11 @@
 import {CurlyBracket, Container, Wrapper, Title} from './styled';
+import { CurlyBrackets } from '../../components';
+import { theme as staticTheme } from '../../theme';
 
 export default function SectionTitle({children}) {
   return (
-    <Container>
-      <CurlyBracket>&#123;</CurlyBracket>
+    <CurlyBrackets size={staticTheme.space[6]}>
       <Title>{children}</Title>
-      <CurlyBracket>&#125;</CurlyBracket>
-    </Container>
+    </CurlyBrackets>
   )
 }

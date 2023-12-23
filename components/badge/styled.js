@@ -15,8 +15,6 @@ export const Container = styled('div')({
   }
 },
 mediaQuery({
-  display: ['initial', 'none'],
-  paddingBottom: [staticTheme.space[7]],
   marginBottom: [staticTheme.space[6]]
 }));
 
