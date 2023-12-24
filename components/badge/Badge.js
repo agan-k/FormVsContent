@@ -8,7 +8,7 @@ export default function Badge() {
   return(
     <Container>
       <CurlyBrackets size={staticTheme.space[6]}>
-        <SiteLogo size={[staticTheme.space[6]]}/>
+        <SiteLogo size={[staticTheme.space[6]]} fontSize={staticTheme.fontSizes[2]} />
       </CurlyBrackets>
     </Container>
   );

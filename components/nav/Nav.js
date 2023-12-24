@@ -65,7 +65,7 @@ export default function Nav({theme, toggleTheme}) {
       {!isBreakpoint ?
         <>
         <CurlyBrackets size={staticTheme.space[5]}>
-            <SiteLogo size={[staticTheme.space[5]]}/>
+          <SiteLogo size={[staticTheme.space[5]]} fontSize={staticTheme.fontSizes[1]} />
         </CurlyBrackets>
           <NavList>
             {navigationExternal}

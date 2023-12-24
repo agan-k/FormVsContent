@@ -31,6 +31,22 @@ export const Container = styled('div')(
     height: [bp1, bp2, bp3],
   })
 );
+export const Title = styled('span')(
+  {
+    position: 'absolute',
+    paddingRight: 6,
+    fontSize: ({fontSize}) => `${fontSize}px`,
+    fontFamily: 'courier',
+    color: '#c5c7c5',
+    color: 'orange',
+    wordSpacing: '-10px',
+    letterSpacing: '1px',
+  },
+  mediaQuery({
+    top: [-10, 6]
+
+  })
+);
 export const Avatar = styled('div')({
   width: '100%',
   height: '100%',
