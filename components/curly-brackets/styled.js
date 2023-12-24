@@ -2,8 +2,6 @@ import styled from "styled-components";
 import {theme as staticTheme} from '../../theme';
 import {mediaQuery} from "../../utils";
 
-({size}) => console.log('here: ', size);
-
 export const Container = styled('div')({
   display: 'flex',
   alignItems: 'center',

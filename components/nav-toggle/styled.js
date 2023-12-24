@@ -7,6 +7,5 @@ export const NavToggleButton = styled('button')(
     background: 'none',
     fontSize: staticTheme.fontSizes[5],
     color: ({theme}) => ({isOpenNav}) => isOpenNav ? theme.colors.background : theme.colors.invertBg,
-    textAlign: ({isOpenNav}) => console.log(isOpenNav),
   }
 );
