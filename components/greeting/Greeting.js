@@ -10,8 +10,8 @@ export default function Greeting() {
       </p>
       <p>
         I am a front-end-focused Software Developer based in 
-        Brooklyn, NY. I build web applications and I specialize in the frontend 
-        architecture, user experience and content management systems. You can download 
+        Brooklyn, NY. I build web applications with an emphasis on scalable front-end 
+        architecture. I specialize in user experience and content management systems. You can download 
         my resume <a href="/assets/content/resume.pdf" target="_blank">here</a>.
       </p>
       <p>
