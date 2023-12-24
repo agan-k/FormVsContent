@@ -6,20 +6,22 @@ export const Button = styled('button')(
   {
     width: staticTheme.space[4],
     height: staticTheme.space[4],
+    background: ({theme}) => theme.colors.background,
     outline: 'none',
     border: 'none',
     paddingRight: staticTheme.space[4],
     fontSize: staticTheme.fontSizes[4],
-    color: ({theme}) => theme.colors.text,
-    background: ({theme}) => theme.colors.background,
     pointerEvents: 'auto',
     cursor: 'pointer',
+    color: ({theme}) => theme.colors.text,
     ':hover': {
       color: ({theme}) => theme.colors.hover,
   },
 },
 mediaQuery({
-  position: ['initital', 'absolute'],
-  right: staticTheme.space[4],
+    position: ['fixed', 'absolute'],
+    top: ['10px', 'unset'],
+    left: [staticTheme.space[2], 'unset'],
+    right: ['unset', staticTheme.space[4]],
 })
 );

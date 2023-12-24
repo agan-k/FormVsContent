@@ -55,8 +55,8 @@ export default function OngoingProject({data, theme}) {
         {hasFloatingImages && (
           <FloatingImagesContainer>
             {floatingImages.map(fi => 
-                <FloatingImage>
-                  <img key={fi.id} src={fi} />
+                <FloatingImage key={fi.id}>
+                  <img src={fi} />
                 </FloatingImage>
             )}
           </FloatingImagesContainer>

@@ -7,7 +7,7 @@ export const lightTheme = {
     text: '#575757',
     anchor: 'magenta',
     invertBg: 'black',
-    invertText: 'white',
+    invertText: '#d4d4d6',
     hover: 'black',
   },
   shadows: {
@@ -27,8 +27,9 @@ export const darkTheme = {
     muted: '#7e807e',
     text: '#d4d4d6',
     anchor: 'cyan',
+    lowKey: 'grey',
     invertBg: 'white',
-    invertText: 'black',
+    invertText: '#575757',
     hover: 'white',
   },
   shadows: {
