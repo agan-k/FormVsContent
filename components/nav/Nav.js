@@ -13,9 +13,7 @@ export default function Nav({theme, toggleTheme}) {
   const [isOpenNav, setIsOpenNav] = useState(false)
   const router = useRouter(); 
   const isBreakpoint = useMediaQuery(MOBILE_BREAKPOINT);
-
-  useEffect(() => {}, [isOpenNav])
-
+  console.log(router.pathname)
   function HandleToggleNav() {
     setIsOpenNav(!isOpenNav);
   }
@@ -23,7 +21,7 @@ export default function Nav({theme, toggleTheme}) {
   const navLinks = [
     {name: 'home', link: '/'},
     {name: 'blog', link: '/blog'},
-    {name: 'resume', link: '/resume'},
+    {name: 'about', link: '/about'},
   ]
   const extLinks = [
     {name: 'GitHub', link: 'https://www.github.com/agan-k'},

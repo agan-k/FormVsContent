@@ -2,16 +2,16 @@ import React from 'react'
 import {Layout} from '../components'
 import {PostCard} from '../components';
 import {PostsWrapper} from '../styles/styled';
-import postsData from '../data/postsData'
+import postsData from '../data/postsData';
+import { BlogWrapper } from '../styles/blog/styled';
 
 export default function Blog({theme, toggleTheme}) {
    const posts = postsData.map(post => <PostCard post={post} key={post.id} /> );
    return (
       <Layout theme={theme} toggleTheme={toggleTheme}>
-         <div>
-            {/* <span>Articles</span> */}
+         <BlogWrapper>
             <PostsWrapper>{posts}</PostsWrapper>
-         </div>
+         </BlogWrapper>
       </Layout>
    )
 }

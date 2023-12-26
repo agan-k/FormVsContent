@@ -32,7 +32,6 @@ export const Container = styled('div')(
 export const NavList = styled('ul')(
   {
     display: 'flex',
-    padding: 0,
     paddingLeft: staticTheme.space[2],
   },
   mediaQuery({
@@ -46,12 +45,14 @@ export const NavItem = styled('li')(
   {
     listStyle: 'none',
     fontSize: staticTheme.fontSizes[2],
+    minWidth: staticTheme.space[5],
+    textAlign: 'center',
     'a:any-link': {
-      padding: staticTheme.space[2],
       textDecoration: 'none',
-      borderRadius: '0',
-      color: ({active}) => active ? ({theme}) => theme.colors.text : ({theme}) => theme.colors.lowKey,
-      pointerEvents: ({active}) => active === 'true' ? 'none' : 'initial',
+      letterSpacing: '2px',
+      color: ({theme}) => ({active}) => active ? theme.colors.hover : theme.colors.lowKey,
+      fontWeight: ({active}) => active ? staticTheme.fontWeights.bold : staticTheme.fontWeights.body,
+      pointerEvents: ({active}) => active ? 'none' : 'initial',
     },
     'a:hover': {
       color: ({theme}) => theme.colors.hover,

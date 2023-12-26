@@ -2,25 +2,6 @@ import styled from 'styled-components';
 import {theme as staticTheme} from '../theme';
 import {mediaQuery} from '../utils';
 
-export const DownloadLink = styled('div')(
-  {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    a: {
-      padding: staticTheme.space[1],
-      boxShadow: ({theme}) => theme.shadows.nav,
-      border: ({theme}) => theme.borders.understated,
-      borderRadius: '5px',
-      color: ({theme}) => theme.colors.muted
-    },
-    'a:hover': {
-      color: ({theme}) => theme.colors.anchor,
-      transition: '.5s'
-    }
-    
-  }
-)
-
 export const PostsWrapper = styled('div')({
   justifyContent: 'space-between',
   alignItems: 'flex-start',
@@ -32,7 +13,7 @@ export const PostsWrapper = styled('div')({
     transition: '.2s',
   },
   a: {
-    width: '32%',
+    width: '49%',
     color: staticTheme.colors.text,
   }
 },
