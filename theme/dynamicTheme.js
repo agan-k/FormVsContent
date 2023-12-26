@@ -2,7 +2,7 @@ export const lightTheme = {
   colors: {
     background: 'white',
     border: 'grey',
-    muted: '#dbdbdb',
+    muted: '#cccccc',
     lowKey: 'grey',
     text: '#575757',
     anchor: 'magenta',
@@ -27,7 +27,7 @@ export const darkTheme = {
     muted: '#7e807e',
     text: '#d4d4d6',
     anchor: 'cyan',
-    lowKey: 'grey',
+    lowKey: '#7e807e',
     invertBg: 'white',
     invertText: '#575757',
     hover: 'white',

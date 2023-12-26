@@ -4,8 +4,9 @@ import {mediaQuery} from "../../utils";
 
 export const Container = styled('div')({
   margin: '0 auto',
-  //TODO - find better solution for inline code block
-  em: {//this is used for inline code block for now
+  paddingTop: staticTheme.space[5],
+  //** TODO - find better solution for inline code block
+  em: {//** this is used for inline code block for now
     fontStyle: 'normal',
     fontFamily: 'monospace',
     fontSize: staticTheme.fontSizes[1],
@@ -17,7 +18,7 @@ export const Container = styled('div')({
   }
 },
 mediaQuery({
-  width: ['100%', '60%'],
+  width: ['100%', '65%'],
 }));
 export const Header = styled('div')({
   display: 'flex',
@@ -54,37 +55,40 @@ mediaQuery({
     fontSize: [staticTheme.fontSizes[1], staticTheme.fontSizes[3]],
   }
 }));
-export const Body = styled('div')({
-  padding: staticTheme.space[2],
-  fontWeight: '400',
-  pre: {
-    width: '90%',
-    margin: '0 auto!important',
-    borderRadius: '5px'
+export const Body = styled('div')(
+  {
+    padding: staticTheme.space[2],
+    lineHeight: staticTheme.lineHeights.body,
+    pre: {// ** code block **
+      width: '95%',
+      borderRadius: '5px',
+      // margin: '0 auto!important',
+    },
+    img: {
+      width: '68%',
+      display: 'block',
+      margin: '0 auto',
+      border: ({theme}) => theme.borders.understated
+    },
   },
-  img: {
-    width: '92%',
-    display: 'block',
-    margin: '0 auto',
-    border: ({theme}) => theme.borders.understated
-  }
-},
-mediaQuery({
-  blockquote: {
-    width: '95%',
-    margin: '0 auto'
-  },
-  'blockquote p': {
-    // width: ['95%', '80%'],
-    color: '#afafaf',
-    fontStyle: 'italic',
-    fontSize: [staticTheme.fontSizes[4], staticTheme.fontSizes[5]],
-    lineHeight: '1.2em',
-    margin: '0',
-    paddingLeft: '.5em',
-    borderLeft: '2px #eee solid',
-  },
-}));
+  mediaQuery({
+    blockquote: {
+      width: '95%',
+      margin: '0 auto',
+      color: ({theme}) => theme.colors.muted,
+    },
+    'blockquote p': {
+      // width: ['95%', '80%'],
+      fontStyle: 'italic',
+      fontSize: [staticTheme.fontSizes[4], staticTheme.fontSizes[5]],
+      lineHeight: '1.2em',
+      margin: '0',
+      paddingLeft: '.5em',
+      borderLeft: '2px #eee solid',
+    },
+
+  })
+);
 export const Signature = styled('span')({
   display: 'block',
   padding: staticTheme.space[2],

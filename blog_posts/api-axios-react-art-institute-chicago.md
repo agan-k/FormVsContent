@@ -50,17 +50,17 @@ Once we have the access to a JSON object like the one above, we can then store i
 
 Let's make a GET request by simply pasting an artwork's **id (87165)** at the end of the API's **endpoint (https://api.artic.edu/api/v1/artworks)**
 
-<img class='markdown-img' src='/assets/content/posts/aic_api_article/browser_get.png' />
+![screen shot](/assets/content/posts/aic_api_article/browser_get.png)
 
 This particular request will return an object containing all of the available information about that specific artwork.
 
-<img class='markdown-img' src='/assets/content/posts/aic_api_article/browser_get_body.png' />
+![screen shot](/assets/content/posts/aic_api_article/browser_get_body.png)
 
 ### Getting the Images to Display in the Browser
 
 In order to actually display the artwork we will need to consult the documentation and look at the way the data is organized. 
 
-It turns out that the delivery of actual images is served trough <a href='https://iiif.io/api/image/2.0/' target=_blank>IIIF API 2.0</a>. The International Image Interoperability Framework (IIIF) stewards a set of open standards that enables rich access to digital media from museums and other cultural institutions around the world.
+It turns out that the delivery of actual images is served trough [IIIF API 2.0](https://iiif.io/api/image/2.0/). The International Image Interoperability Framework (IIIF) stewards a set of open standards that enables rich access to digital media from museums and other cultural institutions around the world.
 
 The IIIF URLs translate to following structure:
 
@@ -74,11 +74,11 @@ https://www.artic.edu/iiif/2/{id}?{list_of_fields}
 ```
 If we try to make a request for the previous artwork while using this structure
 
-<img class='markdown-img' src='/assets/content/posts/aic_api_article/browser_get_frank.png' />
+![screen shot](/assets/content/posts/aic_api_article/browser_get_frank.png)
 
 Will give us this result:
 
-<img class='markdown-img' src='/assets/content/posts/aic_api_article/browser_get_frank_body.png' />
+![screen shot](/assets/content/posts/aic_api_article/browser_get_frank_body.png)
 
 In order to display the image we need to include the value of property "image_id".
 
@@ -102,19 +102,11 @@ The final step is to include the last piece required to display the image. This 
 /{region}/{size}/{rotation}/{quality}.{format}
 ```
 Putting everything together..
-<img class='markdown-img' src='/assets/content/posts/aic_api_article/browser_get_image.png' />
+![screen shot](/assets/content/posts/aic_api_article/browser_get_image.png)
 
 ..and we have our image.
-<img class='markdown-img' src='/assets/content/posts/aic_api_article/browser_get_image_body.jpg' />
+![screen shot](/assets/content/posts/aic_api_article/browser_get_image_body.jpg)
 
 ## Next?
 
 Now that we know how to get to our data, we can start thinking about how to bring it to the front end. All we need to do is make a GET request from our application, save the data, map trough it and extract the pieces we need, and finally concatenate the corresponding id's and endpoints together.
-
-<a href='https://AIC-photography-collection.info' target=_blank>AIC-photography-collection</a> is a passion project which got me into working with APIs in the first place. Feel free to look at it and see how I went about getting all the data to create interactive image galleries. I used the <a href='https://www.npmjs.com/package/axios' target=_blank>axios</a> library (another API!) and search queries to pull data in bulk. You can find the source in <a href='https://github.com/agan-k/aic-photography-selection/tree/master/src' target=_blank>this repo</a>.
-
-
-
-
-
-
