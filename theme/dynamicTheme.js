@@ -9,6 +9,7 @@ export const lightTheme = {
     invertBg: 'black',
     invertText: '#d4d4d6',
     hover: 'black',
+    invertHover: 'white',
   },
   shadows: {
     nav: '0 2px 1px rgb(240, 240, 240)',
@@ -31,6 +32,7 @@ export const darkTheme = {
     invertBg: 'white',
     invertText: '#575757',
     hover: 'white',
+    invertHover: 'black',
   },
   shadows: {
     nav: '0 3px 8px 1px #242323',

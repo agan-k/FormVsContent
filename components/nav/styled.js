@@ -46,11 +46,9 @@ export const NavItem = styled('li')(
     listStyle: 'none',
     fontSize: staticTheme.fontSizes[2],
     minWidth: staticTheme.space[5],
-    textAlign: 'center',
     'a:any-link': {
       textDecoration: 'none',
       letterSpacing: '2px',
-      color: ({theme}) => ({active}) => active ? theme.colors.hover : theme.colors.lowKey,
       fontWeight: ({active}) => active ? staticTheme.fontWeights.bold : staticTheme.fontWeights.body,
       pointerEvents: ({active}) => active ? 'none' : 'initial',
     },
@@ -60,6 +58,17 @@ export const NavItem = styled('li')(
     }
   },
   mediaQuery({
-    padding: ['10px', 'initial']
+    padding: ['10px', 'initial'],
+    textAlign: ['right', 'center'],
+    'a:any-link': {
+      color: 
+        [
+          ({theme}) => ({active}) =>
+          active ? theme.colors.invertHover : theme.colors.lowKey,
+
+          ({theme}) => ({active}) =>
+          active ? theme.colors.hover : theme.colors.lowKey,
+        ]
+    }
   })
 );
