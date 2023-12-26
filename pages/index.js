@@ -12,6 +12,7 @@ import projectsData from '../data/projectsData';
 import postsData from '../data/postsData';
 import { useMediaQuery } from '../utils/hooks';
 import { MOBILE_BREAKPOINT } from '../utils/constants';
+import { PageWrapper } from '../styles/styled';
 
 
 export default function Home({theme, toggleTheme}) {
@@ -34,16 +35,16 @@ export default function Home({theme, toggleTheme}) {
   });
   return (
     <Layout theme={theme} toggleTheme={toggleTheme}>
-      <div>
+      <PageWrapper>
         {isBreakpoint && (
           <Badge />
         )}
         <Greeting />
         <SectionTitle>projects</SectionTitle>
         {ongoingProjects}
-        <SectionTitle>posts</SectionTitle>
+        <SectionTitle>recent posts</SectionTitle>
         <PostsWrapper>{recentPosts}</PostsWrapper>
-      </div>
+      </PageWrapper>
     </Layout>
   )
 }

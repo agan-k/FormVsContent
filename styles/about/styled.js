@@ -5,7 +5,6 @@ import {mediaQuery} from '../../utils';
 export const AboutContainer = styled('div')(
   {
     margin: '0 auto',
-    paddingTop: staticTheme.space[6],
     fontSize: staticTheme.fontSizes[3],
     lineHeight: staticTheme.lineHeights.body,
     img: {
@@ -13,7 +12,7 @@ export const AboutContainer = styled('div')(
     }
   },
   mediaQuery({
-    width: ['95%', '60%'],
+    width: ['100%', '80%'],
     ul: {
       paddingLeft: '25px',
     }

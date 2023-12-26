@@ -10,7 +10,6 @@ export const GreetingWrapper = styled('div')(
     }
   },
   mediaQuery({
-    marginTop: staticTheme.space[5],
     marginBottom: staticTheme.space[4],
     p: {
       fontSize: [staticTheme.fontSizes[2], staticTheme.fontSizes[3]],
