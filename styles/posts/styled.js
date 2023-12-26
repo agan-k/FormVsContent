@@ -60,9 +60,8 @@ export const Body = styled('div')(
     padding: staticTheme.space[2],
     lineHeight: staticTheme.lineHeights.body,
     pre: {// ** code block **
-      width: '95%',
+      width: '90%',
       borderRadius: '5px',
-      // margin: '0 auto!important',
     },
     img: {
       width: '68%',
