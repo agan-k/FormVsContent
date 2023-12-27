@@ -12,3 +12,4 @@ export {CurlyBrackets} from './curly-brackets';
 export {NavToggle} from './nav-toggle';
 export {UtilityButton, DownloadButton} from './buttons';
 export {FlexBox} from './primitives';
+export {PdfEmbed} from './pdf-embed';

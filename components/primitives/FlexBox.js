@@ -4,6 +4,7 @@ export const FlexBox = styled('div')(
   {
     display: 'flex',
     justifyContent: ({justifyContent}) => justifyContent ? justifyContent : 'unset',
-    alignItems: ({alignItemsContent}) => alignItemsContent ? alignItemsContent : 'unset',
+    alignItems: ({alignItems}) => alignItems ? alignItems : 'unset',
+    gap: ({gap}) => gap ? `${gap}px` : 'unset',
   }
 );
