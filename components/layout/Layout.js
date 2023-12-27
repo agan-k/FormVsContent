@@ -10,7 +10,7 @@ export default function Layout({
   children, title = '(form (vs (content)))',
   theme, toggleTheme 
 }) {
-  const isBreakpoint = useMediaQuery(MOBILE_BREAKPOINT);
+  const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
   
   return (
     <Container>
@@ -18,7 +18,7 @@ export default function Layout({
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {isBreakpoint && (
+      {isMobile && (
         <ThemeToggle />
       )}
       <Nav theme={theme} toggleTheme={toggleTheme} />

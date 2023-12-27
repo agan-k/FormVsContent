@@ -12,7 +12,7 @@ import { MOBILE_BREAKPOINT } from '../../utils/constants';
 export default function Nav({theme, toggleTheme}) {
   const [isOpenNav, setIsOpenNav] = useState(false)
   const router = useRouter(); 
-  const isBreakpoint = useMediaQuery(MOBILE_BREAKPOINT);
+  const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
   console.log(router.pathname)
   function HandleToggleNav() {
     setIsOpenNav(!isOpenNav);
@@ -46,21 +46,21 @@ export default function Nav({theme, toggleTheme}) {
   const darkOn = <span>&#x263d;</span>
   return (
     <Container 
-    isMobile={isBreakpoint} 
+    isMobile={isMobile} 
     isOpenNav={isOpenNav}
     >
-      {isBreakpoint && (
+      {isMobile && (
         <NavToggle onClick={() => HandleToggleNav()} isOpenNav={isOpenNav} />
       )}
-      {isBreakpoint && theme ?
+      {isMobile && theme ?
         <ThemeToggle onClick={toggleTheme}>
           {theme == 'light' ? darkOn : lightOn}
         </ThemeToggle> : null}
-      <NavList isMobile={isBreakpoint}>
+      <NavList isMobile={isMobile}>
         {navigationRoutes}
-        {isBreakpoint && navigationExternal}
+        {isMobile && navigationExternal}
       </NavList>
-      {!isBreakpoint ?
+      {!isMobile ?
         <>
         <CurlyBrackets size={staticTheme.space[5]}>
           <SiteLogo size={[staticTheme.space[5]]} fontSize={staticTheme.fontSizes[1]} />

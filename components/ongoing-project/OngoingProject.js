@@ -15,8 +15,8 @@ import {
   FloatingImagesContainer,
 } from './styled';
 
-export default function OngoingProject({data, theme}) {
-  const [ imgIndex, setImgIndex] = useState();
+export default function OngoingProject({data}) {
+  const [imgIndex, setImgIndex] = useState();
   const floatingImages = data?.floatingImage || [];
   const hasFloatingImages = Boolean(data.floatingImage != null);
   
@@ -55,7 +55,7 @@ export default function OngoingProject({data, theme}) {
         {hasFloatingImages && (
           <FloatingImagesContainer>
             {floatingImages.map(fi => 
-                <FloatingImage key={fi.id}>
+                <FloatingImage key={fi}>
                   <img src={fi} />
                 </FloatingImage>
             )}
