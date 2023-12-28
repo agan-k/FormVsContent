@@ -19,7 +19,6 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      {/* <Nav theme={theme} toggleTheme={toggleTheme} /> */}
       <Main>{children}</Main>
       <Footer/>
     </Container>
