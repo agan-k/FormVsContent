@@ -17,7 +17,7 @@ import { PageWrapper } from '../styles/styled';
 
 export default function Home({theme, toggleTheme}) {
   const [hasWindow, setHasWindow] = useState(false);//TODO: fixes next.js dependency error
-  const isBreakpoint = useMediaQuery(MOBILE_BREAKPOINT)
+  const isMobile = useMediaQuery(MOBILE_BREAKPOINT)
 
   const posts = postsData.map(post => <PostCard post={post} key={post.id} /> );
   const recentPosts = posts.slice(0, 3);
@@ -36,7 +36,7 @@ export default function Home({theme, toggleTheme}) {
   return (
     <Layout theme={theme} toggleTheme={toggleTheme}>
       <PageWrapper>
-        {isBreakpoint && (
+        {isMobile && (
           <Badge />
         )}
         <Greeting />

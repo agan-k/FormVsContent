@@ -1,7 +1,7 @@
 'use client';
 
 import Head from 'next/head'
-import {Nav, Footer, ThemeToggle} from '../../components';
+import {Nav, Footer, Header} from '../../components';
 import { useMediaQuery } from '../../utils/hooks';
 import { MOBILE_BREAKPOINT } from '../../utils/constants';
 import {Container, Main} from './styled';
@@ -18,10 +18,8 @@ export default function Layout({
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {isMobile && (
-        <ThemeToggle />
-      )}
-      <Nav theme={theme} toggleTheme={toggleTheme} />
+      <Header theme={theme} toggleTheme={toggleTheme} />
+      {/* <Nav theme={theme} toggleTheme={toggleTheme} /> */}
       <Main>{children}</Main>
       <Footer/>
     </Container>

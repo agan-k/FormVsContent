@@ -18,11 +18,11 @@ export const Name = styled('h2')({
   a: {
     padding: '1rem',
     textDecoration: 'none',
-    transition: '.2s',
+    transition: '0.2s',
   },
   'a:hover': {
     color: '#495057',
-    transition: '.2s',
+    transition: '0.2s',
   }
 })
 export const LogoInfo = styled('div')(
@@ -60,11 +60,11 @@ export const LogoWrapper = styled('div')({
   width: '3rem',
   img: {
     height: '90%',
-    transition: '.2s',
+    transition: '0.2s',
   },
   'img:hover': {
     height: '99%',
-    transition: '.2s',
+    transition: '0.2s',
   }
 });
 export const SourceLink = styled('div')({

@@ -25,7 +25,7 @@ export const Wrapper = styled('div')(
     },
     'button:hover': {
       color: ({theme}) => theme.colors.lowKey,
-      transition: '.4s'
+      transition: '0.4s'
     },
     a: {
       display: 'flex',
@@ -33,7 +33,6 @@ export const Wrapper = styled('div')(
       height: staticTheme.space[4],
       paddingLeft: staticTheme.space[2],
       paddingRight: staticTheme.space[2],
-      // paddingTop: '2px',
 
       margin: staticTheme.space[1],
       marginLeft: '0',
@@ -47,7 +46,7 @@ export const Wrapper = styled('div')(
     },
     'a:hover': {
       color: ({theme}) => theme.colors.lowKey,
-      transition: '.5s'
+      transition: '0.4s'
     }
   }
 );

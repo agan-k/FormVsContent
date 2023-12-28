@@ -2,13 +2,17 @@ import {Container, Avatar, Wrapper, Title} from "./styled";
 import { CurlyBrackets } from "../curly-brackets";
 import {theme as staticTheme} from "../../theme"
 
-export default function SiteLogo({size, fontSize}) {
+export default function SiteLogo({size, fontSize = null, title = false}) {
    return (
       <Wrapper>
-            <Title fontSize={fontSize}>(form (vs (content))</Title>
+         <CurlyBrackets size={size}>
+            {title && (
+               <Title fontSize={fontSize}>(form (vs (content))</Title>
+            )}
             <Container size={size}>
-               <Avatar />
+               <Avatar size={size}/>
             </Container>
+         </CurlyBrackets>
       </Wrapper>
   );
 }

@@ -6,7 +6,7 @@ export const Container = styled('div')({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  letterSpacing: '.3rem',
+  letterSpacing: '0',
 });
 
 export const CurlyBracket = styled('span')({

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme as staticTheme} from '../../theme';
 import {mediaQuery} from "../../utils";
 
-const navHeight = ({isOpenNav}) => isOpenNav ? '330px' : '45px';
+const navHeight = ({isOpenNav}) => isOpenNav ? '360px' : '45px';
 const navWidth = ({isOpenNav}) => isOpenNav ? '50%' : '100%';
 const background = ({isOpenNav}) => isOpenNav ? 
   ({theme}) => theme.colors.invertBg :
@@ -18,7 +18,7 @@ export const Container = styled('div')(
     zIndex: '999',
   },
   mediaQuery({
-    width: [navWidth, '100%'],
+    width: ['50%', '100%'],
     height: [navHeight, 'initial'],
     flexDirection: ['column', 'row'],
     alignItems: ['end', 'center'],
@@ -52,23 +52,23 @@ export const NavItem = styled('li')(
       fontWeight: ({active}) => active ? staticTheme.fontWeights.bold : staticTheme.fontWeights.body,
       pointerEvents: ({active}) => active ? 'none' : 'initial',
     },
-    'a:hover': {
-      color: ({theme}) => theme.colors.hover,
-      transition: '.5s'
-    }
   },
   mediaQuery({
     padding: ['10px', 'initial'],
     textAlign: ['right', 'center'],
     'a:any-link': {
       color: 
-        [
-          ({theme}) => ({active}) =>
-          active ? theme.colors.invertHover : theme.colors.lowKey,
-
-          ({theme}) => ({active}) =>
-          active ? theme.colors.hover : theme.colors.lowKey,
-        ]
+      [
+        ({theme}) => ({active}) =>
+        active ? theme.colors.invertHover : theme.colors.lowKey,
+        
+        ({theme}) => ({active}) =>
+        active ? theme.colors.hover : theme.colors.lowKey,
+      ]
+    },
+    'a:hover': {
+      fontWeight: staticTheme.fontWeights.bold,
+      color: ({theme}) => theme.colors.hover,
     }
   })
 );

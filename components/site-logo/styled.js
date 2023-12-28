@@ -7,28 +7,20 @@ const bp1 = ({size}) => `${size[0]}px`;
 const bp2 = ({size}) => `${size[1]}px`;
 const bp3 = ({size}) => `${size[2]}px`;
 
-export const Wrapper = styled('div')({
-  display: 'flex',
-  justifyContent: 'center'
-})
-
-export const Container = styled('div')(
+export const Wrapper = styled('div')(
   {
-    h1: {
-      width: '100%',
-      fontWeight: staticTheme.fontWeights.body,
-      fontSize: staticTheme.fontSizes[0],
-      textAlign: 'center',
-      color: ({theme}) => theme.colors.muted,
-    },
-    a: {
-      color: ({theme}) => theme.colors.anchor,
-    },
-    paddingRight: '10px',
+    display: 'flex',
+    justifyContent: 'center',
   },
   mediaQuery({
-    width: [bp1, bp2, bp3],
-    height: [bp1, bp2, bp3],
+  })
+);
+
+export const Container = styled('div')(
+  {},
+  mediaQuery({
+    // width: [bp1, bp2, bp3],
+    // height: [bp1, bp2, bp3],
   })
 );
 export const Title = styled('span')(
@@ -44,12 +36,13 @@ export const Title = styled('span')(
   },
   mediaQuery({
     top: [-10, 6]
-
   })
 );
 export const Avatar = styled('div')({
-  width: '100%',
-  height: '100%',
+  width: ({size}) => `${size}px`,
+  height: ({size}) => `${size}px`,
+  // height: ({size}) => console.log(size),
+  marginLeft: '-3px',
   borderRadius: '15%',
   transform: 'rotate(-6deg)',
   boxShadow: '3px 2px 5px 0px grey',

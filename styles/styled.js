@@ -20,7 +20,7 @@ export const PostsWrapper = styled('div')({
   margin: `${staticTheme.space[5]}px auto`,
   ':hover': {
     boxShadow: ({theme}) => theme.shadows.card,
-    transition: '.2s',
+    transition: '0.2s',
   },
   a: {
     width: '49%',
