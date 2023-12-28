@@ -15,7 +15,7 @@ export default function About({dataAbout, dataTimeline, theme, toggleTheme}) {
   const about = dataAbout.content;
   const timeline = dataTimeline.content;
 
-  function ToggleOpenResumePDF() {
+  function HandleToggleResumePDF(ref) {
     setIsOpenPdf(!isOpenPDF);
     ref.current?.scrollIntoView({behavior: 'smooth'});
   }
@@ -27,8 +27,8 @@ export default function About({dataAbout, dataTimeline, theme, toggleTheme}) {
             <Markdown>{about}</Markdown>
             <PdfEmbed 
               isOpenPDF={isOpenPDF} 
-              ref={ref} isMobile={isMobile}
-              onClick={ToggleOpenResumePDF}
+              isMobile={isMobile}
+              HandleToggleResumePDF={HandleToggleResumePDF}
             />
             <br/>
             <br/>

@@ -1,16 +1,18 @@
+import { useRef } from 'react';
 import {UtilityButton, DownloadButton, FlexBox} from '../../components';
 import {theme as staticTheme} from '../../theme';
 import { PdfWrapper } from './styled';
 
 
-export default function PdfEmbed({isOpenPDF, isMobile, ref, onClick}) {
+export default function PdfEmbed({isOpenPDF, isMobile, HandleToggleResumePDF}) {
+  const ref = useRef(null);
   return(
     <>
       {!isMobile ? 
         <PdfWrapper isOpenPDF={isOpenPDF} >
           <h3 ref={ref}>Resume</h3>
           <FlexBox>
-            <UtilityButton onClick={() => onClick()}>
+            <UtilityButton onClick={() => HandleToggleResumePDF(ref)}>
               {isOpenPDF ? 'Collapse' : 'Expand'}
             </UtilityButton>
             <DownloadButton path={'/assets/content/Resume_Koran_Agan.pdf'}>
@@ -21,7 +23,7 @@ export default function PdfEmbed({isOpenPDF, isMobile, ref, onClick}) {
             <p>Unable to display PDF file. <a href="/assets/content/Resume_Koran_Agan.pdf">Download</a> instead.</p>
           </object>
           {isOpenPDF && (
-            <UtilityButton onClick={() => onClick()}>
+            <UtilityButton onClick={() => HandleToggleResumePDF(ref)}>
               Collapse
             </UtilityButton>
           )}     
