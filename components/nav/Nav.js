@@ -57,7 +57,11 @@ export default function Nav({theme, toggleTheme}) {
         {navigationRoutes}
         {isMobile && navigationExternal}
         {isMobile && theme ?
-          <ThemeToggle onClick={toggleTheme}  theme={theme} /> : null}
+          <ThemeToggle 
+            theme={theme}
+            toggleTheme={toggleTheme} 
+            toggleNav={HandleToggleNav}
+          /> : null}
       </NavList>
       {!isMobile ?
         <>
@@ -65,7 +69,7 @@ export default function Nav({theme, toggleTheme}) {
           <NavList>
             {navigationExternal}
           </NavList>
-          <ThemeToggle theme={theme} onClick={toggleTheme} />
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
         </> : null
       }
     </Container>
