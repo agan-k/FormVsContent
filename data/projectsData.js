@@ -91,8 +91,7 @@ const data = [
     githubLink: 'https://github.com/agan-k/raj-jay-v2',
     floatingImage: null,
     desktopScreenshot: ['/assets/screen_shots/raj-jay/raj_desktop.jpg', '/assets/screen_shots/raj-jay/raj_desktop1.jpg'],
-    mobileScreenshot: ['/assets/screen_shots/raj-jay/raj_mobile.jpg', '/assets/screen_shots/raj-jay/raj_mobile1.jpg',
-    '/assets/screen_shots/raj-jay/raj_mobile2.jpg', '/assets/screen_shots/raj-jay/raj_mobile3.jpg',],
+    mobileScreenshot: null,
     tabletScreenshot: null,
   },
   {
