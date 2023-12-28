@@ -61,6 +61,9 @@ export const LogoWrapper = styled('div')({
   img: {
     height: '90%',
     transition: '0.2s',
+    border: ({theme}) => `1px solid ${theme.colors.invertText}`,
+    borderRadius: '50%',
+
   },
   'img:hover': {
     height: '99%',

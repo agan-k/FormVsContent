@@ -15,6 +15,8 @@ export const LogosContainer = styled('div')({
    justifyContent: 'space-evenly',
    img: {
     height: '100%',
+    border: ({theme}) => `1px solid ${theme.colors.invertText}`,
+    borderRadius: '50%',
    },
 });
 export const LogoWrapper = styled('div')({
