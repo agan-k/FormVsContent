@@ -1,12 +1,16 @@
-import React from 'react'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
+'use client';
 
-import {Nav, Footer} from '../../components';
+import Head from 'next/head'
+import {Nav, Footer, Header} from '../../components';
+import { useMediaQuery } from '../../utils/hooks';
+import { MOBILE_BREAKPOINT } from '../../utils/constants';
 import {Container, Main} from './styled';
 
-export default function Layout({ children, title = '(form (vs (content)))', theme, toggleTheme }) {
-  const router = useRouter()
+export default function Layout({ 
+  children, title = '(form (vs (content)))',
+  theme, toggleTheme 
+}) {
+  const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
   
   return (
     <Container>
@@ -14,7 +18,7 @@ export default function Layout({ children, title = '(form (vs (content)))', them
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav theme={theme} toggleTheme={toggleTheme} />
+      <Header theme={theme} toggleTheme={toggleTheme} />
       <Main>{children}</Main>
       <Footer/>
     </Container>

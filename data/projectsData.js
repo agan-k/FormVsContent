@@ -41,9 +41,9 @@ const formVscStack = StackFilter(stackData, 'JavaScript', 'NextJS', 'Styled Comp
 const data = [
   {
     stack: formVscStack,
-    url: 'https://www.formversuscontent.com/',
+    url: 'https://github.com/agan-k/formVsContent',
     name: 'FormVersusContent',
-    description: 'Source of FormVsContent',
+    description: 'Source of this site',
     githubLink: 'https://github.com/agan-k/formVsContent',
     floatingImage: null,
     desktopScreenshot: ['/assets/screen_shots/formvsc/formvsc.png'],
@@ -91,8 +91,7 @@ const data = [
     githubLink: 'https://github.com/agan-k/raj-jay-v2',
     floatingImage: null,
     desktopScreenshot: ['/assets/screen_shots/raj-jay/raj_desktop.jpg', '/assets/screen_shots/raj-jay/raj_desktop1.jpg'],
-    mobileScreenshot: ['/assets/screen_shots/raj-jay/raj_mobile.jpg', '/assets/screen_shots/raj-jay/raj_mobile1.jpg',
-    '/assets/screen_shots/raj-jay/raj_mobile2.jpg', '/assets/screen_shots/raj-jay/raj_mobile3.jpg',],
+    mobileScreenshot: null,
     tabletScreenshot: null,
   },
   {

@@ -16,7 +16,7 @@ Recursion is a concept in which we can make a function call itself inside the bo
 
 Lets look at a classic example of writing a function to calculate the factorial of a given positive integer.
 
-Quickly, the <a href="https://en.wikipedia.org/wiki/Factorial" target="blank">factorial</a> of a given number represents a product of all the positive integers which are less then or equal to the given number in question. For example **!4 = `1 * 2 * 3 * 4` = 24**. We can extract a rough formula for calculating the factorial like so: **!n = n * (n-1) * (n-2) * (n-3)...**
+Quickly, the [factorial](https://en.wikipedia.org/wiki/Factorial) of a given number represents a product of all the positive integers which are less then or equal to the given number in question. For example **!4 = `1 * 2 * 3 * 4` = 24**. We can extract a rough formula for calculating the factorial like so: **!n = n * (n-1) * (n-2) * (n-3)...**
 
 First, let's create a function that will calculate factorial for us with the help of a *for* loop.
 

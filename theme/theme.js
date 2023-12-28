@@ -9,12 +9,13 @@ export const theme = {
   },
   space: [0, 4, 8, 16, 32, 64, 128, 236, 472],
   fonts: {
-    body: 'system-ui, sans-serif',
+    body: 'Helvetica, Arial, Roboto, sans-serif',
     heading: 'inherit',
     monospace: 'Menlo, monospace',
   },
   fontWeights: {
     body: 400,
+    bold: 600,
     heading: 700,
   },
   lineHeights: {

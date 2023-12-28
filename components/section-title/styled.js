@@ -2,12 +2,6 @@ import styled from "styled-components";
 import {theme as staticTheme} from '../../theme';
 import {mediaQuery} from "../../utils";
 
-export const Wrapper = styled('div')({
-  display: 'flex',
-  justifyContent: 'center'
-},
-mediaQuery({
-}));
 export const Container = styled('div')({
   display: 'flex',
   alignItems: 'center',

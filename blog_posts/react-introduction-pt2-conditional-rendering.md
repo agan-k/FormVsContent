@@ -42,11 +42,10 @@ One thing that I find helpful is opening the editor right from the current direc
 Alternatively you can open the folder (react-conditional-rendering) from your editor.
 
 Looking inside the React starter project for the first time can be somewhat overwhelming and for me personally it was even intimidating. Lets get rid of most of the things so we can focus on the basic inner workings of the React application. We will mostly work with the */public* and */src* folders. Go ahead and delete everything inside of these two folders. We will recreate the necessary files from scratch so we can have a better understanding of how all the moving parts fit together. You can leave */node_modules* folder untouched and go ahead and delete everything in the root folder, except for the *`package.json`* file. Your editors explorer should look something like this:
-<img class='markdown-img' src='/assets/content/posts/react_article/react-starter.png' />
+![](/assets/content/posts/react_article/react-starter.png)
 
 
 ## The HTML DOM
-<hr/>
 
 In the **/public** folder, lets go to the terminal and create index file.
 
@@ -80,7 +79,6 @@ As we mentioned in the [first part](react-introduction-pt1) of the article, The 
 
 
 ## Rendering React Elements
-<hr/>
 
 In order to serve the newly created node elements to the DOM we will need to touch a new file in the **/src** folder. From the react-intro directory:
 ```zsh
@@ -131,7 +129,6 @@ Now that we are connected to our local host, we can start developing. Lets try a
 
 
 ## Creating Components 
-<hr/>
 
 ### Top Level Component
 
@@ -210,7 +207,7 @@ If your server is not running, start it again with.
 ```zsh
 ~ npm run start
 ```
-Your browser at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a> should now display the *<Parent />* component with all of its elements.
+Your browser at http://localhost:3000 should now display the *<Parent />* component with all of its elements.
 
 ![browser screenshot](/assets/content/posts/react_article/parent_check.png)
 
@@ -280,7 +277,7 @@ If your server is not running already, start it from the react-intro directory.
 ~ npm run start
 ```
 
-And back at your browser at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a> we should see the elements (separated by the horizontal rule) of both parent and child components.
+And back at your browser at http://localhost:3000 we should see the elements (separated by the horizontal rule) of both parent and child components.
 
 ![browser screenshot](/assets/content/posts/react_article/passing_child.png)
 
@@ -289,15 +286,14 @@ And so we have managed to pass some static content from one component to another
 
 ## Using Props as a Condition for Rendering
 
-<hr/>
 
 In this part we will go over:
 
-1. Passing props from top level component to a child component</h3>
-2. Storing data and assigning it to props</h3>
-3. Using conditional statements to render content inside of components</h3>
+1. Passing props from top level component to a child component
+2. Storing data and assigning it to props
+3. Using conditional statements to render content inside of components
 
-<h3>1. Passing Props</h3>
+### 1. Passing Props
 
 Let's pass a simple prop from the parent component directly to the child component like so:
 
@@ -323,7 +319,7 @@ function Parent() {
 export default Parent
 ```
 
-In order to accept the props from the Parent component, we need to pass them as an argument in the <span class='command'>function Child()</span>.
+In order to accept the props from the Parent component, we need to pass them as an argument in the *function Child()*.
 
 ```jsx 
 function Child(props) {...}
@@ -345,16 +341,16 @@ function Child(props) {
 }
 export default Child
 ```
-Let's check our browser again at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a>
+Let's check our browser again at http://localhost:3000
 
-<img class='markdown-img' src='/assets/content/posts/react_article/hi_there.png' />
+![](/assets/content/posts/react_article/hi_there.png)
 
 
 
 
 We managed to distribute the content from one component to another, avoided repetition in our code while relying on a more programmatic approach. The difference between hard coding a simple sentence for the second time and passing it on, the way we just did, might not seem significant at first. However, if we can imagine greater amount of information (in forms of multiple paragraphs, lists, images etc.) being distributed across several child components, then the potential of this approach becomes more apparent.
 
-<h3>2. Storing Data and Passing it to Props</h3>
+### 2. Storing Data and Passing it to Props
 
 Now let's back up for a moment and take a look at the syntax inside our **h3** within the Child component.
 ```jsx
@@ -409,7 +405,7 @@ if (some condition == true) {
    // do nothing
 }
 ```
-For this conditional statement to work inside of a <span class='command'>return()</span>statement, within the <span class='command'>function Parent()</span> component, we need to convert it in to an expression. For this we can use the Conditional Operator like so:
+For this conditional statement to work inside of a *return()* statement, within the *function Parent()* component, we need to convert it in to an expression. For this we can use the Conditional Operator like so:
 
 ```javascript
  condition == true ? <Child /> : ''
@@ -424,18 +420,18 @@ We could further simplify our expression above.
  condition ? <Child /> : ''
 ```
 This would simply read as: 
-is there such a thing as **<span class='command'>condition</span>** and if so, is it true?
+is there such a thing as *condition* and if so, is it true?
 
 ## Guard Operator
 
-A common practice is to use *logical operator* <span class='command'>&&</span>, in this context sometimes referred to as ***guard operator***.
+A common practice is to use logical operator *&&* , in this context sometimes referred to as ***guard operator***.
 
 ```javascript
  condition && (<Child />)
 ```
-This line of code above will execute if both sides of *logical operator* *&&* evaluate to truthy. In other words if they both exist.
+This line of code above will execute if both sides of logical operator *&&* evaluate to truthy. In other words if they both exist.
 
-<hr/>
+_____
 
 Let's use the ***guard operator*** from above to conditionally render our child component inside of the *function Parent()* component.
 
@@ -483,7 +479,7 @@ export default Parent
 ```
 The way we set up our conditional rendering for the child component reads something like this: If ***banana.exists*** is evaluating to **true**, and if there is an element identified as **child** then include that particular element inside of this *return()* statement.
 
-If we look in our browser at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a>
+If we look in our browser at http://localhost:3000
 
 ![browseer screenshot](/assets/content/posts/react_article/lets_talk_banana.png)
 
@@ -547,7 +543,7 @@ function Parent() {
 }
 export default Parent
 ```
-Let's make sure it works in our browser at <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a>
+Let's make sure it works in our browser at http://localhost:3000
 
 ![browser screenshot](/assets/content/posts/react_article/green_bananas.png)
 

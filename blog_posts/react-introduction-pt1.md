@@ -9,31 +9,29 @@ signature: "K.Agan - Dec '20, Brooklyn, NY"
 
 When I first started getting into [React](https://reactjs.org/) library (framework) I already thought I had a decent sense for what DOM is. I could also write few lines of javascript to manipulate the HTML in the DOM and then style it with some CSS and this is how I was able to build simple websites. This is how one can build anything that a browser is capable of rendering, really. And the experienced ones, who could build anything this way, decided to take it a bit further by building frameworks and libraries in order to increase productivity and enhance performance. I finally arrived at the point where I could no longer avoid dealing with these frameworks. I took a course in React, started building with this new tool and never looked back. However, my transition to React was not exactly smooth and, by sharing my experience here, I'm hoping to provide some insight into certain ways of thinking which might be helpful. 
 
-It is really easy to jump right into it and <span class="command">`npx create-react-app`</span> in the command line that will right out of the box do stuff for us. This is how I started off and it was somewhat counter productive. To be clear, this is not to say that getting your hands dirty and figuring things out on your own is a wrong approach. On contrary, this is how I operate most of the time. However, I also noticed that, had I had some missing pieces of information beforehand, this process would have been much easier. So, jumping straight into the 'tutorial hell' (as someone called it) to obtain some arbitrary solution for our project was not, in my own experience, exactly the best way to do things. Tutorials (even the mediocre ones) are a tremendous resource and absolutely essential for our ever changing ecosystem but a certain balance in our approach needs to be struck in order to keep the growth of our knowledge steady and more seamless.
+It is really easy to jump right into it and *npx create-react-app* in the command line that will right out of the box do stuff for us. This is how I started off and it was somewhat counter productive. To be clear, this is not to say that getting your hands dirty and figuring things out on your own is a wrong approach. On contrary, this is how I operate most of the time. However, I also noticed that, had I had some missing pieces of information beforehand, this process would have been much easier. So, jumping straight into the 'tutorial hell' (as someone called it) to obtain some arbitrary solution for our project was not, in my own experience, exactly the best way to do things. Tutorials (even the mediocre ones) are a tremendous resource and absolutely essential for our ever changing ecosystem but a certain balance in our approach needs to be struck in order to keep the growth of our knowledge steady and more seamless.
 
 
 ## The Essentials
----
 So before going any further, here is a short (bare minimum) list which contains topics that are very simple but essential to understanding how React works. Even if already familiar with them, refreshing on these basic concepts is always beneficial. 
 
-- DOM (HTML)
-- Basic data types (*javascript*)
-- Functions (*javascript*)
-- Conditional operator (*javascript*)
-- Logical operators (*javascript*)
-- Loops (*javascript*)
+* DOM (HTML)
+* Basic data types (JavaScript)
+* Functions (JavaScript)
+* Conditional operator (JavaScript)
+* Logical operators (JavaScript)
+* Loops (JavaScript)
 
 Notice that five out of six listed topics listed here have to do with javascript. This is very telling. React is very much based on javascript. It is a javascript library and/or framework after all. If you are very familiar with javascript, you'll love React. And if you are only little comfortable with javascript, working with React will in many ways help you become better in javascript. Not only because it will somehow make us more productive (which it will) but also because React itself is a finished product (app) and looking at its well designed architecture will help you grow as a developer.
 
 Reviewing the topics listed above will help us understand these few basic concepts in React:
 
-<h3 class='indent'>- The ReactDOM</h3>
-<h3 class='indent'>- React Components</h3>
-<h3 class='indent'>- React Props</h3>
+* The ReactDOM
+* React Components
+* React Props
 
 ## ReactDOM
----
-The first topic has to do with HTML DOM. Here is a great [resource on javascript html DOM](https://www.w3schools.com/js/js_htmldom.asp) but all we need to know about the DOM for now is that React will NOT manipulate the DOM the way javascript does in the traditional (separation of conserns) model - HTML + javascript + CSS. In stead, it will create a "virtual" DOM of its own and have it operate from the "root" container within the body of the <span class='command'>index.html</span> file.
+The first topic has to do with HTML DOM. Here is a great [resource on javascript html DOM](https://www.w3schools.com/js/js_htmldom.asp) but all we need to know about the DOM for now is that React will NOT manipulate the DOM the way javascript does in the traditional (separation of conserns) model - HTML + javascript + CSS. In stead, it will create a "virtual" DOM of its own and have it operate from the "root" container within the body of the *index.html* file.
 
    ```html
    <!DOCTYPE html>
@@ -56,16 +54,16 @@ The first topic has to do with HTML DOM. Here is a great [resource on javascript
    </html>
    ```
 
-But how does the <span class='command'>index.html</span> display all these new elements without having new elements introduced to it? Again, the new "virtual" [ReactDOM](https://reactjs.org/docs/faq-internals.html) within the <span class='command'>class='root'</span> element will take care of it.
+But how does the index.html* display all these new elements without having new elements introduced to it? Again, the new "virtual" [ReactDOM](https://reactjs.org/docs/faq-internals.html) within the class='root'* element will take care of it.
 
 ```jsx
 ReactDOM.render(element, function)
 ```
-Above, you can see that <span class='command'>render()</span> function takes in two arguments <span class='command'>(element, function)</span>. The first one being an element (perhaps something like <span class='command'>h1</span>) and second one is a function which points to the element with the <span class='command'>id='root'</span> in the original HTML DOM. 
+Above, you can see that render()* function takes in two arguments *(element, function)*. The first one being an element (perhaps something like *h1*) and second one is a function which points to the element with the *id='root'* in the original HTML DOM. 
 ```jsx
 ReactDOM.render(<h1>hello!</h1>, document.getElementById('root'))
 ```
-<span class='command'>render()</span> function will take the element in the first argument <span class='command'>h1</span> and display it in the <span class='command'>div</span>  with the <span class='command'>id</span> of <span class='command'>'root'</span>, which the function<span class='command'>getElementById()</span> is pointing to.
+*render()* function will take the element in the first argument *h1* and display it in the *div*  with the *id* of *'root'*, which the function*getElementById()* is pointing to.
 
 We can take this up a notch and, in stead of passing an element for the first argument, we can pass another function.
 ```jsx
@@ -73,14 +71,13 @@ function MyElement() {
    return(<h1>hello from MyElement!</h1>)
 }
 ```
-And then we can pass it as the first argument in the <span class='command'>render()</span> function.
+And then we can pass it as the first argument in the *render()* function.
 ```jsx
 ReactDOM.render(<MyElement />, document.getElementById('root'))
 ```
-[Read more](https://gomakethings.com/rendering-content-with-vanilla-javascript/) on how <span class='command'>render()</span> function works. But notice the self closing tags on <span class='command'>MyElement</span>. Passing this HTML-like syntax is possible because the <span class='command'>render()</span> function comes from ReactDOM as a featured method. A big part of React functionality is built around the ability to seamlessly mix these elements with the regular javascript syntax. Learn more about the JSX syntax in the [the docs](https://reactjs.org/docs/introducing-jsx.html).
+[Read more](https://gomakethings.com/rendering-content-with-vanilla-javascript/) on how *render()* function works. But notice the self closing tags on *MyElement*. Passing this HTML-like syntax is possible because the *render()* function comes from ReactDOM as a featured method. A big part of React functionality is built around the ability to seamlessly mix these elements with the regular javascript syntax. Learn more about the JSX syntax in the [the docs](https://reactjs.org/docs/introducing-jsx.html).
 
 ## React Components
----
 It goes without saying that we can pass more than just a single element in our functions. The only thing we need to make sure of is to wrap all the elements in to a single "Parent" element.
 ```jsx
 function MyElement() {
@@ -92,9 +89,9 @@ function MyElement() {
       )
 }
 ```
-In this case the <span class='command'>div</span> represents a "Parent" for the <span class='command'>h1</span> and <span class='command'>p</span> "children".
+In this case the *div* represents a "Parent" for the *h1* and *p* "children".
 
-Lets take the <span class='command'>MyElement()</span> function and rename it just for the purpose of demonstrating.
+Lets take the *MyElement()* function and rename it just for the purpose of demonstrating.
 ```jsx
 function MyComponent() {
    return(
@@ -129,7 +126,6 @@ function MyComponent() {
 }
 ```
 ## Props
----
 The way we pass arguments in functions, React Components can do similar with props (properties).
 ```jsx
 function MyComponent() {
@@ -145,23 +141,23 @@ function ChildComponent(props) {
    )
 }
 ```
-What happens here is following. The property <span class='command'>name='MyComponent'</span> is delivered to the ChildComponent as a *key: 'value'* pair inside of an *object*.
+What happens here is following. The property *name='MyComponent'* is delivered to the ChildComponent as a *key: 'value'* pair inside of an *object*.
 ```javascript
 props: {
    name: 'MyComponent'
 }
 ```
-The ChildComponent accepts it as an argument <span class='command'>(props)</span>
+The ChildComponent accepts it as an argument *(props)*
 ```jsx
 function ChildComponent(props) {...}
 ```
-and returns the *'value'* of the *'key'* <span class='command'>name:</span>
+and returns the *'value'* of the *'key'* *name:*
 ```jsx
 {props.name}
 ```
-Notice the curly braces used on <span class='command'>{props.name}</span>. This is how we can inject javascript anywhere inside the <span class='command'>return()</span> statement.
+Notice the curly braces used on *{props.name}*. This is how we can inject javascript anywhere inside the *return()* statement.
 
-And so, we have successfully passed information from one component to another and finally rendered it in our <span class='command'>index.html</span> for it to be displayed in the browser.
+And so, we have successfully passed information from one component to another and finally rendered it in our *index.html* for it to be displayed in the browser.
 <img class='markdown-img' src='/assets/content/posts/react_article/hello_from_parent_component.png' />
 Now, think about it. We did not touch the original DOM. We didn't have to introduce any new elements and therefore it did not need to reload.
 

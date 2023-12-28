@@ -2,52 +2,73 @@ import styled from "styled-components";
 import {theme as staticTheme} from '../../theme';
 import {mediaQuery} from "../../utils";
 
-export const Container = styled('div')({
-  display: 'flex',
-  justifyContent: 'space-between',
-  width: '100%',
-  padding: '0',
-  borderRadius: '0',
-  zIndex: '99',
-},
-mediaQuery({
-  paddingTop: [staticTheme.space[1], staticTheme.space[3]],
-  marginBottom: [staticTheme.space[4], staticTheme.space[6]],
+const navHeight = ({isOpenNav}) => isOpenNav ? '380px' : '45px';
+const navWidth = ({isOpenNav}) => isOpenNav ? '50%' : '100%';
+const background = ({isOpenNav}) => isOpenNav ? 
+  ({theme}) => theme.colors.invertBg :
+  ({theme}) => theme.colors.background;
 
-}));
-export const NavList = styled('ul')({
-  display: 'flex',
-  
-  alignItems: 'center',
-  margin: '0',
-  padding: '0',
-},
-mediaQuery({
-  minWidth: ['50%', '25%'],
-  justifyContent: ['space-between'],
-
-}));
-export const NavItem = styled('li')({
-  listStyle: 'none',
-  padding: '0',
-  margin: '0',
-  fontSize: staticTheme.fontSizes[2],
-  a: {
-    padding: staticTheme.space[2],
-    paddingTop: '0',
-    textDecoration: 'none',
-    color: 'grey',
-    borderRadius: '0',
-    boxShadow: ({active}) => active === 'true' ? ({theme}) => theme.shadows.nav : 'none',
+export const Container = styled('div')(
+  {
+    position: 'fixed',
+    display: 'flex',
+    overflow: 'hidden',
+    top: '0',
+    right: '0',
+    zIndex: '999',
   },
-  'a:hover': {
-    boxShadow: ({theme}) => theme.shadows.nav,
-    color: ({theme}) => theme.colors.hover,
-  }
-},
-mediaQuery({
-  a: {
-    // paddingLeft: [staticTheme.space[2], '0']
-  }
-
-}))
+  mediaQuery({
+    width: ['50%', '100%'],
+    height: [navHeight, 'initial'],
+    flexDirection: ['column', 'row'],
+    alignItems: ['end', 'center'],
+    justifyContent: ['unset', 'space-evenly'],
+    background: [background, ({theme}) => theme.colors.background],
+    paddingTop: [staticTheme.space[1], staticTheme.space[3]],
+    marginBottom: [staticTheme.space[4], staticTheme.space[5]],
+    paddingBottom: ['unset', staticTheme.space[3]],
+  })
+);
+export const NavList = styled('ul')(
+  {
+    display: 'flex',
+    paddingLeft: staticTheme.space[2],
+  },
+  mediaQuery({
+    minWidth: ['98%', '25%'],
+    flexDirection: ['column', 'row'],
+    justifyContent: ['unset', 'space-between'],
+    alignItems: ['end', 'center'],
+  })
+);
+export const NavItem = styled('li')(
+  {
+    listStyle: 'none',
+    fontSize: staticTheme.fontSizes[2],
+    minWidth: staticTheme.space[5],
+    'a:any-link': {
+      textDecoration: 'none',
+      letterSpacing: '2px',
+      fontWeight: ({active}) => active ? staticTheme.fontWeights.bold : staticTheme.fontWeights.body,
+      pointerEvents: ({active}) => active ? 'none' : 'initial',
+    },
+  },
+  mediaQuery({
+    padding: ['10px', 'initial'],
+    textAlign: ['right', 'center'],
+    'a:any-link': {
+      color: 
+      [
+        ({theme}) => ({active}) =>
+        active ? theme.colors.invertHover : theme.colors.lowKey,
+        
+        ({theme}) => ({active}) =>
+        active ? theme.colors.hover : theme.colors.lowKey,
+      ]
+    },
+    'a:hover': {
+      fontWeight: staticTheme.fontWeights.bold,
+      color: ({theme}) => theme.colors.hover,
+    }
+  })
+);

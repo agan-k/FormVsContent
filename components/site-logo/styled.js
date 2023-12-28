@@ -1,30 +1,48 @@
 import styled from 'styled-components';
 import {theme as staticTheme} from '../../theme';
+import { mediaQuery } from '../../utils';
 
-export const Wrapper = styled('div')({
-  display: 'flex',
-  justifyContent: 'center'
-})
+//breakpoints:
+const bp1 = ({size}) => `${size[0]}px`;
+const bp2 = ({size}) => `${size[1]}px`;
+const bp3 = ({size}) => `${size[2]}px`;
 
-export const Container = styled('div')({
-  // position: 'relative',
-  height: ({size}) => `${size}px`,
-  width: ({size}) => `${size}px`,
-  h1: {
-    width: '100%',
-    fontFamily: 'courier',
-    fontWeight: staticTheme.fontWeights.body,
-    fontSize: staticTheme.fontSizes[0],
-    textAlign: 'center',
-    color: ({theme}) => theme.colors.muted,
+export const Wrapper = styled('div')(
+  {
+    display: 'flex',
+    justifyContent: 'center',
   },
-  a: {
-    color: ({theme}) => theme.colors.anchor,
-  }
-})
+  mediaQuery({
+  })
+);
+
+export const Container = styled('div')(
+  {},
+  mediaQuery({
+    // width: [bp1, bp2, bp3],
+    // height: [bp1, bp2, bp3],
+  })
+);
+export const Title = styled('span')(
+  {
+    position: 'absolute',
+    paddingRight: 6,
+    fontSize: ({fontSize}) => `${fontSize}px`,
+    fontFamily: 'courier',
+    color: '#c5c7c5',
+    color: 'orange',
+    wordSpacing: '-10px',
+    letterSpacing: '1px',
+  },
+  mediaQuery({
+    top: [-10, 6]
+  })
+);
 export const Avatar = styled('div')({
-  width: '100%',
-  height: '100%',
+  width: ({size}) => `${size}px`,
+  height: ({size}) => `${size}px`,
+  // height: ({size}) => console.log(size),
+  marginLeft: '-3px',
   borderRadius: '15%',
   transform: 'rotate(-6deg)',
   boxShadow: '3px 2px 5px 0px grey',

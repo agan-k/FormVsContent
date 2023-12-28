@@ -19,10 +19,8 @@ export default function Post({ content, data, theme, toggleTheme }) {
             </Header>
             <Body>
                <ReactMarkdown
-                  escapeHtml={false}
-                  source={content}
                   renderers={{ code: codeBlock }}
-               />
+               >{content}</ReactMarkdown>
             </Body>
             <hr/>
             <Signature>{frontmatter.signature}</Signature>

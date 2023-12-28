@@ -15,11 +15,11 @@ import {
   FloatingImagesContainer,
 } from './styled';
 
-export default function OngoingProject({data, theme}) {
-  const [ imgIndex, setImgIndex] = useState();
+export default function OngoingProject({data}) {
+  const [imgIndex, setImgIndex] = useState();
   const floatingImages = data?.floatingImage || [];
   const hasFloatingImages = Boolean(data.floatingImage != null);
-  console.log(floatingImages)
+  
   return (
     <Wrapper>
       <Name><a href={data.url}>{data.name}</a></Name>
@@ -55,8 +55,8 @@ export default function OngoingProject({data, theme}) {
         {hasFloatingImages && (
           <FloatingImagesContainer>
             {floatingImages.map(fi => 
-                <FloatingImage>
-                  <img key={fi.id} src={fi} />
+                <FloatingImage key={fi}>
+                  <img src={fi} />
                 </FloatingImage>
             )}
           </FloatingImagesContainer>
