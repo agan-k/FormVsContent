@@ -30,7 +30,7 @@ export default function Nav({theme, toggleTheme}) {
   ]
   const navigationRoutes = navLinks.map(item =>
     <NavItem key={item.name} active={router.pathname == `${item.link}` ? true : false}>
-      <Link href={item.link}>
+      <Link href={item.link} onClick={() => HandleToggleNav()}>
         {item.name}
       </Link>
     </NavItem>
