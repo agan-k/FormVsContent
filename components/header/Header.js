@@ -4,6 +4,7 @@ import { Container } from "./styled";
 import {theme as staticTheme} from '../../theme';
 import { useMediaQuery } from "../../utils/hooks";
 import { MOBILE_BREAKPOINT } from "../../utils/constants";
+import Link from "next/link";
 
 export default function Header({theme, toggleTheme}) {
   const router = useRouter();
@@ -12,7 +13,9 @@ export default function Header({theme, toggleTheme}) {
   return(
     <Container>
       {isMobile && !isHome &&
+      <Link href={'/'}>
         <SiteLogo size={staticTheme.space[4]} />
+      </Link>
       }
       <Nav theme={theme} toggleTheme={toggleTheme} />
     </Container>
