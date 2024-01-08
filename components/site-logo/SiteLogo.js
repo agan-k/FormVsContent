@@ -9,9 +9,9 @@ export default function SiteLogo({size, fontSize = null, title = false}) {
             {title && (
                <Title fontSize={fontSize}>(form (vs (content))</Title>
             )}
-            <Container size={size}>
+            <>
                <Avatar size={size}/>
-            </Container>
+            </>
          </CurlyBrackets>
       </Wrapper>
   );
