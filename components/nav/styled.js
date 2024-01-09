@@ -3,7 +3,6 @@ import {theme as staticTheme} from '../../theme';
 import {mediaQuery} from "../../utils";
 
 const navHeight = ({isOpenNav}) => isOpenNav ? '380px' : '45px';
-const navWidth = ({isOpenNav}) => isOpenNav ? '50%' : '100%';
 const background = ({isOpenNav}) => isOpenNav ? 
   ({theme}) => theme.colors.invertBg :
   ({theme}) => theme.colors.background;

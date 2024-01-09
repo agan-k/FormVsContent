@@ -1,28 +1,13 @@
 import styled from 'styled-components';
-import {theme as staticTheme} from '../../theme';
 import { mediaQuery } from '../../utils';
-
-//breakpoints:
-const bp1 = ({size}) => `${size[0]}px`;
-const bp2 = ({size}) => `${size[1]}px`;
-const bp3 = ({size}) => `${size[2]}px`;
 
 export const Wrapper = styled('div')(
   {
     display: 'flex',
     justifyContent: 'center',
-  },
-  mediaQuery({
-  })
+  }
 );
 
-export const Container = styled('div')(
-  {},
-  mediaQuery({
-    // width: [bp1, bp2, bp3],
-    // height: [bp1, bp2, bp3],
-  })
-);
 export const Title = styled('span')(
   {
     position: 'absolute',
@@ -41,7 +26,6 @@ export const Title = styled('span')(
 export const Avatar = styled('div')({
   width: ({size}) => `${size}px`,
   height: ({size}) => `${size}px`,
-  // height: ({size}) => console.log(size),
   marginLeft: '-3px',
   borderRadius: '15%',
   transform: 'rotate(-6deg)',
