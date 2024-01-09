@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Nav, SiteLogo } from "../../components";
 import { Container } from "./styled";
@@ -10,6 +11,10 @@ export default function Header({theme, toggleTheme}) {
   const router = useRouter();
   const isHome = Boolean(router.pathname === '/');
   const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
+  useEffect(() => {
+    localStorage.setItem('background', theme);
+    console.log('next: ', localStorage.background)
+  }, [theme])
   return(
     <Container>
       {isMobile && !isHome &&
