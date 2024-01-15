@@ -30,15 +30,9 @@ export default function Post({ content, data, theme, toggleTheme }) {
    
 }
 Post.getInitialProps = async (context) => {
-   const { slug } = context.query
- 
-   // Import .md file using the `slug` from the URL
-   const content = await import(`../../blog_posts/${slug}.md`)
-
-   // Parse .md data through `matter`
-   const data = matter(content.default)
-
-   // Pass data to component props
-   return { ...data }
+   const { slug } = context.query;
+   const content = await import(`../../blog_posts/${slug}.md`);
+   const data = matter(content.default);
+   return { ...data };
 }
  
