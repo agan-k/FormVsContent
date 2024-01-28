@@ -32,3 +32,65 @@ mediaQuery({
   padding: [staticTheme.space[2]]
 })
 );
+
+//// LANDING PAGE:
+export const LandingWrapper = styled('div')({
+  height: '100vh',
+  display: 'flex',
+  alignItems: 'center',
+
+},
+mediaQuery({
+  
+})
+);
+export const LogoWrapper = styled('div')(
+  {
+    display: 'block',
+    background: 'blue',
+    width: '100%',
+    height: '33Vh',
+    display: 'flex',
+    justifyContent: 'center',
+    img: {
+    }
+  },
+
+  mediaQuery({
+
+  })
+);
+export const LogoContainer = styled('div')(
+  {
+    display: 'block',
+    position: 'relative',
+    background: 'red',
+    width: '100%',
+    height: '33Vh',
+    display: 'flex',
+    justifyContent: 'center',
+    img: {
+    }
+  },
+
+  mediaQuery({
+
+  })
+);
+export const ImageContainer = styled('div')(
+  {
+    display: 'block',
+    background: 'blue',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    img: {
+      height: '300px'
+    }
+  },
+
+  mediaQuery({
+
+  })
+);
+
