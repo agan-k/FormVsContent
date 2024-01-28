@@ -1,18 +1,25 @@
-import { LandingWrapper, LogoContainer, ImageContainer, LogoWrapper } from "../styles/styled";
-import { CurlyBrackets } from "../components/curly-brackets";
-import {theme as staticTheme} from "../theme";
+import { 
+  LandingWrapper, 
+  BracesWrapper, 
+  ImageWrapper, 
+  LogoWrapper,
+  BraceLeft,
+  BraceRight,
+} from "../styles/styled";
 
 export default function Home() {
+  const braceLeft = <>&#123;</>;
+  const braceRight = <>&#125;</>;
   return(
     <LandingWrapper>
       <LogoWrapper>
-        <LogoContainer>
-          <CurlyBrackets size={staticTheme.space[7]}>
-            <ImageContainer>
-              <img src="assets/sailin.jpg"/>
-            </ImageContainer>
-          </CurlyBrackets>
-        </LogoContainer>
+        <BracesWrapper>
+          <BraceLeft>{braceLeft}</BraceLeft>
+          <ImageWrapper>
+            <img src="assets/sailin.jpg"/>
+          </ImageWrapper>
+          <BraceRight>{braceRight}</BraceRight>
+        </BracesWrapper>
       </LogoWrapper>
     </LandingWrapper>
   )

@@ -49,7 +49,7 @@ export const LogoWrapper = styled('div')(
     display: 'block',
     background: 'blue',
     width: '100%',
-    height: '33Vh',
+    height: staticTheme.space[7],
     display: 'flex',
     justifyContent: 'center',
     img: {
@@ -60,32 +60,57 @@ export const LogoWrapper = styled('div')(
 
   })
 );
-export const LogoContainer = styled('div')(
+export const BracesWrapper = styled('div')(
   {
     display: 'block',
     position: 'relative',
+    fontSize: staticTheme.space[7],
+    fontWeight: 100,
     background: 'red',
-    width: '100%',
-    height: '33Vh',
     display: 'flex',
     justifyContent: 'center',
-    img: {
-    }
+    width: '80%',
   },
-
+  
   mediaQuery({
-
+    
   })
-);
-export const ImageContainer = styled('div')(
+  );
+export const BraceLeft = styled('div')(
   {
-    display: 'block',
-    background: 'blue',
-    width: '100%',
+    marginTop: - staticTheme.space[3],
     display: 'flex',
-    justifyContent: 'center',
+    alignItems: 'center',
+    // background: 'green',
+    height: '100%',
+    position: 'absolute',
+    left: 0,
+  },
+  mediaQuery({
+  })
+  );
+  export const BraceRight = styled('div')(
+    {
+      marginTop: - staticTheme.space[3],
+      display: 'flex',
+      alignItems: 'center',
+      // background: 'green',
+      height: '100%',
+      position: 'absolute',
+      right: 0,
+    },
+
+    mediaQuery({
+
+    })
+  );
+export const ImageWrapper = styled('div')(
+  {
+    display: 'flex',
+    alignItems: 'center',
+    display: 'flex',
     img: {
-      height: '300px'
+      height: '100%'
     }
   },
 
