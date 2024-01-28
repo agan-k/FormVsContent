@@ -35,6 +35,7 @@ mediaQuery({
 
 //// LANDING PAGE:
 export const LandingWrapper = styled('div')({
+  background: 'white',
   height: '100vh',
   display: 'flex',
   alignItems: 'center',
@@ -48,7 +49,7 @@ mediaQuery({
 export const LogoWrapper = styled('div')(
   {
     display: 'block',
-    background: 'blue',
+    // background: 'blue',
     width: '100%',
     height: staticTheme.space[7],
     display: 'flex',
@@ -65,20 +66,43 @@ const enclose = keyframes`
     width: 100%;
   }
   to {
-    width: 20%;
+    width: 27%;
   }
-`
+`;
+const emerge = keyframes`
+  0% {
+    opacity: 0;
+    
+  }
+  50% {
+    opacity: .5;
+    box-shadow: 7px 7px 9px 3px rgb(94, 98, 99, 0);
+    border: 2px solid rgb(240, 226, 202, 0);
+  }
+  70% {
+    opacity: .8;
+    transform: rotate(-4deg);
+    box-shadow: 7px 7px 9px 3px rgb(94, 98, 99, .1);
+    border: 2px solid rgb(240, 226, 202, .1)
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-6deg);
+    box-shadow: 7px 7px 9px 3px rgb(94, 98, 99, .6);
+    border: 2px solid rgb(240, 226, 202, 1);
+  }
+`;
 
 export const BracesWrapper = styled('div')(
   {
     display: 'block',
     position: 'relative',
     fontSize: staticTheme.space[7],
-    fontWeight: 100,
-    background: 'red',
+    color: 'orange',
+    fontWeight: '100',
+    // background: 'red',
     display: 'flex',
     justifyContent: 'center',
-    width: '80%',
     animation: () => css`${enclose} 2s forwards`
   },
   
@@ -120,7 +144,13 @@ export const ImageWrapper = styled('div')(
     alignItems: 'center',
     display: 'flex',
     img: {
-      height: '80%'
+      height: '80%',
+      borderRadius: '15%',
+      animation: () => css`${emerge} 2s forwards`,
+      // boxShadow: '7px 7px 9px 3px rgb(94, 98, 99, .6)',
+      // border: '2px solid rgb(240, 226, 202)',
+      // transform: 'rotate(-6deg)'
+      
     }
   },
 
