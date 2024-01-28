@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import {theme as staticTheme} from '../theme';
 import {mediaQuery} from '../utils';
 
@@ -44,6 +44,7 @@ mediaQuery({
   
 })
 );
+
 export const LogoWrapper = styled('div')(
   {
     display: 'block',
@@ -52,14 +53,22 @@ export const LogoWrapper = styled('div')(
     height: staticTheme.space[7],
     display: 'flex',
     justifyContent: 'center',
-    img: {
-    }
   },
 
   mediaQuery({
 
   })
 );
+
+const enclose = keyframes`
+  from {
+    width: 100%;
+  }
+  to {
+    width: 20%;
+  }
+`
+
 export const BracesWrapper = styled('div')(
   {
     display: 'block',
@@ -70,6 +79,7 @@ export const BracesWrapper = styled('div')(
     display: 'flex',
     justifyContent: 'center',
     width: '80%',
+    animation: () => css`${enclose} 2s forwards`
   },
   
   mediaQuery({
@@ -110,7 +120,7 @@ export const ImageWrapper = styled('div')(
     alignItems: 'center',
     display: 'flex',
     img: {
-      height: '100%'
+      height: '80%'
     }
   },
 
