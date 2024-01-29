@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 import {theme as staticTheme} from '../../theme';
 import {mediaQuery} from '../../utils';
-import * as animationKeyframes from '../../styles/animationKeyframes'
+import * as animationKeyframes from '../../styles/animationKeyframes';
+import { Z_INDEX } from "../../utils/constants";
 
 
 export const Wrapper = styled('div')(
@@ -14,17 +15,18 @@ export const Wrapper = styled('div')(
     width: '100%',
     paddingTop: '20%',
     alignItems: 'center',
+    zIndex: Z_INDEX.landing[1],
     animation: () => css`
-      ${animationKeyframes.hide} 2s 7s forwards;
+      ${animationKeyframes.hideLanding} 2s 7s forwards;
     `,
-    zIndex: 9999,
   },
   mediaQuery({
+    
   })
 );
 export const Container = styled('div')(
   {
-    maxWidth: '1200px',
+    maxWidth: '820px',
     margin: '0 auto',
   },
   mediaQuery({
@@ -55,9 +57,12 @@ export const BracesWrapper = styled('div')(
     fontWeight: '100',
     display: 'flex',
     justifyContent: 'center',
-    animation: () => css`${animationKeyframes.enclose} 2s 4s forwards`
   },
   mediaQuery({
+    animation: [
+      () => css`${animationKeyframes.encloseMobile} 2s 4s forwards`,
+      () => css`${animationKeyframes.enclose} 2s 4s forwards`,
+    ]
   })
 );
 export const BraceLeft = styled('div')(

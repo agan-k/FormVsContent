@@ -1,4 +1,5 @@
 import { keyframes } from 'styled-components';
+import { Z_INDEX } from '../utils/constants';
 
 export const type = keyframes`
   from {width: 0;}
@@ -8,9 +9,12 @@ export const blink = keyframes`
   from {border-color: orange;}
   to {border-color: white;}
 `;
-export const hide = keyframes`
+export const hideLanding = keyframes`
   from {opacity: 1;}
-  to {opacity: 0; z-index: 0;}
+  to {
+    opacity: 0; 
+    z-index: ${Z_INDEX.landing[0]};
+  }
 `;
 export const show = keyframes`
   from {opacity: 0;}
@@ -18,7 +22,11 @@ export const show = keyframes`
 `;
 export const enclose = keyframes`
   from {width: 100%;}
-  to { width: 27%;}
+  to { width: 44%;}
+`;
+export const encloseMobile = keyframes`
+  from {width: 100%;}
+  to { width: 87%;}
 `;
 export const emerge = keyframes`
   0% {opacity: 0;}

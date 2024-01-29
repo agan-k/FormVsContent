@@ -3,7 +3,6 @@ import {
   Greeting,
   OngoingProject,
   SectionTitle,
-  Badge,
   Layout,
   PostCard,
   LandingPage,
@@ -39,9 +38,6 @@ export default function Home({theme, toggleTheme}) {
       <LandingPage />
       <Layout theme={theme} toggleTheme={toggleTheme}>
         <PageWrapper>
-          {isMobile && (
-            <Badge />
-          )}
           <Greeting />
           <SectionTitle>projects</SectionTitle>
           {ongoingProjects}

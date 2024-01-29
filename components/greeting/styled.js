@@ -14,7 +14,7 @@ export const GreetingWrapper = styled('div')(
     p: {
       fontSize: [staticTheme.fontSizes[2], staticTheme.fontSizes[3]],
       width: ['95%', '70%'],
-      lineHeight: ['1.2rem', staticTheme.lineHeights.body],
+      lineHeight: ['1.5rem', staticTheme.lineHeights.body],
     }
   })
 )

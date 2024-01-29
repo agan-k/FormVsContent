@@ -8,7 +8,10 @@ export const Container = styled('div')(
     margin: '0 auto',
   },
   mediaQuery({
-    paddingTop: [staticTheme.space[5], staticTheme.space[5] + staticTheme.space[1]],
+    paddingTop: [
+      staticTheme.space[5], 
+      staticTheme.space[5] + staticTheme.space[1]
+    ],
   })
 );
 export const Main = styled('div')({

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Nav, SiteLogo } from "../../components";
-import { Container } from "./styled";
+import { Container, LogoWrapper } from "./styled";
 import {theme as staticTheme} from '../../theme';
 import { useMediaQuery } from "../../utils/hooks";
 import { MOBILE_BREAKPOINT } from "../../utils/constants";
@@ -17,10 +17,12 @@ export default function Header({theme, toggleTheme}) {
   }, [theme])
   return(
     <Container>
-      {isMobile && !isHome &&
-      <Link href={'/'}>
-        <SiteLogo size={staticTheme.space[4]} />
-      </Link>
+      {isMobile && 
+        <LogoWrapper>
+          <Link href={'/'}>
+            <SiteLogo size={staticTheme.space[4]} />
+          </Link>
+        </LogoWrapper>
       }
       <Nav theme={theme} toggleTheme={toggleTheme} />
     </Container>

@@ -4,7 +4,7 @@ import {mediaQuery} from '../../utils';
 
 export const Wrapper = styled('div')({
   position: 'relative',
-  background: ({theme}) => theme.colors.background,
+  // background: ({theme}) => theme.colors.background,
   width: staticTheme.space[16],
   margin: `${staticTheme.space[5]}px auto`,
   textAlign: 'center',
@@ -49,7 +49,6 @@ export const LogosContainer = styled('div')(
     display: 'flex',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    // height: '3rem',
   },
   mediaQuery({
       height: [staticTheme.space[4], staticTheme.space[4]],
