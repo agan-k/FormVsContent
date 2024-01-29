@@ -11,7 +11,6 @@ export const Button = styled('button')(
     fontSize: staticTheme.fontSizes[4],
     pointerEvents: 'auto',
     cursor: 'pointer',
-    zIndex: '999',
   },
   mediaQuery({
     position: ['block', 'absolute'],

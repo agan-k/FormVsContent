@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme as staticTheme} from '../../theme';
 import {mediaQuery} from "../../utils";
 
-const navHeight = ({isOpenNav}) => isOpenNav ? '380px' : '45px';
+const navHeight = ({isOpenNav}) => isOpenNav ? '100%' : '45px';
 const background = ({isOpenNav}) => isOpenNav ? 
   ({theme}) => theme.colors.invertBg :
   ({theme}) => theme.colors.background;
@@ -14,7 +14,6 @@ export const Container = styled('div')(
     overflow: 'hidden',
     top: '0',
     right: '0',
-    zIndex: '999',
   },
   mediaQuery({
     width: ['50%', '100%'],

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {theme as staticTheme} from '../../theme';
+import { Z_INDEX } from "../../utils/constants";
 
 export const Container = styled('div')(
   {
@@ -7,12 +8,17 @@ export const Container = styled('div')(
     width: '100%',
     height: staticTheme.space[5],
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     margin: '0',
     left: '0',
     top: '0',
-    zIndex: '999',
+    zIndex: Z_INDEX.header,
     background: ({theme}) => theme.colors.background,
+  }
+);
+export const LogoWrapper = styled('div')(
+  {
+    zIndex: Z_INDEX.mobileLogo,
   }
 )

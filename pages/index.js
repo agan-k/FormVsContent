@@ -3,9 +3,9 @@ import {
   Greeting,
   OngoingProject,
   SectionTitle,
-  Badge,
   Layout,
   PostCard,
+  LandingPage,
 } from '../components';
 import {PostsWrapper} from '../styles/styled';
 import projectsData from '../data/projectsData';
@@ -34,17 +34,18 @@ export default function Home({theme, toggleTheme}) {
     )
   });
   return (
-    <Layout theme={theme} toggleTheme={toggleTheme}>
-      <PageWrapper>
-        {isMobile && (
-          <Badge />
-        )}
-        <Greeting />
-        <SectionTitle>projects</SectionTitle>
-        {ongoingProjects}
-        <SectionTitle>recent posts</SectionTitle>
-        <PostsWrapper>{recentPosts}</PostsWrapper>
-      </PageWrapper>
-    </Layout>
+    <>
+      {!isMobile && <LandingPage />}
+      
+      <Layout theme={theme} toggleTheme={toggleTheme}>
+        <PageWrapper>
+          <Greeting />
+          <SectionTitle>projects</SectionTitle>
+          {ongoingProjects}
+          <SectionTitle>recent posts</SectionTitle>
+          <PostsWrapper>{recentPosts}</PostsWrapper>
+        </PageWrapper>
+      </Layout>
+    </>
   )
 }
