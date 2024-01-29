@@ -6,6 +6,7 @@ export {SiteLogo} from './site-logo';
 export {Badge} from './badge';
 export {Nav} from './nav';
 export {Footer} from './footer';
+export {LandingPage} from './landing-page';
 export {Layout} from './layout';
 export {PostCard} from './post-card';
 export {ThemeToggle} from './theme-toggle';
