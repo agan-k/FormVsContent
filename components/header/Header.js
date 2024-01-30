@@ -20,7 +20,7 @@ export default function Header({theme, toggleTheme}) {
       {isMobile && 
         <LogoWrapper>
           <Link href={'/'}>
-            <SiteLogo size={staticTheme.space[4]} />
+            <SiteLogo size={staticTheme.space[5]} />
           </Link>
         </LogoWrapper>
       }
