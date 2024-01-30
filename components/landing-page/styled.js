@@ -93,7 +93,7 @@ export const ImageWrapper = styled('div')(
   {
     display: 'flex',
     alignItems: 'center',
-    display: 'flex',
+    justifyContent: 'center',
     img: {
       height: '80%',
       borderRadius: '15%',
@@ -105,7 +105,7 @@ export const ImageWrapper = styled('div')(
 );
 
 export const TitleWrapper = styled.div`
-  padding-left: 10%;
+  padding-left: 5%;
 `;
 
 export const Title = styled.div`

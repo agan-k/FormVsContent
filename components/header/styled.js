@@ -19,6 +19,7 @@ export const Container = styled('div')(
 );
 export const LogoWrapper = styled('div')(
   {
+    marginTop: staticTheme.space[3],
     zIndex: Z_INDEX.mobileLogo,
   }
 )

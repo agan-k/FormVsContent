@@ -35,7 +35,7 @@ export default function Home({theme, toggleTheme}) {
   });
   return (
     <>
-      {!isMobile && <LandingPage />}
+      <LandingPage />
       
       <Layout theme={theme} toggleTheme={toggleTheme}>
         <PageWrapper>
