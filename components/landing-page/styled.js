@@ -93,7 +93,7 @@ export const ImageWrapper = styled('div')(
   {
     display: 'flex',
     alignItems: 'center',
-    display: 'flex',
+    justifyContent: 'center',
     img: {
       height: '80%',
       borderRadius: '15%',
