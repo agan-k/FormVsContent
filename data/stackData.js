@@ -3,7 +3,7 @@ const stackData = [
    { id: 2, name: 'CSS', src: '/assets/css3.png' },
    { id: 3, name: 'JavaScript', src: '/assets/javascript.png' },
    { id: 4, name: 'ReactJS', src: '/assets/reactJS.png' },
-   { id: 5, name: 'NextJS', src: '/assets/nextJS.png' },
+   { id: 5, name: 'NextJS', src: '/assets/next.png' },
    { id: 6, name: 'API', src: '/assets/api.png' },
    { id: 7, name: 'Liquid', src: '/assets/liquid.png' },
    { id: 8, name: 'Headless CMS', src: '/assets/prismic-io.jpg' },
