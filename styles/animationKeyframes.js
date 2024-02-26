@@ -10,10 +10,12 @@ export const blink = keyframes`
   to {border-color: white;}
 `;
 export const hideLanding = keyframes`
-  from {opacity: 1;}
+  from {
+    top: 0;
+  }
   to {
-    opacity: 0; 
-    z-index: ${Z_INDEX.landing[0]};
+    top: -9999px;
+  }
   }
 `;
 export const show = keyframes`

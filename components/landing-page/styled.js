@@ -13,11 +13,10 @@ export const Wrapper = styled('div')(
     background: 'white',
     height: '100vh',
     width: '100%',
-    paddingTop: '20%',
     alignItems: 'center',
     zIndex: Z_INDEX.landing[1],
     animation: () => css`
-      ${animationKeyframes.hideLanding} 2s 7s forwards;
+      ${animationKeyframes.hideLanding} 5s 7s forwards;
     `,
   },
   mediaQuery({
@@ -28,6 +27,7 @@ export const Container = styled('div')(
   {
     maxWidth: '820px',
     margin: '0 auto',
+    marginTop: '20%',
   },
   mediaQuery({
   })
