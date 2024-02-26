@@ -1,5 +1,5 @@
 import { keyframes } from 'styled-components';
-import { Z_INDEX } from '../utils/constants';
+import {theme} from '../theme';
 
 export const type = keyframes`
   from {width: 0;}
@@ -7,7 +7,7 @@ export const type = keyframes`
 `;
 export const blink = keyframes`
   from {border-color: orange;}
-  to {border-color: white;}
+  to {border-color: ${theme.colors.background};}
 `;
 export const hideLanding = keyframes`
   from {
