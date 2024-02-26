@@ -25,7 +25,7 @@ const sloohStack = StackFilter(stackData, 'CSS', 'HTML5', 'JavaScript')
   .map(item => item)
 const laraStack = StackFilter(stackData, 'NextJS', 'Headless CMS')
   .map(item => item)
-const rajStack = StackFilter(stackData, 'ReactJS', 'Headless CMS', 'Styled Components', 'Jest', 'Parcel')
+const rajStack = StackFilter(stackData, 'NextJS', 'Headless CMS', 'Styled Components', 'Jest')
   .map(item => item)
 const aicStack = StackFilter(stackData, 'ReactJS', 'JavaScript', 'CSS3', 'HTML', 'API')
   .map(item => item)
@@ -62,6 +62,17 @@ const data = [
     tabletScreenshot: null,
   },
   {
+    stack: rajStack,
+    url: 'https://rajivJayaweera.com',
+    name: 'RajivJayaveera.com',
+    description: 'Music artist profile web app. Headless CMS, responsive design, third party music distribution integration, form submission.',
+    githubLink: 'https://github.com/agan-k/raj-jay',
+    floatingImage: null,
+    desktopScreenshot: ['/assets/screen_shots/raj-jay/raj-screen.png'],
+    mobileScreenshot: null,
+    tabletScreenshot: null,
+  },
+  {
     stack: renofiQualifyStack,
     url: 'https://qualify.renofi.com/',
     name: 'Renofi Qualify App',
@@ -80,28 +91,6 @@ const data = [
     githubLink: null,
     floatingImage: null,
     desktopScreenshot: ['/assets/screen_shots/renofi/renofi.gif'],
-    mobileScreenshot: null,
-    tabletScreenshot: null,
-  },
-  {
-    stack: rajStack,
-    url: 'https://rajivJayaweera.com',
-    name: 'RajivJayaveera.com',
-    description: 'Music artist profile web app. Headless CMS, responsive design, third party music distribution integration, form submission.',
-    githubLink: 'https://github.com/agan-k/raj-jay-v2',
-    floatingImage: null,
-    desktopScreenshot: ['/assets/screen_shots/raj-jay/raj_desktop.jpg', '/assets/screen_shots/raj-jay/raj_desktop1.jpg'],
-    mobileScreenshot: null,
-    tabletScreenshot: null,
-  },
-  {
-    stack: domStack,
-    url: 'https://deluxe-croissant-c10389.netlify.app/',
-    name: 'DominiqueCarre.fr',
-    description: 'Music artist profile web app. Headless CMS, responsive design, form submission.',
-    githubLink: 'https://github.com/agan-k/carre1',
-    floatingImage: null,
-    desktopScreenshot: ['/assets/screen_shots/carre/dominique_desktop.jpg'],
     mobileScreenshot: null,
     tabletScreenshot: null,
   },
@@ -146,6 +135,17 @@ const data = [
     githubLink: null,
     floatingImage: null,
     desktopScreenshot: ['/assets/screen_shots/lara/lara_desktop1.jpg', '/assets/screen_shots/lara/lara_desktop2.jpg'],
+    mobileScreenshot: null,
+    tabletScreenshot: null,
+  },
+  {
+    stack: domStack,
+    url: 'https://deluxe-croissant-c10389.netlify.app/',
+    name: 'DominiqueCarre.fr',
+    description: 'Music artist profile web app. Headless CMS, responsive design, form submission.',
+    githubLink: 'https://github.com/agan-k/carre1',
+    floatingImage: null,
+    desktopScreenshot: ['/assets/screen_shots/carre/dominique_desktop.jpg'],
     mobileScreenshot: null,
     tabletScreenshot: null,
   },

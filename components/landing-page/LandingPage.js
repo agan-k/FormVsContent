@@ -16,7 +16,6 @@ export default function LandingPage() {
   return(
     <Wrapper>
       <Container>
-
         <TitleWrapper>
           <Title>(form (vs (content)))</Title>
         </TitleWrapper>

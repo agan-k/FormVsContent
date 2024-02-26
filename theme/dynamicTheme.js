@@ -1,6 +1,6 @@
 export const lightTheme = {
   colors: {
-    background: 'white',
+    background: '#ebebeb',
     border: 'grey',
     muted: '#cccccc',
     lowKey: 'grey',
@@ -29,7 +29,7 @@ export const darkTheme = {
     text: '#d4d4d6',
     anchor: 'cyan',
     lowKey: '#7e807e',
-    invertBg: 'white',
+    invertBg: '#ebebeb',
     invertText: '#575757',
     hover: 'white',
     invertHover: 'black',

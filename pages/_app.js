@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "../theme" 
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState('dark'); 
+  const [theme, setTheme] = useState('light'); 
 
   const toggleTheme = () => {
     theme == 'light' ? setTheme('dark') : setTheme('light')
