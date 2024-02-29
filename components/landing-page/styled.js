@@ -10,13 +10,14 @@ export const Wrapper = styled('div')(
     position: 'fixed',
     top: 0,
     left: 0,
-    background: ({theme}) => theme.colors.background,
     height: '100vh',
     width: '100%',
+    background: ({theme}) => theme.colors.background,
+    boxShadow: ({theme}) => theme.shadows.landing,
     alignItems: 'center',
     zIndex: Z_INDEX.landing[1],
     animation: () => css`
-      ${animationKeyframes.hideLanding} 5s 7s forwards;
+      ${animationKeyframes.hideLanding} 7s 7s forwards;
     `,
   },
   mediaQuery({
