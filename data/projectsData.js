@@ -64,7 +64,7 @@ const data = [
   {
     stack: rajStack,
     url: 'https://rajivJayaweera.com',
-    name: 'RajivJayaveera.com',
+    name: 'RajivJayaweera.com',
     description: 'Music artist profile web app. Headless CMS, responsive design, third party music distribution integration, form submission.',
     githubLink: 'https://github.com/agan-k/raj-jay',
     floatingImage: null,
