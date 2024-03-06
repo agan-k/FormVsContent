@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle({
     margin: '0 auto',
     background: ({ theme }) => theme.colors.background,
     color: ({ theme }) => theme.colors.text,
-    fontFamily: 'Helvetica, Arial, Roboto, sans-serif',
+    fontFamily: 'Courier, monospace, Helvetica, Ariel',
   },
   a: {
     textDecoration: 'none',

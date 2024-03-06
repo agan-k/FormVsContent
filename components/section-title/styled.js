@@ -10,8 +10,7 @@ export const Container = styled('div')({
 });
 export const Title = styled('h3')({
   margin: '0',
-  paddingTop: staticTheme.space[2],
-  verticalAlign: 'text',
+  paddingBottom: '6px',
   textAlign: 'center',
 },
 mediaQuery({

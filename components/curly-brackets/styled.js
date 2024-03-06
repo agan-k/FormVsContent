@@ -9,7 +9,7 @@ export const Container = styled('div')({
 });
 
 export const CurlyBracket = styled('span')({
-  fontWeight: '100',
+  fontFamily: 'Courier New',
   color: 'orange',
 },
 mediaQuery({
