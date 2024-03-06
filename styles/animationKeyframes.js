@@ -24,11 +24,11 @@ export const show = keyframes`
 `;
 export const enclose = keyframes`
   from {width: 100%;}
-  to { width: 53%;}
+  to { width: 45%;}
 `;
 export const encloseMobile = keyframes`
   from {width: 100%;}
-  to { width: 87%;}
+  to { width: 53%;}
 `;
 export const emerge = keyframes`
   0% {opacity: 0;}

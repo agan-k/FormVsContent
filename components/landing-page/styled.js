@@ -38,7 +38,6 @@ export const LogoWrapper = styled('div')(
   {
     display: 'block',
     width: '100%',
-    height: staticTheme.space[7],
     display: 'flex',
     justifyContent: 'center',
     opacity: 0,
@@ -47,13 +46,16 @@ export const LogoWrapper = styled('div')(
     `
   },
   mediaQuery({
+    height: [
+      staticTheme.space[6],
+      staticTheme.space[7],
+    ]
   })
 );
 export const BracesWrapper = styled('div')(
   {
     display: 'block',
     position: 'relative',
-    fontSize: staticTheme.space[7]+staticTheme.space[3],
     color: 'orange',
     fontWeight: '100',
     display: 'flex',
@@ -61,6 +63,10 @@ export const BracesWrapper = styled('div')(
     fontFamily: 'Courier New'
   },
   mediaQuery({
+    fontSize: [
+      staticTheme.space[5]+staticTheme.space[4],
+      staticTheme.space[6]+staticTheme.space[4],
+    ],
     animation: [
       () => css`${animationKeyframes.encloseMobile} 2s 4s forwards`,
       () => css`${animationKeyframes.enclose} 2s 4s forwards`,
@@ -69,7 +75,6 @@ export const BracesWrapper = styled('div')(
 );
 export const BraceLeft = styled('div')(
   {
-    marginTop: - staticTheme.space[1],
     display: 'flex',
     alignItems: 'center',
     height: '100%',
@@ -81,7 +86,7 @@ export const BraceLeft = styled('div')(
 );
 export const BraceRight = styled('div')(
   {
-    marginTop: - staticTheme.space[1],
+    marginTop: - 1+'px',
     display: 'flex',
     alignItems: 'center',
     height: '100%',
@@ -103,6 +108,7 @@ export const ImageWrapper = styled('div')(
     }
   },
   mediaQuery({
+
   })
 );
 
