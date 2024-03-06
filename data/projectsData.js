@@ -15,7 +15,7 @@ const StackFilter = (arr, ...params) => {
 }
 const renofiStack = StackFilter(stackData, 'Hugo', 'Sass', 'JavaScript', 'Headless CMS')
   .map(item => item)
-const renofiQualifyStack = StackFilter(stackData, 'ReactJS', 'Styled Components', 'GraphQL', 'Jest')
+const renofiQualifyStack = StackFilter(stackData, 'TypeScript','ReactJS', 'Styled Components', 'GraphQL', 'Jest')
   .map(item => item)
 const kworqStack = StackFilter(stackData, 'Tailwind', 'NextJS', 'TypeScript', 'Headless CMS')
   .map(item => item)
@@ -25,7 +25,7 @@ const sloohStack = StackFilter(stackData, 'CSS', 'HTML5', 'JavaScript')
   .map(item => item)
 const laraStack = StackFilter(stackData, 'NextJS', 'Headless CMS')
   .map(item => item)
-const rajStack = StackFilter(stackData, 'NextJS', 'Headless CMS', 'Styled Components', 'Jest')
+const rajStack = StackFilter(stackData, 'NextJS', 'TypeScript', 'Headless CMS', 'Styled Components', 'Jest')
   .map(item => item)
 const aicStack = StackFilter(stackData, 'ReactJS', 'JavaScript', 'CSS3', 'HTML', 'API')
   .map(item => item)
@@ -64,7 +64,7 @@ const data = [
   {
     stack: rajStack,
     url: 'https://rajivJayaweera.com',
-    name: 'RajivJayaveera.com',
+    name: 'RajivJayaweera.com',
     description: 'Music artist profile web app. Headless CMS, responsive design, third party music distribution integration, form submission.',
     githubLink: 'https://github.com/agan-k/raj-jay',
     floatingImage: null,
