@@ -53,11 +53,12 @@ export const BracesWrapper = styled('div')(
   {
     display: 'block',
     position: 'relative',
-    fontSize: staticTheme.space[7],
+    fontSize: staticTheme.space[7]+staticTheme.space[3],
     color: 'orange',
     fontWeight: '100',
     display: 'flex',
     justifyContent: 'center',
+    fontFamily: 'Courier New'
   },
   mediaQuery({
     animation: [
@@ -68,7 +69,7 @@ export const BracesWrapper = styled('div')(
 );
 export const BraceLeft = styled('div')(
   {
-    marginTop: - staticTheme.space[3],
+    marginTop: - staticTheme.space[1],
     display: 'flex',
     alignItems: 'center',
     height: '100%',
@@ -80,7 +81,7 @@ export const BraceLeft = styled('div')(
 );
 export const BraceRight = styled('div')(
   {
-    marginTop: - staticTheme.space[3],
+    marginTop: - staticTheme.space[1],
     display: 'flex',
     alignItems: 'center',
     height: '100%',
@@ -113,7 +114,6 @@ export const Title = styled.div`
   white-space: nowrap;
   width: 0;
   overflow: hidden;
-  font-family: ${staticTheme.fonts.monospace};
   font-size: ${staticTheme.fontSizes[2]};
   letter-spacing: 6px;
   color: grey;

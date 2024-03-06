@@ -24,7 +24,7 @@ export const show = keyframes`
 `;
 export const enclose = keyframes`
   from {width: 100%;}
-  to { width: 44%;}
+  to { width: 53%;}
 `;
 export const encloseMobile = keyframes`
   from {width: 100%;}

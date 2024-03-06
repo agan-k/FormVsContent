@@ -4,7 +4,6 @@ import {mediaQuery} from '../../utils';
 
 export const Wrapper = styled('div')({
   position: 'relative',
-  // background: ({theme}) => theme.colors.background,
   width: staticTheme.space[16],
   margin: `${staticTheme.space[5]}px auto`,
   textAlign: 'center',

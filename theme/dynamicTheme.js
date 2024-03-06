@@ -14,7 +14,7 @@ export const lightTheme = {
   shadows: {
     nav: '0 2px 1px rgb(240, 240, 240)',
     float: '0 3px 8px 1px #242323',
-    landing: '0 1px 58px 1px grey',
+    landing: '0 30px 58px 1px #cccc',
     card: '0 5px 8px 3px rgb(240, 240, 240)',
     inlineCode: '1px 2px 16px rgb(227, 227, 227) inset'
   },
