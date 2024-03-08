@@ -47,6 +47,7 @@ export const About: React.FC<AboutProps> = ({dataAbout, dataTimeline}) => {
       </Layout>
    );
 };
+export default About;
 
 //@ts-expect-error
 About.getInitialProps = async () => {
