@@ -1,4 +1,5 @@
 export const lightTheme = {
+  name: 'light',
   colors: {
     background: '#ebebeb',
     border: 'grey',
@@ -11,6 +12,9 @@ export const lightTheme = {
     hover: 'black',
     invertHover: 'white',
   },
+  space: [0, 4, 8, 16, 32, 64, 128, 236, 472],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+
   shadows: {
     nav: '0 2px 1px rgb(240, 240, 240)',
     float: '0 3px 8px 1px #242323',
@@ -24,6 +28,7 @@ export const lightTheme = {
 }
 
 export const darkTheme = {
+  name: 'dark',
   colors: {
     background: 'black',
     muted: '#7e807e',
@@ -35,6 +40,9 @@ export const darkTheme = {
     hover: 'white',
     invertHover: 'black',
   },
+  space: [0, 4, 8, 16, 32, 64, 128, 236, 472],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+
   shadows: {
     nav: '0 3px 8px 1px #242323',
     float: '0 3px 8px 1px #2e2d2d',

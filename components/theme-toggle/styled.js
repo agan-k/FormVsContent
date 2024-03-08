@@ -8,7 +8,7 @@ export const Button = styled('button')(
     height: staticTheme.space[4],
     outline: 'none',
     border: 'none',
-    fontSize: staticTheme.fontSizes[4],
+    fontSize: ({theme}) => theme.fontSizes[4]+'px',
     pointerEvents: 'auto',
     cursor: 'pointer',
   },

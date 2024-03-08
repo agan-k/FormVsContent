@@ -15,7 +15,11 @@ import {
   FloatingImagesContainer,
 } from './styled';
 
-export default function OngoingProject({data}) {
+interface OngoingProjectProps {
+  data: any
+}
+
+export const OngoingProject: React.FC<OngoingProjectProps> = ({data}) => {
   const [imgIndex, setImgIndex] = useState();
   const floatingImages = data?.floatingImage || [];
   const hasFloatingImages = Boolean(data.floatingImage != null);

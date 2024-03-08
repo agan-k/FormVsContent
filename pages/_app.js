@@ -1,6 +1,8 @@
-import { useState } from "react"
+import { useState, createContext, useContext } from "react"
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme, GlobalStyles } from "../theme" 
+import { lightTheme, darkTheme, GlobalStyles } from "../theme" ;
+
+export const ToggleThemeContext = createContext(null);
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('light'); 
@@ -10,9 +12,11 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
-      <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
         <GlobalStyles />
-        <Component {...pageProps} theme={theme} setTheme={setTheme} toggleTheme={toggleTheme} />
+        <ToggleThemeContext.Provider value={toggleTheme}>
+          <Component {...pageProps} />
+        </ToggleThemeContext.Provider>
       </ThemeProvider>
   ) 
 }

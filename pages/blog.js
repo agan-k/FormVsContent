@@ -4,10 +4,10 @@ import {PostCard, SectionTitle} from '../components';
 import {PageWrapper, PostsWrapper} from '../styles/styled';
 import postsData from '../data/postsData';
 
-export default function Blog({theme, toggleTheme}) {
+export default function Blog() {
    const posts = postsData.map(post => <PostCard post={post} key={post.id} /> );
    return (
-      <Layout theme={theme} toggleTheme={toggleTheme}>
+      <Layout >
          <PageWrapper>
             <SectionTitle>posts</SectionTitle>
             <PostsWrapper>{posts}</PostsWrapper>

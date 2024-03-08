@@ -1,16 +1,12 @@
 'use client';
-
 import Head from 'next/head'
-import {Nav, Footer, Header} from '../../components';
-import { useMediaQuery } from '../../utils/hooks';
-import { MOBILE_BREAKPOINT } from '../../utils/constants';
+import {Footer, Header} from '../../components';
 import {Container, Main} from './styled';
 
 export default function Layout({ 
-  children, title = '(form (vs (content)))',
-  theme, toggleTheme 
+  children, 
+  title = '(form (vs (content)))',
 }) {
-  const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
   
   return (
     <Container>
@@ -18,7 +14,7 @@ export default function Layout({
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header theme={theme} toggleTheme={toggleTheme} />
+      <Header />
       <Main>{children}</Main>
       <Footer/>
     </Container>

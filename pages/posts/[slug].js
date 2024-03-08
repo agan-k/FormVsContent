@@ -4,19 +4,12 @@ import {codeBlock} from '../../utils'
 import {Layout} from '../../components'
 import {Body, Container, Header, Signature, Title} from '../../styles/posts/styled'
 
-export default function Post({ content, data, theme, toggleTheme }) {
+export default function Post({ content, data }) {
    const frontmatter = data
 
    return(
-      <Layout theme={theme} toggleTheme={toggleTheme}>
+      <Layout>
          <Container>
-            <Header>
-               <img src={frontmatter.image}/>
-               <Title>
-                  <h2>{frontmatter.title}</h2>
-                  <h3>{frontmatter.subtitle}</h3>
-               </Title>
-            </Header>
             <Body>
                <ReactMarkdown
                   renderers={{ code: codeBlock }}

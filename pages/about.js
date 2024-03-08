@@ -1,15 +1,14 @@
-import {useState, useEffect, useRef} from 'react';
+import {useState} from 'react';
 import matter from 'gray-matter';
 import Markdown from 'react-markdown';
-import {Layout, UtilityButton, DownloadButton, FlexBox, PdfEmbed} from '../components';
-import {AboutContainer, PdfWrapper} from '../styles/about/styled'
-import { PageWrapper } from '../styles/styled';
-import { useMediaQuery } from '../utils/hooks';
-import { MOBILE_BREAKPOINT } from '../utils/constants';
+import {Layout, PdfEmbed} from '../components';
+import {AboutContainer} from '../styles/about/styled'
+import {PageWrapper} from '../styles/styled';
+import {useMediaQuery} from '../utils/hooks';
+import {MOBILE_BREAKPOINT} from '../utils/constants';
 
-export default function About({dataAbout, dataTimeline, theme, toggleTheme}) {
+export default function About({dataAbout, dataTimeline}) {
   const [isOpenPDF, setIsOpenPdf] = useState(false)
-  const ref = useRef(null);
   const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
 
   const about = dataAbout.content;
@@ -21,7 +20,7 @@ export default function About({dataAbout, dataTimeline, theme, toggleTheme}) {
   }
 
    return (
-      <Layout theme={theme} toggleTheme={toggleTheme}>
+      <Layout >
         <PageWrapper>
           <AboutContainer>
             <Markdown>{about}</Markdown>

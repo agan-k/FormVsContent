@@ -6,7 +6,7 @@ import {
   Mask,
 } from './styled';
 
-export default function PostCard({post, recentPosts}) {
+export default function PostCard({post}) {
   
   return (
     <Link href={post.link}>

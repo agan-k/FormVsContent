@@ -1,33 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import {ThemeContext} from 'styled-components';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Container, NavItem, NavList } from './styled';
 import {ThemeToggle, SiteLogo, CurlyBrackets, NavToggle} from '../../components';
 import {theme as staticTheme} from '../../theme';
 import { useMediaQuery } from '../../utils/hooks';
-import { MOBILE_BREAKPOINT } from '../../utils/constants';
+import { MOBILE_BREAKPOINT, navLinks, extLinks } from '../../utils/constants';
 
-export default function Nav({theme, toggleTheme}) {
-  const [isOpenNav, setIsOpenNav] = useState(false)
+export default function Nav() {
+  const [isOpenNav, setIsOpenNav] = useState(false);
+  const theme = useContext(ThemeContext);
   const router = useRouter(); 
   const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
 
   function HandleToggleNav() {
     setIsOpenNav(!isOpenNav);
   }
-
-  const navLinks = [
-    {name: 'home', link: '/'},
-    {name: 'blog', link: '/blog'},
-    {name: 'about', link: '/about'},
-  ]
-  const extLinks = [
-    {name: 'GitHub', link: 'https://www.github.com/agan-k'},
-    {name: 'LinkedIn', link: 'https://www.linkedin.com/in/koran-agan/'},
-    {name: 'email', link: 'mailto:koranagan@gmail.com'},
-  ]
+  
   const navigationRoutes = navLinks.map(item =>
     <NavItem key={item.name} active={router.pathname == `${item.link}` ? true : false}>
       <Link href={item.link} onClick={() => HandleToggleNav()}>
@@ -58,8 +50,6 @@ export default function Nav({theme, toggleTheme}) {
         {isMobile && navigationExternal}
         {isMobile && theme ?
           <ThemeToggle 
-            theme={theme}
-            toggleTheme={toggleTheme} 
             toggleNav={HandleToggleNav}
           /> : null}
       </NavList>
@@ -69,7 +59,7 @@ export default function Nav({theme, toggleTheme}) {
           <NavList>
             {navigationExternal}
           </NavList>
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          <ThemeToggle />
         </> : null
       }
     </Container>
