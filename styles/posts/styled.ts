@@ -8,7 +8,6 @@ export const Container = styled('div')(
     //** TODO - find better solution for inline code block
     em: {//** this is used for inline code block for now
       fontStyle: 'normal',
-      // fontFamily: 'monospace',
       fontSize: ({theme}) => theme.fontSizes[1]+'px',
       fontWeight: '100',
       borderRadius: '4px',

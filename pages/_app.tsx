@@ -13,11 +13,11 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
-        <GlobalStyles />
-        <ToggleThemeContext.Provider value={toggleTheme}>
-          <Component {...pageProps} />
-        </ToggleThemeContext.Provider>
-      </ThemeProvider>
+      <GlobalStyles />
+      <ToggleThemeContext.Provider value={toggleTheme}>
+        <Component {...pageProps} />
+      </ToggleThemeContext.Provider>
+    </ThemeProvider>
   ) 
 }
 export default MyApp
