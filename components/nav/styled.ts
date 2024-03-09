@@ -50,26 +50,26 @@ export const NavItem = styled('li')(
     'a:any-link': {
       textDecoration: 'none',
       letterSpacing: '2px',
-      fontWeight: ({active, theme}) => active ? theme.fontWeights.bold : theme.fontWeights.body,
+      fontWeight: ({active, theme}) => active ? 
+        theme.fontWeights.bold : theme.fontWeights.body,
       pointerEvents: ({active}) => active ? 'none' : 'initial',
+        '&:hover': {
+          fontWeight: ({theme}) => theme.fontWeights.bold,
+          color: ({theme}) => theme.colors.anchor,
+          transition: '.2s',
+        },
     },
   },
   mediaQuery({
     padding: ['10px', 'initial'],
     textAlign: ['right', 'center'],
     'a:any-link': {
-      color: 
-      [
-        ({theme}) => ({active}) =>
-        active ? theme.colors.invertHover : theme.colors.lowKey,
-        
-        ({theme}) => ({active}) =>
-        active ? theme.colors.hover : theme.colors.lowKey,
+      color: [
+        ({theme, active}) => active ? 
+        theme.colors.background : theme.colors.lowKey,
+        ({theme, active}) => active ? 
+        theme.colors.text : theme.colors.lowKey,
       ]
-    },
-    'a:hover': {
-      fontWeight: ({theme}) => theme.fontWeights.bold,
-      color: ({theme}) => theme.colors.hover,
     }
   })
 );

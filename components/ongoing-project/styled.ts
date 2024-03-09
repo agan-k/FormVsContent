@@ -104,11 +104,21 @@ export const FloatingImagesContainer = styled('div')(
     justifyContent: 'space-between',
   },
   mediaQuery({
-    display: ['none', 'flex'],
-    width: ['unset', ({theme}) => theme.space[6] + theme.space[5]]+'px',
-    height: ['unset', ({theme}) => theme.space[7] + theme.space[6]]+'px',
-    top: ['unset', '-20px'],
-    right: ['unset', ({theme}) => theme.space[7]+'px'],
+    display: ['flex', 'flex'],
+    width: [
+      ({theme}) => theme.space[5]+theme.space[4]+'px',
+      ({theme}) => theme.space[6] + theme.space[5]+'px',
+    ],
+    
+    height: [
+      ({theme}) => theme.space[6]+theme.space[5]+'px',
+      ({theme}) => theme.space[7] + theme.space[6]+'px',
+    ],
+    top: ['-10px', '-20px'],
+    right: [
+      ({theme}) => theme.space[4]+'px',
+      ({theme}) => theme.space[7]+'px',
+    ],
   })
   );
   
@@ -120,10 +130,10 @@ export const FloatingImagesContainer = styled('div')(
   },
   mediaQuery({
     width: [
-      ({theme}) => theme.space[5]+'px',
+      ({theme}) => theme.space[5]+theme.space[4]+'px',
       ({theme}) => theme.space[6]+theme.space[5]+'px'],
     height: [
-      ({theme}) => theme.space[3] + theme.space[4]+'px', 
+      ({theme}) => theme.space[5] + theme.space[3]+'px', 
       ({theme}) => theme.space[6] + theme.space[4]+'px'],
     img: {
       width: '100%',

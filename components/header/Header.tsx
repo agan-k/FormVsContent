@@ -13,9 +13,7 @@ export const Header = () => {
     <Container>
       {isMobile && 
         <LogoWrapper>
-          <Link href={'/'}>
-            <SiteLogo size={({theme}) => theme.space[5]+'px'} />
-          </Link>
+          <SiteLogo size={({theme}) => theme.space[5]+'px'} />
         </LogoWrapper>
       }
       <Nav />

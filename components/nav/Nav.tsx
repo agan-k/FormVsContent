@@ -10,10 +10,6 @@ export const Nav = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);
   const router = useRouter(); 
   const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
-
-  function HandleToggleNav() {
-    setIsOpenNav(!isOpenNav);
-  }
   
   const navigationRoutes = navLinks.map(item =>
     <NavItem key={item.name} active={router.pathname == `${item.link}` ? true : false}>

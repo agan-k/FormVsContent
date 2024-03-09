@@ -35,14 +35,14 @@ const domStack = StackFilter(stackData, 'ReactJS', 'Headless CMS', 'Styled Compo
   .map(item => item)
 const nycDiverStack = StackFilter(stackData, 'HTML5', 'CSS', 'JavaScript', 'Django', 'PostgreSQL', 'Webpack')
   .map(item => item)
-const formVscStack = StackFilter(stackData, 'JavaScript', 'NextJS', 'Styled Components')
+const formVscStack = StackFilter(stackData, 'TypeScript', 'NextJS', 'Styled Components')
 .map(item => item)
 
 const data = [
   {
     stack: formVscStack,
     url: 'https://github.com/agan-k/formVsContent',
-    name: 'FormVersusContent',
+    name: 'FormVsContent',
     description: 'Source of this site',
     githubLink: 'https://github.com/agan-k/formVsContent',
     floatingImage: null,

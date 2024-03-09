@@ -8,7 +8,6 @@ export const Container = styled('div')(
     height: ({theme}) => theme.space[5]+'px',
     display: 'flex',
     justifyContent: 'center',
-    // alignItems: 'center',
     margin: '0',
     left: '0',
     top: '0',

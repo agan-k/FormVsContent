@@ -38,6 +38,7 @@ export const lightTheme = {
   },
   borders: {
     understated: '1px solid #dbdbdb',
+    button: '4px solid magenta'
   }
 };
 
@@ -80,5 +81,6 @@ export const darkTheme = {
   },
   borders: {
     understated: '1px solid #292929',
+    button: '4px solid cyan'
   }
 }

@@ -1,7 +1,7 @@
 ---
 image: '/assets/reactJS.png'
 title: "React, Introduction"
-subtitle: "A Somewhat Personal Journey trough a Powerhouse"
+subtitle: "A Personal Journey trough a Powerhouse"
 date: "Dec 2020 by"
 author: 'K. Agan'
 signature: "K.Agan - Dec '20, Brooklyn, NY"
@@ -158,7 +158,9 @@ and returns the *'value'* of the *'key'* *name:*
 Notice the curly braces used on *{props.name}*. This is how we can inject javascript anywhere inside the *return()* statement.
 
 And so, we have successfully passed information from one component to another and finally rendered it in our *index.html* for it to be displayed in the browser.
-<img class='markdown-img' src='/assets/content/posts/react_article/hello_from_parent_component.png' />
+
+![](/assets/content/posts/react_article/hello_from_parent_component.png)
+
 Now, think about it. We did not touch the original DOM. We didn't have to introduce any new elements and therefore it did not need to reload.
 
 ## Conclusion

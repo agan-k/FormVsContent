@@ -35,10 +35,12 @@ export const PdfEmbed: React.FC<PdfEmbedProps> = ({
               Collapse
             </UtilityButton>
           )}     
-        </PdfWrapper> :
+        </PdfWrapper> 
+        :
         <FlexBox 
+          justifyContent={'center'}
           alignItems={'center'}
-          gap={({theme}) => theme.space[4]}
+          gap={({theme}) => theme.space[4]+'px'}
         >
           <h3>Resume</h3>
           <DownloadButton path={'/assets/content/Resume_Koran_Agan.pdf'}>

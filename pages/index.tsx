@@ -24,7 +24,7 @@ export default function Home() {
   });
   return (
     <>
-      {/* <LandingPage /> */}
+      <LandingPage />
       
       <Layout>
         <PageWrapper>

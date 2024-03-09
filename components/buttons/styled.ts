@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { mediaQuery } from "../../utils";
 
 export const Wrapper = styled('div')(
   {
     display: 'flex',
     justifyContent: 'start',
-    button: {
+    button: {// Utility button:
       display: 'flex',
       alignItems: 'center',
       height: ({theme}) => theme.space[4]+'px',
@@ -16,17 +17,16 @@ export const Wrapper = styled('div')(
       fontFamily: ({theme}) => theme.fonts.body,
       fontSize: ({theme}) => theme.fontSizes[1]+'px',
       boxShadow: ({theme}) => theme.shadows.nav,
-      border: ({theme}) => theme.borders.understated,
-      borderRadius: '5px',
-      background: ({theme}) => theme.colors.invertBg,
-      color: ({theme}) => theme.colors.background,
+      border: ({theme}) => theme.borders.button,
+      background: ({theme}) => theme.colors.background,
+      color: ({theme}) => theme.colors.text,
       cursor: 'pointer',
     },
     'button:hover': {
-      color: ({theme}) => theme.colors.lowKey,
-      transition: '0.4s'
+      color: ({theme}) => theme.colors.anchor,
+      transition: '0.4s',
     },
-    a: {
+    a: {// Download button:
       display: 'flex',
       alignItems: 'center',
       height: ({theme}) => theme.space[4]+'px',
@@ -37,14 +37,13 @@ export const Wrapper = styled('div')(
       marginLeft: '0',
       fontSize: ({theme}) => theme.fontSizes[1]+'px',
       boxShadow: ({theme}) => theme.shadows.nav,
-      border: ({theme}) => theme.borders.understated,
-      borderRadius: '5px',
-      background: ({theme}) => theme.colors.invertBg,
-      color: ({theme}) => theme.colors.background,
+      border: ({theme}) => theme.borders.button,
+      background: ({theme}) => theme.colors.background,
+      color: ({theme}) => theme.colors.text,
       cursor: 'pointer',
     },
     'a:hover': {
-      color: ({theme}) => theme.colors.lowKey,
+      color: ({theme}) => theme.colors.anchor,
       transition: '0.4s'
     }
   }
