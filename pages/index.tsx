@@ -10,21 +10,12 @@ import {
 import {PostsWrapper} from '../styles/styled';
 import projectsData from '../data/projectsData';
 import postsData from '../data/postsData';
-import { useMediaQuery } from '../utils/hooks';
 import { PageWrapper } from '../styles/styled';
 
 
 export default function Home() {
-  // const [hasWindow, setHasWindow] = useState(false);//TODO: fixes next.js dependency error
-
   const posts = postsData.map(post => <PostCard post={post} key={post.id} /> );
   const recentPosts = posts.slice(0, 3);
-
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     setHasWindow(true);
-  //   }
-  // }, []);
 
   const ongoingProjects = projectsData?.map((item) => {
     return (

@@ -16,9 +16,6 @@ interface AboutProps {
 export const About: React.FC<AboutProps> = ({dataAbout, dataTimeline}) => {
   const [isOpenPDF, setIsOpenPdf] = useState(false)
   const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
-
-  console.log('here: ', dataAbout)
-
   const about = dataAbout.content;
   const timeline = dataTimeline.content;
 
@@ -28,7 +25,7 @@ export const About: React.FC<AboutProps> = ({dataAbout, dataTimeline}) => {
   }
 
    return (
-      <Layout >
+      <Layout>
         <PageWrapper>
           <AboutContainer>
             <Markdown>{about}</Markdown>
