@@ -89,7 +89,7 @@ fac(4)
   |             |     returns 3 * 2 = 6
   |             
   |--> evaluates fac(4 - 1) to 6. 
-  |    returns 3 * 6 = 24
+  |    returns 4 * 6 = 24
 
 */
 ```
