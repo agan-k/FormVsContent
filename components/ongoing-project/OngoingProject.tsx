@@ -27,9 +27,7 @@ export const OngoingProject: React.FC<OngoingProjectProps> = ({data}) => {
   return (
     <Wrapper>
       <Name><a href={data.url}>{data.name}</a></Name>
-      <p>
-        {data.description}
-      </p>
+        <p dangerouslySetInnerHTML={{__html: data.description}} />
       <LogoInfo>
         {data.stack.map((item, index) =>
           index == imgIndex ? 
