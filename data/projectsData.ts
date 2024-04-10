@@ -54,7 +54,7 @@ const data = [
     stack: nycDiverStack,
     url: 'https://www.nycdiver.com/',
     name: 'NYC Diver',
-    description: 'Deep dive into New York City events. Full stack web app - database, user creation, authentication, event submission and management.',
+    description: 'Deep dive into New York City events.<br/> <strong>NYC Diver</strong> &#129343; compiles lists of events from select venues and<br/> saves member submitted events.&#128640;<br/><br/> Full stack web app - content aggregator,<br/> database, user creation, authentication, event submission and management.',
     githubLink: 'https://github.com/agan-k/nycdiver',
     floatingImage: ['/assets/screen_shots/nycdiver/logout.png', '/assets/screen_shots/nycdiver/manage.png'],
     desktopScreenshot: ['/assets/screen_shots/nycdiver/nycdiver.jpg'],
