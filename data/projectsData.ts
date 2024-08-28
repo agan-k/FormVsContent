@@ -35,6 +35,8 @@ const domStack = StackFilter(stackData, 'ReactJS', 'Headless CMS', 'Styled Compo
   .map(item => item)
 const nycDiverStack = StackFilter(stackData, 'HTML5', 'CSS', 'JavaScript', 'Django', 'PostgreSQL', 'Webpack')
   .map(item => item)
+const poppasMusicStack = StackFilter(stackData, 'HTML5', 'CSS', 'JavaScript', 'Liquid', 'Python', 'Shopify')
+  .map(item => item)
 const formVscStack = StackFilter(stackData, 'TypeScript', 'NextJS', 'Styled Components')
 .map(item => item)
 
@@ -47,6 +49,17 @@ const data = [
     githubLink: 'https://github.com/agan-k/formVsContent',
     floatingImage: null,
     desktopScreenshot: ['/assets/screen_shots/formvsc/formvsc.png'],
+    mobileScreenshot: null,
+    tabletScreenshot: null,
+  },
+  {
+    stack: poppasMusicStack,
+    url: 'https://www.poppasmusic.com/',
+    name: "Poppa's Music",
+    description: 'Music retail',
+    githubLink: '',
+    floatingImage: '',
+    desktopScreenshot: ['/assets/screen_shots/poppas-music/poppas-music.png'],
     mobileScreenshot: null,
     tabletScreenshot: null,
   },

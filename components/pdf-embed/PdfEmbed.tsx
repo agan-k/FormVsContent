@@ -23,12 +23,12 @@ export const PdfEmbed: React.FC<PdfEmbedProps> = ({
             <UtilityButton handleToggle={() => HandleToggleResumePDF(ref)}>
               {isOpenPDF ? 'Collapse' : 'Expand'}
             </UtilityButton>
-            <DownloadButton path={'/assets/content/Resume_Koran_Agan.pdf'}>
+            <DownloadButton path={'/assets/content/K_Agan_Resume.pdf'}>
               Download
             </DownloadButton>
           </FlexBox>
-          <object data="/assets/content/Resume_Koran_Agan.pdf" type="application/pdf" width="100%" height="100%">
-            <p>Unable to display PDF file. <a href="/assets/content/Resume_Koran_Agan.pdf">Download</a> instead.</p>
+          <object data="/assets/content/K_Agan_Resume.pdf" type="application/pdf" width="100%" height="100%">
+            <p>Unable to display PDF file. <a href="/assets/content/K_Agan_Resume.pdf">Download</a> instead.</p>
           </object>
           {isOpenPDF && (
             <UtilityButton handleToggle={() => HandleToggleResumePDF(ref)}>

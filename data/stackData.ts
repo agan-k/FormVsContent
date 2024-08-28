@@ -18,5 +18,7 @@ const stackData = [
    { id: 17, name: 'Parcel', src: '/assets/parcel.png' },
    { id: 18, name: 'Django', src: '/assets/django2.png' },
    { id: 19, name: 'Webpack', src: '/assets/webpack.png' },
+   { id: 20, name: 'Python', src: '/assets/python.webp' },
+   { id: 21, name: 'Shopify', src: '/assets/shopify.png' },
 ]
 export default stackData
