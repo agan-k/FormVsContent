@@ -37,6 +37,8 @@ const nycDiverStack = StackFilter(stackData, 'HTML5', 'CSS', 'JavaScript', 'Djan
   .map(item => item)
 const poppasMusicStack = StackFilter(stackData, 'HTML5', 'CSS', 'JavaScript', 'Liquid', 'Python', 'Shopify')
   .map(item => item)
+const weinerMusicStack = StackFilter(stackData, 'HTML5', 'CSS', 'JavaScript', 'Liquid', 'Python', 'Shopify')
+  .map(item => item)
 const formVscStack = StackFilter(stackData, 'TypeScript', 'NextJS', 'Styled Components')
 .map(item => item)
 
@@ -53,10 +55,21 @@ const data = [
     tabletScreenshot: null,
   },
   {
+    stack: weinerMusicStack,
+    url: 'http://www.weinermusic.com/',
+    name: "Weinermusic.com",
+    description: 'E-commerce <br><br>Brand design, theme customization, marketplace integration, <br>custom apps, product management automation. ',
+    githubLink: '',
+    floatingImage: '',
+    desktopScreenshot: ['/assets/screen_shots/weinermusic/weinermusic.png'],
+    mobileScreenshot: null,
+    tabletScreenshot: null,
+  },
+  {
     stack: poppasMusicStack,
     url: 'https://www.poppasmusic.com/',
     name: "Poppa's Music",
-    description: 'Music retail',
+    description: 'Music retail<br><br> Brand design, product management automation, marketplace integration, <br>POS integration, subscription management, e-mail campaigns.',
     githubLink: '',
     floatingImage: '',
     desktopScreenshot: ['/assets/screen_shots/poppas-music/poppas-music.png'],
