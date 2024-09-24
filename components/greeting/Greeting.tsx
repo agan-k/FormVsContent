@@ -10,7 +10,7 @@ export const Greeting = () => {
         I am a front-end-focused Software Developer based in 
         Brooklyn, NY. I build web applications with an emphasis on scalable front-end 
         architecture. I specialize in user experience and content management systems. You can download 
-        my resume <a href="/assets/content/Resume_Koran_Agan.pdf" target="_blank">here</a>.
+        my resume <a href="/assets/content/K_Agan_Resume.pdf" target="_blank">here</a>.
       </p>
       <p>
         I am always looking to collaborate, so if you have a great idea, please drop me a 
